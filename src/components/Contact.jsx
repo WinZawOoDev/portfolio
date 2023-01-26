@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Contact() {
     return (
-        <div className='h-screen flex justify-center text-center items-center bg-gray-300'>
+        <section id='contact' className='h-screen flex justify-center text-center items-center bg-gray-300'>
             <span className='text-2xl font-extrabold'>Contact Section</span>
-        </div>
+        </section>
     )
 }
