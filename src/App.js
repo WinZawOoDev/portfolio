@@ -10,13 +10,13 @@ export const AppContext = createContext(null);
 
 function App() {
 
-  const [showSideNav, setShowSideNav] = useState(false);
+  const [openSideNav, setOpenSideNav] = useState(false);
 
   return (
     <div className="scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-gray-100">
-      <AppContext.Provider value={{ showSideNav, setShowSideNav }}>
+      <AppContext.Provider value={{ openSideNav, setOpenSideNav }}>
         <Navbar />
-        {showSideNav && <SideNav />}
+        <SideNav />
         <Home />
         <About />
         <Contact />
