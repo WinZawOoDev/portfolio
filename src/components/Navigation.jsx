@@ -14,21 +14,22 @@ export default function Navigation() {
     const [openSideNav, setOpenSideNav] = useState(true);
 
 
-    const NavLink = ({ listStyleClass }) => list.map(list => <li key={list.id} className={listStyleClass}>
-        <Link
-            activeClass='font-normal'
-            to={list.to}
-            spy={true}
-            smooth={true}
-            hashSpy={true}
-        >
-            {list.name}
-        </Link>
-    </li>
-    )
+    function navLink(isNavbar) {
+        return list.map(list => <li key={list.id} className={`${isNavbar ? "mx-9" : "my-9"} capitalize text-lg text-gray-600 font-light cursor-pointer`}>
+            <Link
+                activeClass='font-normal text-green-600'
+                to={list.to}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+            >
+                {list.name}
+            </Link>
+        </li>)
+    }
 
 
-    function navbar() {
+    function navBar() {
 
         return (
             <header>
@@ -37,7 +38,7 @@ export default function Navigation() {
                         {hamburger()}
                     </div>
                     <ul className='hidden md:flex py-4 px-11'>
-                        <NavLink listStyleClass='mx-9 capitalize text-lg text-gray-600 font-light cursor-pointer' />
+                        {navLink(true)}
                     </ul>
                 </nav>
             </header>
@@ -49,7 +50,7 @@ export default function Navigation() {
     function sideNav() {
         return (
             <nav
-                className={`fixed right-0 h-screen min-w-[15em] max-w-[20em] transform translate-x-0 duration-300 ${openSideNav && " translate-x-96"}`}
+                className={`fixed right-0 h-screen min-w-[15em] max-w-[20em] z-50 transform translate-x-0 duration-300 ${openSideNav && " translate-x-96"}`}
             >
                 <div className='h-full bg-white'>
                     <div className='h-1/6 flex justify-center items-center'>
@@ -57,7 +58,7 @@ export default function Navigation() {
                     </div>
                     <div className='h-5/6 flex justify-center items-center px-5 shadow-xl'>
                         <ul className='px-5 -mt-24'>
-                            <NavLink listStyleClass="my-9 capitalize text-lg texst-gay-600 font-light cursor-pointer" />
+                            {navLink(false)}
                         </ul>
                     </div>
                 </div>
@@ -83,7 +84,7 @@ export default function Navigation() {
 
     return (
         <>
-            {navbar()}
+            {navBar()}
             {sideNav()}
         </>
     )
