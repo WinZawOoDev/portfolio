@@ -4,14 +4,14 @@ import { AiFillLinkedin, AiOutlineWhatsApp, AiOutlineGithub } from 'react-icons/
 import { FiTwitter } from 'react-icons/fi'
 import busy_programmer from '@/public/Programmer-rafiki.svg'
 import Link from 'next/link'
-import { Spectral, Karla, Cardo, Work_Sans, DM_Sans } from 'next/font/google'
+import { Spectral, Work_Sans, DM_Sans } from 'next/font/google'
 
 const spectralFont = Spectral({
     weight: "800",
     subsets: ["latin"]
 })
 const workSansFont = Work_Sans({ weight: "300", subsets: ["latin"] })
-const dmSansFont = DM_Sans({weight:"600", subsets:["latin"]});
+const dmSansFont = DM_Sans({ weight: "600", subsets: ["latin"] });
 
 export default function About() {
     return (
@@ -46,11 +46,6 @@ export default function About() {
 
                 {/* Image */}
                 <div className='text-center'>
-                    {/* <div className='relative w-[25em] h-[30em]'>
-                        <div className='absolute z-10 w-full h-full bg-gray-300 rounded-tr-[6em] transform translate-x-6 -translate-y-6'></div>
-                        <div className='absolute z-50 w-full h-full bg-gray-100 rounded-tr-[6em] rounded-bl-[11em]'></div>
-                        <div className='absolute z-20 w-full h-full bg-gray-200 rounded-bl-[11em] transform -translate-x-8 translate-y-6'></div>
-                    // </div> */}
                     <Image
                         src={busy_programmer}
                         alt='Gentleman'
