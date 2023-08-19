@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
+import { Alegreya_Sans, Rubik} from 'next/font/google'
 import { FiExternalLink } from 'react-icons/fi'
+
 
 export type contentDescProps = {
   position: string;
@@ -14,6 +16,8 @@ export type contentDescProps = {
   techStack: string[];
 }
 
+const alegreyaSanFont = Alegreya_Sans({subsets:["cyrillic"], weight:"400"})
+const rubik = Rubik({subsets:["latin"], weight:"600"})
 
 export default function ContentDesc({ position, company, date, description, techStack }: contentDescProps) {
   return (
@@ -22,10 +26,10 @@ export default function ContentDesc({ position, company, date, description, tech
 
         {/* Position */}
         <div className='flex items-center'>
-          <h5 className='font-bold text-lg text-gray-800 capitalize'>{position}</h5>
-          <Link href={"#"} className='flex items-center'>
-            <span className='ml-2 mr-[0.5em] text-sm italic font-light text-gray-600'>{company}</span>
-            <span className='text-gray-400'><FiExternalLink /></span>
+          <h5 className={`${rubik.className} font-bold text-lg text-gray-800 capitalize`}>{position}</h5>
+          <Link href={"#"} className='group flex items-center'>
+            <span className={`ml-2 mr-[0.5em] text-sm italic font-light text-gray-500`}>{company}</span>
+            <span className='text-gray-400 transform transition-all delay-150 duration-150 group-hover:scale-125'><FiExternalLink /></span>
           </Link>
         </div>
 
@@ -37,7 +41,7 @@ export default function ContentDesc({ position, company, date, description, tech
         </div>
       </div>
 
-      <p className='font-light text-gray-600'>
+      <p className={`${alegreyaSanFont.className} py-1 text-lg font-light text-gray-700`}>
         {description}
       </p>
 
