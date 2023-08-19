@@ -20,7 +20,7 @@ export default function About() {
 
                 {/* Introduction */}
                 <div className='px-5'>
-                    <span className='mb-3'>Hey, I'm</span>
+                    <span className='mb-3 text-gray-800'>Hey, I'm</span>
                     <span className={`${spectralFont.className} text-7xl block mt-2 mb-10 text-gray-900`}>Win Zaw Oo</span>
                     <span className={`block ${dmSansFont.className} text-gray-900 my-5 font-bold leading-3 text-xl`}>Web Developer</span>
                     <p className={`${workSansFont.className} text-center my-4 text-gray-800`}>
