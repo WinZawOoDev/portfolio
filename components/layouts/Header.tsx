@@ -16,9 +16,9 @@ export default function Header() {
           </div>
 
           {/* Navigation Links */}
-          <nav className='leading-3 tracking-tight'>
+          <nav className='leading-3 tracking-tight text-gray-700'>
             <ul className='flex items-center justify-center text-lg leading-tight capitalize'>
-              <li className='px-5 cursor-pointer'>about</li>
+              <li className='px-5 cursor-pointer font-bold'>about</li>
               <li className='px-5 cursor-pointer'>experiences</li>
               <li className='px-5 cursor-pointer'>projects</li>
               <li className='px-5 cursor-pointer'>contact</li>
