@@ -1,9 +1,8 @@
-import Image from 'next/image'
-
+import About from '@/components/About'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className='font-bold text-2xl'>Hello from my portfolio</h1>
+    <main className="flex w-full"> 
+        <About/>
     </main>
   )
 }
