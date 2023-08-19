@@ -30,14 +30,14 @@ export default function ContentDesc({ position, company, date, description, tech
         </div>
 
         {/* Join Date  */}
-        <div className='font-light text-xs mt-1 my-2'>
+        <div className='font-light text-xs mt-1 my-2 text-gray-900'>
           <span className='tracking-wide'>{date.start}</span>
           <span className='mx-2'>-</span>
           <span className='tracking-wide'>{date.end}</span>
         </div>
       </div>
 
-      <p className='font-light'>
+      <p className='font-light text-gray-600'>
         {description}
       </p>
 
