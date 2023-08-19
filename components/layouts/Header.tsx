@@ -9,9 +9,10 @@ const greek = Inter({ subsets: ["vietnamese"] })
 
 export default function Header() {
   return (
-    <header className='fixed top-0 w-full z-30'>
+    <header className='fixed top-0 w-full z-30 bg-[rgb(248,248,255)]'>
       <div className='max-w-7xl mx-auto'>
-        <div className='flex items-center justify-between py-10'>
+        <div className='flex items-center justify-between pt-10 pb-5'>
+          
           {/* Logo */}
           <div className={greek.className}>
             <Link href={"#"}>
