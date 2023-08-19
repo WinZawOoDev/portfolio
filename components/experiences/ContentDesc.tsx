@@ -44,7 +44,7 @@ export default function ContentDesc({ position, company, date, description, tech
       {/* Techical Stack */}
       <div className='flex items-center mt-3'>
         {techStack.map((tech, index) => (
-          <span key={`${tech}${index}`} className='rounded-full text-xs tracking-wide text-[#f2f3f4] font-semibold p-2 bg-[#414a4c] mx-1'>
+          <span key={`${tech}${index}`} className='rounded-full text-xs tracking-wide text-[#f2f3f4] font-medium p-2 bg-[#36454f] mx-1'>
             {tech}
           </span>))}
       </div>

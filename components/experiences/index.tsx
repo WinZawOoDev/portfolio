@@ -12,7 +12,7 @@ const experiences: contentDescProps[] = [
       end: "12/Dec/2020"
     },
     description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "Postgresql"]
+    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
   },
   {
     position: "web developer",
@@ -23,7 +23,7 @@ const experiences: contentDescProps[] = [
       end: "12/Dec/2020"
     },
     description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "Postgresql"]
+    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
   },
   {
     position: "web developer",
@@ -34,7 +34,7 @@ const experiences: contentDescProps[] = [
       end: "12/Dec/2020"
     },
     description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "Postgresql"]
+    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
   },
   {
     position: "web developer",
@@ -45,7 +45,7 @@ const experiences: contentDescProps[] = [
       end: "12/Dec/2020"
     },
     description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "Postgresql"]
+    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
   }
 ]
 
