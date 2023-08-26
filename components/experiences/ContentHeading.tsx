@@ -13,7 +13,7 @@ export default function ContentHeading() {
                 <motion.h1
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", duration: 0.5, delay: 0.1, ease: "easeInOut" }}
+                    transition={{ type: "spring", duration: 0.5, delay: 0.1 }}
                     className={`${libreFranklinFont.className} text-4xl font-bold text-gray-700`}
                 >
                     My Working Experiences.
@@ -21,7 +21,7 @@ export default function ContentHeading() {
                 <motion.span
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", duration: 0.6, delay: 0.2, ease: "easeInOut" }}
+                    transition={{ type: "spring", duration: 0.6, delay: 0.2 }}
                     className='block text-lg text-gray-600'
                 >
                     as a developer.
@@ -29,7 +29,7 @@ export default function ContentHeading() {
                 <motion.button
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2, ease: "easeOut" }}
+                    transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2 }}
                     className='outline-none rounded-md ring-4 ring-gray-600 bg-[#253529] px-5 py-2 my-7 font-semibold text-white'
                 >
                     Contact me
@@ -37,7 +37,7 @@ export default function ContentHeading() {
                 <motion.button
                     initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                    transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1}}
                     className='outline-none rounded-md mx-5 ring-4 ring-[#253529] px-5 py-2  my-7 font-semibold text-[#253529]'
                 >
                     My Resume
