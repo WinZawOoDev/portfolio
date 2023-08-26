@@ -1,7 +1,6 @@
-'use client'
+'use client';
 
 import React, { createContext, useContext, useReducer } from 'react'
-import { Element } from 'react-scroll'
 
 const IntroContext = createContext({} as any);
 export const useIntroContext = () => useContext(IntroContext);
@@ -14,21 +13,17 @@ type TYPEOUTACTION =
     | { type: "content", payload: boolean }
 
 
-export default function Container({ children }: { children: React.ReactNode }) {
+
+export default function IntroProvider({ children }: { children: React.ReactNode }) {
 
     const [typeOutStatus, dispatchTypeOutStatus] = useReducer(typeOutReducer, typeOutInitState);
 
     return (
-        <Element name='about' className='relative w-full'>
-            <IntroContext.Provider value={{ typeOutStatus, dispatchTypeOutStatus }}>
-                <div className='max-w-7xl mx-auto grid grid-cols-2 place-items-center h-screen'>
-                    {children}
-                </div>
-            </IntroContext.Provider>
-        </Element>
+        <IntroContext.Provider value={{ typeOutStatus, dispatchTypeOutStatus }}>
+            {children}
+        </IntroContext.Provider>
     )
 }
-
 
 function typeOutReducer(state: typeof typeOutInitState, action: TYPEOUTACTION) {
     const { type, payload } = action;

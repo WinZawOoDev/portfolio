@@ -3,7 +3,7 @@
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from 'react-scroll'
-import { useIntroContext } from '../about/Container';
+import { useIntroContext } from '../about/IntroProvider'
 
 export default function BouncePoint() {
 

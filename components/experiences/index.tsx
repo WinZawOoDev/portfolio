@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './Container'
+import Container from '../layouts/Container'
 import ContentDesc, { contentDescProps } from './ContentDesc'
 import ContentHeading from './ContentHeading'
 
@@ -53,22 +53,24 @@ const experiences: contentDescProps[] = [
 export default function Experiences() {
 
   return (
-    <Container>
-      <div className='relative max-w-7xl h-fit pt-36 m-auto inset-y-0 inset-x-0'>
-        <div className='grid grid-cols-2 gap-5'>
-          <ContentHeading />
-          <div>
-            {experiences.map((exp, index) => (
-              <ContentDesc
-                key={`${index}${exp.date.start}`}
-                position={exp.position}
-                company={exp.company}
-                website={exp.website}
-                date={exp.date}
-                description={exp.description}
-                techStack={exp.techStack}
-              />
-            ))}
+    <Container name='experiences'>
+      <div className='h-auto overflow-hidden'>
+        <div className='relative max-w-7xl h-fit pt-36 m-auto inset-y-0 inset-x-0'>
+          <div className='grid grid-cols-2 gap-5'>
+            <ContentHeading />
+            <div>
+              {experiences.map((exp, index) => (
+                <ContentDesc
+                  key={`${index}${exp.date.start}`}
+                  position={exp.position}
+                  company={exp.company}
+                  website={exp.website}
+                  date={exp.date}
+                  description={exp.description}
+                  techStack={exp.techStack}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

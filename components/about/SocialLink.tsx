@@ -4,7 +4,7 @@ import React from 'react'
 import { AiFillLinkedin, AiOutlineWhatsApp, AiOutlineGithub } from 'react-icons/ai'
 import { FiTwitter } from 'react-icons/fi'
 import Link from 'next/link'
-import { useIntroContext } from './Container'
+import { useIntroContext } from './IntroProvider'
 import { AnimatePresence, motion } from 'framer-motion'
 
 export default function SocialLink() {

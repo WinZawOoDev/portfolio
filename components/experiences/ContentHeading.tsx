@@ -37,7 +37,7 @@ export default function ContentHeading() {
                 <motion.button
                     initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1}}
+                    transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1 }}
                     className='outline-none rounded-md mx-5 ring-4 ring-[#253529] px-5 py-2  my-7 font-semibold text-[#253529]'
                 >
                     My Resume

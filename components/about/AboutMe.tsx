@@ -3,7 +3,7 @@
 import React from 'react'
 import { Spectral, Work_Sans, DM_Sans } from 'next/font/google'
 import Typewriter from 'typewriter-effect'
-import { useIntroContext } from './Container';
+import { useIntroContext } from './IntroProvider';
 
 const spectralFont = Spectral({
     weight: "800",
