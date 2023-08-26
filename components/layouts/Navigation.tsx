@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { Libre_Franklin } from 'next/font/google'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimateSharedLayout } from 'framer-motion'
 
 const navLinks = [
   { id: 1, to: "about", name: "about" },
@@ -13,6 +13,7 @@ const navLinks = [
 ];
 
 const libreFranklinFont = Libre_Franklin({ subsets: ["latin-ext"], weight: "400" })
+
 
 export default function Navigation() {
 
@@ -37,10 +38,8 @@ export default function Navigation() {
               {link.name}
               {activeLink === link.to &&
                 (<motion.div
-                  initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: "100%" }}
-                  transition={{ delay: 0.3, duration: 1.5, type: "spring" }}
-                  className='absolute -bottom-2 h-[0.11em] rounded-2xl bg-[#343434]'
+                  className='absolute -bottom-2 inset-x-0 h-[0.11em] rounded-2xl bg-[#343434]'
+                  layoutId='underline'
                 />)}
             </Link>
           </li>
