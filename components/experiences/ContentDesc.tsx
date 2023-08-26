@@ -33,7 +33,7 @@ export default function ContentDesc({ position, company, date, description, tech
         opacity: 1,
         y: 0
       }}
-      transition={{ type: "spring", ease: "easeInOut", duration: 0.5, bounce: 0.4 }}
+      transition={{ type: "spring", duration: 0.5, bounce: 0.4 }}
       className='relative rounded-md w-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] cursor-default my-2 p-6'
     >
       <div className='py-2'>
