@@ -1,7 +1,7 @@
 import React from 'react'
-import {Libre_Franklin} from 'next/font/google'
 import Container from './Container'
 import ContentDesc, { contentDescProps } from './ContentDesc'
+import ContentHeading from './ContentHeading'
 
 const experiences: contentDescProps[] = [
   {
@@ -50,28 +50,14 @@ const experiences: contentDescProps[] = [
   }
 ]
 
-
-const libreFranklinFont = Libre_Franklin({subsets:["latin"], weight:"800"})
-
 export default function Experiences() {
+
   return (
     <Container>
-      {/* Experiences Descriptions */}
       <div className='relative max-w-7xl h-fit pt-36 m-auto inset-y-0 inset-x-0'>
         <div className='grid grid-cols-2 gap-5'>
-          <div className='relative place-items-end'>
-            <div className='absolute inset-x-0 top-1/4 m-auto h-fit w-fit'>
-              <h1 className={`${libreFranklinFont.className} text-4xl font-bold text-gray-700`}>My Working Experiences.</h1>
-              <span className='block text-lg text-gray-600'>as a developer.</span>
-              <button className='outline-none rounded-md ring-4 ring-gray-600 bg-[#253529] px-5 py-2 transform transition-all delay-150 duration-150 hover:scale-110 my-7 font-semibold text-white'>
-                Contact me
-              </button>
-              <button className='outline-none rounded-md mx-5 ring-4 ring-[#253529] px-5 py-2 transform transition-all delay-150 duration-150 hover:scale-110 my-7 font-semibold text-[#253529]'>
-                My Resume
-              </button>
-            </div>
-          </div>
-          <div className=''>
+          <ContentHeading />
+          <div>
             {experiences.map((exp, index) => (
               <ContentDesc
                 key={`${index}${exp.date.start}`}
@@ -84,10 +70,8 @@ export default function Experiences() {
               />
             ))}
           </div>
-
         </div>
       </div>
-
     </Container>
   )
 }

@@ -6142,7 +6142,7 @@ export default function HeroAnimation() {
             <motion.g id="freepik--Desk--inject-40"
                 initial={{ opacity: 0, translateX: -50 }}
                 animate={{ opacity: 1, translateX: 0 }}
-                transition={{ duration: 1, delay: 2, ease: "easeOut" }}
+                transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
             >
                 <polygon
                     points="203.55 216.17 216.4 216.17 212.98 252.96 233.3 256.01 233.3 258.57 190.5 258.57 190.5 256.01 199.26 252.96 203.55 216.17"

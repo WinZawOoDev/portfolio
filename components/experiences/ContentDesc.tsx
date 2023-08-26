@@ -1,8 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import { Alegreya_Sans, Rubik} from 'next/font/google'
-import { FiExternalLink } from 'react-icons/fi'
+'use client';
 
+import React, { useRef } from 'react'
+import Link from 'next/link'
+import { Alegreya_Sans, Rubik } from 'next/font/google'
+import { FiExternalLink } from 'react-icons/fi'
+import { motion } from 'framer-motion'
 
 export type contentDescProps = {
   position: string;
@@ -16,12 +18,24 @@ export type contentDescProps = {
   techStack: string[];
 }
 
-const alegreyaSanFont = Alegreya_Sans({subsets:["cyrillic"], weight:"400"})
-const rubik = Rubik({subsets:["latin"], weight:"600"})
+const alegreyaSanFont = Alegreya_Sans({ subsets: ["cyrillic"], weight: "400" })
+const rubik = Rubik({ subsets: ["latin"], weight: "600" })
 
 export default function ContentDesc({ position, company, date, description, techStack }: contentDescProps) {
+
   return (
-    <div className='relative rounded-md bg-[#f5f5f5] transform transition-all delay-100 duration-150 hover:bg-[#f8f8ff] cursor-default my-2 p-6'>
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 60
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0
+      }}
+      transition={{ type: "spring", ease: "easeInOut", duration: 0.5, bounce: 0.4 }}
+      className='relative rounded-md w-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] cursor-default my-2 p-6'
+    >
       <div className='py-2'>
 
         {/* Position */}
@@ -52,6 +66,6 @@ export default function ContentDesc({ position, company, date, description, tech
             {tech}
           </span>))}
       </div>
-    </div>
+    </motion.div>
   )
 }
