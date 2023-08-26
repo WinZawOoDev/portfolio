@@ -3,11 +3,15 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-
 export default function HeroAnimation() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" >
-            <g id="freepik--background-complete--inject-40">
+            <motion.g
+                id="freepik--background-complete--inject-40"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            >
                 <rect
                     y={382.4}
                     width={500}
@@ -3045,8 +3049,12 @@ export default function HeroAnimation() {
                         fill: "#fafafa",
                     }}
                 />
-            </g>
-            <g id="freepik--Shadow--inject-40">
+            </motion.g>
+            <motion.g id="freepik--Shadow--inject-40"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1.1 }}
+                transition={{ duration: 0.2, delay: 0.3, ease: "easeOut" }}
+            >
                 <ellipse
                     id="freepik--path--inject-40"
                     cx={250}
@@ -3057,8 +3065,12 @@ export default function HeroAnimation() {
                         fill: "#f5f5f5",
                     }}
                 />
-            </g>
-            <g id="freepik--Code--inject-40">
+            </motion.g>
+            <motion.g id="freepik--Code--inject-40"
+                initial={{ opacity: 0, translateY: -900, scale: 5 }}
+                animate={{ opacity: 1, translateY: 0, scale: 1 }}
+                transition={{ duration: 3.5, delay: 4, ease: "easeInOut" }}
+            >
                 <path
                     d="M107.11,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.43-.17.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
@@ -6066,8 +6078,12 @@ export default function HeroAnimation() {
                         }}
                     />
                 </g>
-            </g>
-            <g id="freepik--trash-bin--inject-40">
+            </motion.g>
+            <motion.g id="freepik--trash-bin--inject-40"
+                initial={{ opacity: 0, translateY: 20, translateX: 40 }}
+                animate={{ opacity: 1, translateY: 0, translateX: 0 }}
+                transition={{ duration: 2, delay: 3, ease: "easeOut" }}
+            >
                 <path
                     d="M421.43,394.19a3,3,0,0,0-2.39-4.27,6.36,6.36,0,0,0-2-7,1.47,1.47,0,0,0-.87-.39,1.7,1.7,0,0,0-.94.41l-5.58,4a3.4,3.4,0,0,0-1.11,1.09c-1.14,2.21,3,5,1.28,6.86-.48.52-1.26.63-1.87,1-1.32.83-1.48,2.65-2.1,4.09s-2.78,2.55-3.6,1.22c.61-1.38-1.24-2.57-2.73-2.74s-3.06-.26-3.89-1.66c-2.12,1.85-6.88-3.33-6.77-5.41-1.75.13-2.94,1.76-3.32,3.4a25.05,25.05,0,0,0-.18,5.2c0,3.38-1.14,6.7-1.08,10.08,0,2.63,1.06,5.55,3.47,6.61a9.05,9.05,0,0,0,3.74.5l27.43-.18a4,4,0,0,0,1.92-.32c1.24-.64,1.5-2.27,1.62-3.66l1.47-17.88Z"
                     style={{
@@ -6122,8 +6138,12 @@ export default function HeroAnimation() {
                         fill: "#3D3D3D",
                     }}
                 />
-            </g>
-            <g id="freepik--Desk--inject-40">
+            </motion.g>
+            <motion.g id="freepik--Desk--inject-40"
+                initial={{ opacity: 0, translateX: -50 }}
+                animate={{ opacity: 1, translateX: 0 }}
+                transition={{ duration: 1, delay: 2, ease: "easeOut" }}
+            >
                 <polygon
                     points="203.55 216.17 216.4 216.17 212.98 252.96 233.3 256.01 233.3 258.57 190.5 258.57 190.5 256.01 199.26 252.96 203.55 216.17"
                     style={{
@@ -6578,8 +6598,12 @@ export default function HeroAnimation() {
                     <polygon points="140.57 229.16 114.23 229.16 114.06 228.23 140.4 228.23 140.57 229.16" />
                     <polygon points="138.82 231.9 114.72 231.9 114.55 230.98 138.66 230.98 138.82 231.9" />
                 </g>
-            </g>
-            <motion.g id="freepik--speech-bubble--inject-40">
+            </motion.g>
+            <motion.g id="freepik--speech-bubble--inject-40"
+                initial={{ opacity: 0, translateY: -30, translateX: 50 }}
+                animate={{ opacity: 1, translateY: 0, translateX: 0 }}
+                transition={{ duration: 2.2, delay: 2.5, ease: "easeOut" }}
+            >
                 <rect
                     x={282.77}
                     y={119.82}
@@ -6599,7 +6623,7 @@ export default function HeroAnimation() {
                 />
                 <motion.path
                     animate={{ rotate: 360 }}
-                    transition={{ ease:"linear", duration: 20, repeat: Infinity }}
+                    transition={{ ease: "linear", duration: 15, repeat: Infinity }}
                     style={{
                         fill: "#fff",
                         opacity: 0.9,
@@ -6607,8 +6631,8 @@ export default function HeroAnimation() {
                     d="M302.87,134v-2.19l-1.13-.11a5.73,5.73,0,0,0-.84-2l.72-.88-1.55-1.55-.87.73a5.81,5.81,0,0,0-2-.84l-.11-1.13h-2.19l-.11,1.13a5.81,5.81,0,0,0-2,.84l-.87-.73-1.55,1.55.72.88a5.73,5.73,0,0,0-.84,2l-1.13.11V134l1.13.1a5.66,5.66,0,0,0,.84,2l-.72.88,1.55,1.55.87-.73a5.81,5.81,0,0,0,2,.84l.11,1.13h2.19l.11-1.13a5.81,5.81,0,0,0,2-.84l.87.73,1.55-1.55-.72-.88a5.66,5.66,0,0,0,.84-2Zm-6.9,1.87a3,3,0,1,1,3-3A3,3,0,0,1,296,135.87Z"
                 />
                 <motion.path
-                    animate={{rotate: -360}}
-                    transition={{ease: "linear", duration: 15, repeat: Infinity}}
+                    animate={{ rotate: -360 }}
+                    transition={{ ease: "linear", duration: 5, repeat: Infinity }}
                     d="M311.74,140.18v-1.72l-.88-.08a4.66,4.66,0,0,0-.66-1.59l.57-.68-1.22-1.22-.68.57a4.66,4.66,0,0,0-1.59-.66l-.08-.88h-1.72l-.08.88a4.53,4.53,0,0,0-1.58.66l-.69-.57-1.21,1.22.56.68a4.66,4.66,0,0,0-.66,1.59l-.88.08v1.72l.88.08a4.53,4.53,0,0,0,.66,1.58l-.56.69,1.21,1.21.69-.56a4.53,4.53,0,0,0,1.58.66l.08.88h1.72l.08-.88a4.66,4.66,0,0,0,1.59-.66l.68.56,1.22-1.21-.57-.69a4.53,4.53,0,0,0,.66-1.58Zm-5.4,1.46a2.32,2.32,0,1,1,2.32-2.32A2.32,2.32,0,0,1,306.34,141.64Z"
                     style={{
                         fill: "#fff",
@@ -6616,8 +6640,8 @@ export default function HeroAnimation() {
                     }}
                 />
                 <motion.path
-                    animate={{rotate: 360}}
-                    transition={{ease: "linear", duration: 10, repeat: Infinity}}
+                    animate={{ rotate: 360 }}
+                    transition={{ ease: "linear", duration: 2, repeat: Infinity }}
                     d="M302.87,145.05v-1.44l-.75-.07a3.74,3.74,0,0,0-.55-1.33l.48-.58-1-1-.58.48a3.92,3.92,0,0,0-1.33-.56l-.07-.74h-1.44l-.07.74a3.92,3.92,0,0,0-1.33.56l-.58-.48-1,1,.48.58a3.74,3.74,0,0,0-.55,1.33l-.75.07v1.44l.75.07a3.9,3.9,0,0,0,.55,1.33l-.48.57,1,1,.58-.47a3.9,3.9,0,0,0,1.33.55l.07.74h1.44l.07-.74a3.9,3.9,0,0,0,1.33-.55l.58.47,1-1-.48-.57a3.9,3.9,0,0,0,.55-1.33Zm-4.54,1.23a2,2,0,1,1,1.95-1.95A2,2,0,0,1,298.33,146.28Z"
                     style={{
                         fill: "#fff",
@@ -6625,7 +6649,11 @@ export default function HeroAnimation() {
                     }}
                 />
             </motion.g>
-            <g id="freepik--Character--inject-40">
+            <motion.g id="freepik--Character--inject-40"
+                initial={{ opacity: 0, translateX: 60 }}
+                animate={{ opacity: 1, translateX: 0 }}
+                transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
+            >
                 <g id="freepik--group--inject-40">
                     <polygon
                         points="294.06 408.2 286.09 407.11 284.99 388.17 292.94 389.27 294.06 408.2"
@@ -7024,7 +7052,7 @@ export default function HeroAnimation() {
                         isolation: "isolate",
                     }}
                 />
-            </g>
+            </motion.g>
         </svg>
     )
 }

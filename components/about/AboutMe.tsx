@@ -72,7 +72,7 @@ export default function AboutMe() {
             <p className={`${workSansFont.className} text-center my-4 text-gray-800`}>
                 {typeOutStatus.position && (
                     <Typewriter
-                        options={{ delay: 65 }}
+                        options={{ delay: 1 }}
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(900)
