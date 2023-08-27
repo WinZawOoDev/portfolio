@@ -12,7 +12,7 @@ export default function SocialLink() {
     const { typeOutStatus } = useIntroContext();
 
     return (
-        <div className='flex items-center justify-center my-10 text-gray-600 text-4xl'>
+        <div className='flex items-center justify-center my-10 text-gray-600 text-3xl'>
             <AnimatePresence>
                 {typeOutStatus.content && (
                     <>

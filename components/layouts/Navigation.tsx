@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react'
 import { Link } from 'react-scroll'
-import { Libre_Franklin } from 'next/font/google'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { Libre_Franklin, Neuton, IBM_Plex_Sans } from 'next/font/google'
+import { motion } from 'framer-motion'
 
 const navLinks = [
   { id: 1, to: "about", name: "about" },
@@ -12,7 +12,7 @@ const navLinks = [
   { id: 4, to: "contact", name: "contact" }
 ];
 
-const libreFranklinFont = Libre_Franklin({ subsets: ["latin-ext"], weight: "400" })
+const ibmFont = IBM_Plex_Sans({subsets:["latin"], weight:"400"})
 
 
 export default function Navigation() {
@@ -23,7 +23,7 @@ export default function Navigation() {
     <nav className='leading-3 tracking-tight text-gray-700'>
       <ul className='flex items-center justify-center text-lg leading-tight capitalize'>
         {navLinks.map((link) => (
-          <li key={link.id} className={`${libreFranklinFont.className} px-5 cursor-pointer`}>
+          <li key={link.id} className={`${ibmFont.className} px-5 cursor-pointer`}>
             <Link
               to={link.to}
               spy={true}
