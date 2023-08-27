@@ -35,8 +35,8 @@ export default function Card({ imageSource, projectName, href, content, techStac
                 >
                     <RiExternalLinkFill />
                 </Link>
-                <h4 className={`${robotoFont.className} text-sm text-left mb-3 mt-2`}>{projectName}</h4>
-                <p className={`mt-5 px-3 ${firaSansFont.className} text-center font-light text-sm`}>
+                <h4 className={`${robotoFont.className} text-sm text-gray-800 text-left mb-3 mt-2`}>{projectName}</h4>
+                <p className={`mt-5 px-3 ${firaSansFont.className} text-center font-light text-sm text-gray-700`}>
                     {content}
                 </p>
             </div>
