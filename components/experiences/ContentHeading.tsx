@@ -7,9 +7,10 @@ import { motion } from 'framer-motion'
 const libreFranklinFont = Libre_Franklin({ subsets: ["latin"], weight: "800" })
 
 export default function ContentHeading() {
+
     return (
         <div className='relative place-items-end'>
-            <div className='absolute inset-x-0 top-1/4 m-auto h-fit w-fit'>
+            <div className={`absolute inset-x-0 top-1/4 m-auto h-fit w-fit`}>
                 <motion.h1
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}

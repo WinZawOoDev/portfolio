@@ -5,7 +5,7 @@ import { Element } from 'react-scroll'
 
 export default function Container({ children, name }: PropsWithChildren<{ name: string }>) {
     return (
-        <Element name={name} className='relative w-full'>
+        <Element name={name} className='relative'>
             {children}
         </Element>
     )

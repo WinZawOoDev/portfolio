@@ -1,24 +1,27 @@
 import React from 'react'
-import Container from '../layouts/Container'
+import LinkContainer from '../layouts/LinkContainer'
 import AboutMe from './AboutMe'
 import SocialLink from './SocialLink'
 import HeroAnimation from './HeroAnimation'
 import BouncePoint from '../utils/BouncePoint'
 import IntroProvider from './IntroProvider'
+import LayoutContainer from '../layouts/LayoutContainer'
 
 export default function About() {
     return (
-        <Container name='about'>
-            <IntroProvider>
-                <div className='max-w-7xl mx-auto grid grid-cols-2 place-items-center h-screen'>
-                    <div className='px-5'>
-                        <AboutMe />
-                        <SocialLink />
+        <LinkContainer name='about'>
+            <LayoutContainer>
+                <IntroProvider>
+                    <div className='grid grid-cols-2 place-items-center h-screen'>
+                        <div className='px-5'>
+                            <AboutMe />
+                            <SocialLink />
+                        </div>
+                        <HeroAnimation />
+                        <BouncePoint />
                     </div>
-                    <HeroAnimation />
-                    <BouncePoint />
-                </div>
-            </IntroProvider>
-        </Container>
+                </IntroProvider>
+            </LayoutContainer>
+        </LinkContainer>
     )
 }
