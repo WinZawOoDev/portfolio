@@ -3,6 +3,7 @@
 import React from 'react'
 import { Libre_Franklin } from 'next/font/google'
 import { motion } from 'framer-motion'
+import { Link } from 'react-scroll'
 
 const libreFranklinFont = Libre_Franklin({ subsets: ["latin"], weight: "800" })
 
@@ -27,14 +28,23 @@ export default function ContentHeading() {
                 >
                     as a developer.
                 </motion.span>
-                <motion.button
-                    initial={{ opacity: 0, x: -15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2 }}
-                    className='outline-none rounded-md ring-4 ring-gray-600 bg-[#253529] px-5 py-2 my-7 font-semibold text-white'
+                <Link
+                    spy={true}
+                    smooth={true}
+                    hashSpy={true}
+                    duration={1000}
+                    to='contact'
                 >
-                    Contact me
-                </motion.button>
+                    <motion.button
+                        initial={{ opacity: 0, x: -15 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2 }}
+                        className='outline-none rounded-md ring-4 ring-gray-600 bg-[#253529] px-5 py-2 my-7 font-semibold text-white'
+                    >
+                        Contact me
+                    </motion.button>
+                </Link>
+
                 <motion.button
                     initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}

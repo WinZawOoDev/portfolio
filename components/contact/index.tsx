@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import LinkContainer from '../layouts/LinkContainer'
 import LayoutContainer from '../layouts/LayoutContainer'
 import Heading from './Heading'
-import { TextInput, TextArea, Button } from './Input'
+import Form from './Form'
 
 export default function Contact() {
     return (
@@ -13,14 +13,7 @@ export default function Contact() {
                     <div className='absolute bg-[#080808] inset-0 m-auto -z-10' />
                     <div className='w-full h-fit relative max-w-lg'>
                         <Heading />
-                        <form method='post'>
-                            <fieldset>
-                                <TextInput label='Name' name='name' type='text' />
-                                <TextInput label='Email' name='email' type='email' />
-                                <TextArea label='Message' name='message' />
-                            </fieldset>
-                            <Button label='Send Email' />
-                        </form>
+                        <Form />
                     </div>
                 </div>
                 <div className='absolute m-auto inset-x-0 bottom-4 h-fit w-fit flex items-center'>

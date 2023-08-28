@@ -3067,8 +3067,8 @@ export default function HeroAnimation() {
                 />
             </motion.g>
             <motion.g id="freepik--Code--inject-40"
-                initial={{ opacity: 0, translateY: -900, scale: 5 }}
-                animate={{ opacity: 1, translateY: 0, scale: 1 }}
+                initial={{ opacity: 0, y: -900, scale: 5 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 3.5, delay: 4, ease: "easeInOut" }}
             >
                 <path
@@ -6080,8 +6080,8 @@ export default function HeroAnimation() {
                 </g>
             </motion.g>
             <motion.g id="freepik--trash-bin--inject-40"
-                initial={{ opacity: 0, translateY: 20, translateX: 40 }}
-                animate={{ opacity: 1, translateY: 0, translateX: 0 }}
+                initial={{ opacity: 0, y: 20, x: 40 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ duration: 2, delay: 3, ease: "easeOut" }}
             >
                 <path
@@ -6140,8 +6140,8 @@ export default function HeroAnimation() {
                 />
             </motion.g>
             <motion.g id="freepik--Desk--inject-40"
-                initial={{ opacity: 0, translateX: -50 }}
-                animate={{ opacity: 1, translateX: 0 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
             >
                 <polygon
@@ -6600,8 +6600,8 @@ export default function HeroAnimation() {
                 </g>
             </motion.g>
             <motion.g id="freepik--speech-bubble--inject-40"
-                initial={{ opacity: 0, translateY: -30, translateX: 50 }}
-                animate={{ opacity: 1, translateY: 0, translateX: 0 }}
+                initial={{ opacity: 0, y: -30, x: 50 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
                 transition={{ duration: 2.2, delay: 2.5, ease: "easeOut" }}
             >
                 <rect
@@ -6650,8 +6650,8 @@ export default function HeroAnimation() {
                 />
             </motion.g>
             <motion.g id="freepik--Character--inject-40"
-                initial={{ opacity: 0, translateX: 60 }}
-                animate={{ opacity: 1, translateX: 0 }}
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 2.5, ease: "easeOut" }}
             >
                 <g id="freepik--group--inject-40">

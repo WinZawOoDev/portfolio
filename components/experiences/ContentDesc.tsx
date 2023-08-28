@@ -42,7 +42,7 @@ export default function ContentDesc({ position, company, date, description, tech
         <div className='flex items-center'>
           <h5 className={`${rubik.className} font-bold text-lg text-gray-800 capitalize`}>{position}</h5>
           <Link href={"#"} className='group flex items-center'>
-            <span className={`ml-2 mr-[0.5em] text-sm italic font-light text-gray-500`}>{company}</span>
+            <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500`}>{company}</span>
             <span className='text-gray-400 transform transition-all delay-150 duration-150 group-hover:scale-125'><FiExternalLink /></span>
           </Link>
         </div>

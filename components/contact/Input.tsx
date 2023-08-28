@@ -32,13 +32,15 @@ export function TextArea({ label, name }: { label: string, name: string }) {
     )
 }
 
-export function Button({ label }: { label: string }) {
+export function Button({ label, disabled }: { label: string, disabled: boolean }) {
     return (
         <motion.button
+            type='submit'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-            className='outline-none px-3 py-2 ring-2 font-medium ring-gray-400 text-gray-50 bg-gray-900 rounded'
+            className={`${disabled && "pointer-events-none cursor-not-allowed "} outline-none px-3 py-2 ring-2 font-medium ring-gray-400 text-gray-50 bg-gray-900 rounded`}
+            disabled={disabled}
         >
             {label}
         </motion.button>
