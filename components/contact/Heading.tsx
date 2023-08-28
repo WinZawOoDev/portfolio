@@ -11,7 +11,7 @@ export default function Heading() {
             transition={{duration: 0.5, delay: 0.1, ease: "easeInOut"}}
         >
             <h1 className='text-xl text-gray-300'>Contact</h1>
-            <span className='text-gray-400 text-sm font-light'>Get in touch with me!</span>
+            <span className='text-gray-400 text-sm font-light'>Get in touch with me !</span>
         </motion.div>
     )
 }
