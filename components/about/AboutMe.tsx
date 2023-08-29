@@ -17,7 +17,7 @@ export default function AboutMe() {
     const { typeOutStatus, dispatchTypeOutStatus } = useIntroContext();
 
     return (
-        <div className='relative pt-36 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
+        <div className='relative pt-24 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
             <span className='mb-3 text-sm lg:text-base whitespace-pre-line text-gray-800'>
                 <Typewriter
                     options={{
@@ -35,7 +35,7 @@ export default function AboutMe() {
                 />
             </span>
 
-            <h1 className={`${spectralFont.className} text-3xl md:text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
+            <h1 className={`${spectralFont.className} text-4xl md:text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
                 {typeOutStatus.intro && (
                     <Typewriter
                         onInit={(typewriter) => {
