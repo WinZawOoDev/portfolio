@@ -11,7 +11,7 @@ export default function ContentHeading() {
 
     return (
         <div className='relative w-full h-[10em] lg:h-full'>
-            <div className={`absolute bottom-5 inset-x-0 lg:top-1/4 m-auto h-fit w-fit text-center lg:text-left`}>
+            <div className={`absolute bottom-5 lg:bottom-auto inset-x-0 lg:top-1/4 m-auto h-fit w-fit text-center lg:text-left`}>
                 <motion.h1
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}

@@ -1,22 +1,24 @@
 'use client'
 
 import React, { useState } from 'react'
+import { IBM_Plex_Sans } from 'next/font/google'
 import { motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
 import { navLinks } from './Navigation'
+
+const ibmFont = IBM_Plex_Sans({ subsets: ["latin"], weight: "400" })
 
 export default function MobileMenu() {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(prev => !prev);
 
-    const [activeLink, setActiveLink] = useState("");
-
     return (
         <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
             className='lg:hidden'
+            onBlur={() => toggleMenu()}
         >
             <HambargerMenu onClick={() => toggleMenu()} />
             <motion.nav
@@ -40,25 +42,22 @@ export default function MobileMenu() {
                         }
                     }
                 }}
-                className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-200'
+                className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 shadow-2xl'
             >
-                <motion.ul
+                <ul
                     className='absolute m-auto inset-0 h-fit w-fit'
                 >
                     {navLinks.map(link => (
-                        <motion.li key={link.id} className='my-5 capitalize'>
+                        <li key={link.id} className={`${ibmFont.className} my-5 capitalize`}>
                             <ScrollLink
                                 to={link.to}
-                                activeClass='relative flex item-center'
-                                onSetActive={(paramLink) => {
-                                    setActiveLink(paramLink);
-                                }}
+                                activeClass='relative flex item-center font-medium transition-all duration-75 delay-75 transform  translate-x-4'
                             >
                                 {link.name}
                             </ScrollLink>
-                        </motion.li>
+                        </li>
                     ))}
-                </motion.ul>
+                </ul>
             </motion.nav>
         </motion.div>
     )

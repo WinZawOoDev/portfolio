@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Alegreya_Sans, Rubik } from 'next/font/google'
 import { FiExternalLink } from 'react-icons/fi'
+import {BsArrowUpRight} from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
 export type contentDescProps = {
@@ -43,7 +44,7 @@ export default function ContentDesc({ position, company, date, description, tech
           <h5 className={`${rubik.className} font-bold text-lg text-gray-800 capitalize`}>{position}</h5>
           <Link href={"#"} className='group flex items-center'>
             <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500`}>{company}</span>
-            <span className='text-gray-400 transform transition-all delay-150 duration-150 group-hover:scale-125'><FiExternalLink /></span>
+            <span className='text-gray-400 transform transition-all delay-75 duration-75 group-hover:scale-110'><BsArrowUpRight /></span>
           </Link>
         </div>
 
