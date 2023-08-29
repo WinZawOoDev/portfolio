@@ -8,8 +8,8 @@ export default function Projects() {
     return (
         <LinkContainer name='projects'>
             <LayoutContainer>
-                <div className='text-center h-fit pt-36'>
-                    <div className='absolute top-1/2 bg-[#080808] inset-0 m-auto -z-10' />
+                <div className='text-center h-fit pt-10 lg:pt-36'>
+                    <div className='absolute top-80 md:top-1/3 lg:top-1/2 bg-[#080808] inset-0 m-auto -z-10' />
                     <Heading />
                     <ProjectList />
                 </div>

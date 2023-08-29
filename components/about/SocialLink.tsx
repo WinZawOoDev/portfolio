@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai'
-import { FiTwitter } from 'react-icons/fi'
 import Link from 'next/link'
 import { useIntroContext } from './IntroProvider'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -14,7 +13,7 @@ export default function SocialLink() {
     const { typeOutStatus } = useIntroContext();
 
     return (
-        <div className='flex items-center justify-center my-10 text-gray-600 text-3xl'>
+        <div className='flex items-center justify-center mt-8 mb:2 lg:my-10 text-gray-600 text-2xl lg:text-3xl'>
             <AnimatePresence>
                 {typeOutStatus.content && (
                     <>
@@ -42,7 +41,7 @@ export default function SocialLink() {
                                 <Image
                                     src={twitter}
                                     alt='twitter icon'
-                                    className='w-6 h-6'
+                                    className='w-5 h-5 lg:w-6 lg:h-6'
                                 />
                             </Link>
                         </motion.div>

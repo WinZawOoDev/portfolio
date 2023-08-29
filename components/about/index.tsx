@@ -12,8 +12,8 @@ export default function About() {
         <LinkContainer name='about'>
             <LayoutContainer>
                 <IntroProvider>
-                    <div className='grid grid-cols-2 place-items-center h-screen'>
-                        <div className='px-5'>
+                    <div className=' lg:grid lg:grid-cols-2 lg:place-items-center h-fit lg:h-screen'>
+                        <div className='px-14  lg:px-5'>
                             <AboutMe />
                             <SocialLink />
                         </div>

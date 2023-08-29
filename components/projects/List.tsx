@@ -63,7 +63,10 @@ const projects = [
 ];
 
 const container: Variants = {
-    hidden: { opacity: 1, x: -100 },
+    hidden: {
+        opacity: 0,
+        x: -100
+    },
     visible: {
         opacity: 1,
         x: 0,
@@ -78,7 +81,10 @@ const container: Variants = {
 };
 
 const item: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: {
+        opacity: 0,
+        y: 30
+    },
     visible: {
         opacity: 1,
         y: 0
@@ -91,7 +97,7 @@ export default function List() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            className='grid grid-cols-3 gap-5 place-items-center mx-auto w-fit mt-14'
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center px-10 mx-auto w-full md:w-fit  mt-14'
         >
             {projects.map(project => (
                 <motion.li

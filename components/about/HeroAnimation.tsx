@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function HeroAnimation() {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" >
+        <svg className='hidden lg:block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" >
             <motion.g
                 id="freepik--background-complete--inject-40"
                 initial={{ opacity: 0 }}

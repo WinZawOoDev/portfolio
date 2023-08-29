@@ -56,8 +56,8 @@ export default function Experiences() {
     <LinkContainer name='experiences'>
       <LayoutContainer>
         <div className='h-auto overflow-hidden'>
-          <div className='relative h-fit pt-36 inset-y-0 inset-x-0'>
-            <div className='grid grid-cols-2 gap-5'>
+          <div className='relative h-fit md:px-12 py-9 lg:px:2 lg:pt-36 inset-y-0 inset-x-0'>
+            <div className='lg:grid lg:grid-cols-2 lg:gap-5'>
               <ContentHeading />
               <div>
                 {experiences.map((exp, index) => (

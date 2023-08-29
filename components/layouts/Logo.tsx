@@ -2,10 +2,9 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Link } from 'react-scroll'
 import { motion } from 'framer-motion'
 import business_man from '@/public/images/business_man.jpg'
-
+import ScrollLink from '../utils/ScrollLink'
 
 export default function Logo() {
     return (
@@ -15,13 +14,7 @@ export default function Logo() {
             whileTap={{ scale: 0.95 }}
             className='cursor-pointer'
         >
-            <Link
-                to="about"
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                duration={1000}
-            >
+            <ScrollLink to="about">
                 <Image
                     src={business_man}
                     alt='logo'
@@ -29,7 +22,7 @@ export default function Logo() {
                     height={200}
                     className='w-[2.5em] h-[3.5em] rounded-full'
                 />
-            </Link>
+            </ScrollLink>
         </motion.div>
 
     )

@@ -22,7 +22,7 @@ type Props = {
 
 export default function Card({ imageSource, projectName, href, content, techStack, sourceLink }: Props) {
     return (
-        <div className='relative flex-1 justify-between bg-[#f8f4ff] h-[25em] w-[20em] shadow-2xl p-1 rounded-md'>
+        <div className='relative flex-1 justify-between bg-[#f8f4ff] h-[25em]  w-full  md:w-[20em] shadow-2xl p-1 rounded-md'>
             <Image
                 src={imageSource}
                 alt='work place'

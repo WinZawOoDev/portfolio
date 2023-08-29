@@ -13,7 +13,7 @@ export default function Heading() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{duration: 0.7, delay: 0.06, ease:"easeOut"}}
-                className={`${workSansFont.className} text-4xl text-gray-800`}
+                className={`${workSansFont.className} text-2xl lg:text-4xl text-gray-800`}
             >
                 Projects
             </motion.h1>
@@ -21,7 +21,7 @@ export default function Heading() {
                 initial={{opacity: 0, x:-30}}
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: 0.8, delay: 0.07, ease:"easeOut"}}
-                className='text-gray-400'
+                className='text-gray-400 text-sm lg:text-base'
             >
                 showcase only
             </motion.span>

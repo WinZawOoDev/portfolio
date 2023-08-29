@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <LinkContainer name='contact'>
             <LayoutContainer>
-                <div className='h-screen flex items-center justify-center'>
+                <div className='h-screen flex items-center justify-center px-5'>
                     <div className='absolute bg-[#080808] inset-0 m-auto -z-10' />
                     <div className='w-full h-fit relative max-w-lg'>
                         <Heading />

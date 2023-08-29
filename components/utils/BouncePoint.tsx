@@ -13,10 +13,10 @@ export default function BouncePoint() {
         <AnimatePresence>
             {typeOutStatus.content && (
                 <motion.div
-                    initial={{ opacity: 0, bottom: "-3em" }}
-                    animate={{ opacity: 1, bottom: '1.5em' }}
+                    initial={{ opacity: 0, y: 0 }}
+                    animate={{ opacity: 1, y: -40 }}
                     transition={{ duration: 1, delay: 0.3, type: "spring" }}
-                    className='absolute'
+                    className='absolute m-auto inset-x-0 -bottom-28 lg:bottom-2 h-fit w-fit'
                 >
                     <Link
                         to='experiences'
@@ -25,9 +25,9 @@ export default function BouncePoint() {
                         hashSpy={true}
                         duration={1000}
                     >
-                        <button className='relative h-9 w-5 border border-gray-300 ring-2 ring-gray-600 rounded-3xl'>
+                        <button className='relative h-7 w-4 lg:h-9 lg:w-5 border border-gray-300 ring-2 ring-gray-600 rounded-3xl'>
                             <span
-                                className='absolute bounce-in-top m-auto inset-x-0 w-2 h-2 shadow ring-[0.1em] ring-gray-600 bg-gray-500 rounded-full'
+                                className='absolute bounce-in-top m-auto inset-x-0 w-[0.3em] h-[0.3em] lg:w-2 lg:h-2 shadow ring-[0.1em] ring-gray-600 bg-gray-500 rounded-full'
                             />
                         </button>
                     </Link>

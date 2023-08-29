@@ -17,9 +17,8 @@ export default function AboutMe() {
     const { typeOutStatus, dispatchTypeOutStatus } = useIntroContext();
 
     return (
-        <div className='relative w-[36em]'>
-
-            <span className='mb-3 whitespace-pre-line text-gray-800'>
+        <div className='relative mt-32 lg:mt-0 w-full lg:w-[36em]'>
+            <span className='mb-3 text-sm lg:text-base whitespace-pre-line text-gray-800'>
                 <Typewriter
                     options={{
                         delay: 60
@@ -36,7 +35,7 @@ export default function AboutMe() {
                 />
             </span>
 
-            <h1 className={`${spectralFont.className} text-7xl block mt-2 mb-10 text-gray-900`}>
+            <h1 className={`${spectralFont.className} text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
                 {typeOutStatus.intro && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -52,7 +51,7 @@ export default function AboutMe() {
                 }
             </h1>
 
-            <h4 className={`block ${dmSansFont.className} text-gray-900 my-5 font-bold leading-3 text-xl`}>
+            <h4 className={`block ${dmSansFont.className} text-base  lg:text-xl lg:text-ba text-gray-900 my-5 font-bold leading-3`}>
                 {typeOutStatus.name && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -69,7 +68,7 @@ export default function AboutMe() {
                 }
             </h4>
 
-            <p className={`${workSansFont.className} text-center my-4 text-gray-800`}>
+            <p className={`${workSansFont.className} text-sm lg:text-base text-center my-4 text-gray-800`}>
                 {typeOutStatus.position && (
                     <Typewriter
                         options={{ delay: 1 }}

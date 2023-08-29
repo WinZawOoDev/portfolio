@@ -34,7 +34,7 @@ export default function ContentDesc({ position, company, date, description, tech
         y: 0
       }}
       transition={{ type: "spring", duration: 0.5, bounce: 0.4 }}
-      className='relative rounded-md w-fit h-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] cursor-default my-2 p-6'
+      className='relative rounded-md w-fit mx-5 lg:mx-0 h-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] cursor-default my-2 p-6'
     >
       <div className='py-2'>
 
@@ -60,7 +60,7 @@ export default function ContentDesc({ position, company, date, description, tech
       </p>
 
       {/* Techical Stack */}
-      <div className='flex items-center mt-3'>
+      <div className='flex flex-wrap gap-1 items-center mt-3'>
         {techStack.map((tech, index) => (
           <span key={`${tech}${index}`} className='rounded-full text-xs tracking-wide text-[#f2f3f4] font-medium p-2 bg-[#36454f] mx-1'>
             {tech}
