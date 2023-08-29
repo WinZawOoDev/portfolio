@@ -35,7 +35,7 @@ export default function AboutMe() {
                 />
             </span>
 
-            <h1 className={`${spectralFont.className} text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
+            <h1 className={`${spectralFont.className} text-xl md:text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
                 {typeOutStatus.intro && (
                     <Typewriter
                         onInit={(typewriter) => {

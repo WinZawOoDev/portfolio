@@ -13,7 +13,7 @@ export default function About() {
             <LayoutContainer>
                 <IntroProvider>
                     <div className='lg:grid lg:grid-cols-2 lg:place-items-center h-fit lg:h-screen'>
-                        <div className='px-14 lg:px-5'>
+                        <div className='px-5 md:px-14'>
                             <AboutMe />
                             <SocialLink />
                         </div>
