@@ -82,7 +82,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.5,
                             delay: 0.3,
-                            ease: "easeInOut"
                         }
                     },
                     closed: {
@@ -93,7 +92,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.3,
                             delay: 0.1,
-                            ease: "easeInOut"
                         }
                     }
                 }}
@@ -110,7 +108,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.3,
                             delay: 0.1,
-                            ease: "easeInOut"
                         }
                     },
                     closed: {
@@ -122,7 +119,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.5,
                             delay: 0.3,
-                            ease: "easeInOut"
                         }
                     }
                 }}
@@ -138,7 +134,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.5,
                             delay: 0.3,
-                            ease: "easeInOut"
                         }
                     },
                     closed: {
@@ -149,7 +144,6 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                             bounce: 0.03,
                             duration: 0.3,
                             delay: 0.1,
-                            ease: "easeInOut"
                         }
                     }
                 }}
