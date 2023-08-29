@@ -45,7 +45,7 @@ export default function MobileMenu() {
                 className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 shadow-2xl'
             >
                 <ul
-                    className='absolute m-auto inset-0 h-fit w-fit'
+                    className='absolute m-auto inset-0 h-fit w-fit text-gray-800'
                 >
                     {navLinks.map(link => (
                         <li key={link.id} className={`${ibmFont.className} my-5 capitalize`}>
