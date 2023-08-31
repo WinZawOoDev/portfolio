@@ -53,7 +53,9 @@ export default function MobileMenu() {
                                 to={link.to}
                                 activeClass='relative flex item-center font-medium transition-all duration-75 delay-75 transform  translate-x-4'
                             >
-                                {link.name}
+                                <span className='cursor-pointer'>
+                                    {link.name}
+                                </span>
                             </ScrollLink>
                         </li>
                     ))}

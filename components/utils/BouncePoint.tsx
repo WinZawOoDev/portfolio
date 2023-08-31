@@ -16,7 +16,7 @@ export default function BouncePoint() {
                     initial={{ opacity: 0, y: 0 }}
                     animate={{ opacity: 1, y: -40 }}
                     transition={{ duration: 1, delay: 0.3, type: "spring" }}
-                    className='absolute m-auto inset-x-0 -bottom-28 lg:-bottom-3 h-fit w-fit'
+                    className='hidden lg:block absolute m-auto inset-x-0 -bottom-3 h-fit w-fit'
                 >
                     <Link
                         to='experiences'
