@@ -5,9 +5,9 @@ const nextConfig = {
         // your project has ESLint errors.
         ignoreDuringBuilds: true,
     },
-    experimental: {
-        serverActions: true,
-    },
+    // experimental: {
+    //     serverActions: true,
+    // },
 
     webpack(config) {
         // Grab the existing rule that handles SVG imports
