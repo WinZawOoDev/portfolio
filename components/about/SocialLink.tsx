@@ -5,8 +5,7 @@ import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai'
 import Link from 'next/link'
 import { useIntroContext } from './IntroProvider'
 import { AnimatePresence, motion } from 'framer-motion'
-import Image from 'next/image'
-import twitter from '@/public/images/twitter.png'
+import Twitter from '../utils/Twitter';
 
 export default function SocialLink() {
 
@@ -37,12 +36,7 @@ export default function SocialLink() {
                             className='mx-2'
                         >
                             <Link href={"https://twitter.com/WinZaw00"} target='_blank' >
-                                {/* <FiTwitter /> */}
-                                <Image
-                                    src={twitter}
-                                    alt='twitter icon'
-                                    className='w-5 h-5 lg:w-6 lg:h-6'
-                                />
+                                <Twitter/>
                             </Link>
                         </motion.div>
                         }
