@@ -3,7 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { Alegreya_Sans, Rubik } from 'next/font/google'
-import { FiExternalLink } from 'react-icons/fi'
 import {BsArrowUpRight} from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
@@ -22,7 +21,7 @@ export type contentDescProps = {
 const alegreyaSanFont = Alegreya_Sans({ subsets: ["cyrillic"], weight: "400" })
 const rubik = Rubik({ subsets: ["latin"], weight: "600" })
 
-export default function ContentDesc({ position, company, date, description, techStack }: contentDescProps) {
+export default function ContentDesc({ position, company, website, date, description, techStack }: contentDescProps) {
 
   return (
     <motion.div
@@ -42,7 +41,7 @@ export default function ContentDesc({ position, company, date, description, tech
         {/* Position */}
         <div className='flex items-center'>
           <h5 className={`${rubik.className} font-bold text-lg text-gray-800 capitalize`}>{position}</h5>
-          <Link href={"#"} className='group flex items-center'>
+          <Link href={website} target='_blank' className='group flex items-center'>
             <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500`}>{company}</span>
             <span className='text-gray-400 transform transition-all delay-75 duration-75 group-hover:scale-110'><BsArrowUpRight /></span>
           </Link>

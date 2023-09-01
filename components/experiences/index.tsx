@@ -8,47 +8,47 @@ const experiences: contentDescProps[] = [
   {
     position: "web developer",
     company: "CloudSourceMyanmar",
-    website: "",
+    website: "https://www.cloudsource.co.jp",
     date: {
-      start: "12/Dec/2020",
-      end: "12/Dec/2020"
+      start: "02/2023",
+      end: "present"
     },
-    description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
+    description: "Develop a tour management system, which can manage tour itinerary, bus car routes, service prices, customers, borkers, and buses.",
+    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql", "GCP"]
   },
   {
     position: "web developer",
-    company: "CloudSourceMyanmar",
-    website: "",
+    company: "Advancer Business Solution",
+    website: "http://pos.com.mm/",
     date: {
-      start: "12/Dec/2020",
-      end: "12/Dec/2020"
+      start: "01/2020",
+      end: "10/2022"
     },
-    description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
+    description: "Develop a goods order management system, which orders goods from grocery stores to its suppliers and integrates with SAP system.",
+    techStack: ["PHP(Laravel)", "React.js", "BootstrapCss", "Database(Mysql)"]
   },
   {
     position: "web developer",
-    company: "CloudSourceMyanmar",
-    website: "",
+    company: "Advancer Business Solution",
+    website: "http://pos.com.mm/",
     date: {
-      start: "12/Dec/2020",
-      end: "12/Dec/2020"
+      start: "01/2020",
+      end: "10/2022"
     },
-    description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
+    description: "Develop a membership card payment system API integration. which user can pay their charges with memeber card from point of sale system",
+    techStack: ["PHP(Laravel)", "Database(Mysql)"]
   },
   {
     position: "web developer",
-    company: "CloudSourceMyanmar",
-    website: "",
+    company: "Advancer Business Solution",
+    website: "http://pos.com.mm/",
     date: {
-      start: "12/Dec/2020",
-      end: "12/Dec/2020"
+      start: "01/2020",
+      end: "10/2022"
     },
-    description: " There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "PrismaORM", "PostgreSql"]
-  }
+    description: "Fix bugs and maintain the pos system, which improves performance, and speed of functionality, and add new features.",
+    techStack: ["PHP(Codeigniter)", "BootstrapCss", "Database(Mysql)"]
+  },
 ]
 
 export default function Experiences() {
