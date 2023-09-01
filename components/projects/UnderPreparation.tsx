@@ -20,7 +20,7 @@ export default function UnderProcessing() {
         >
             <div className='flex items-center px-4'>
                 <h1 className={`${orbitronFont.className} text-xl lg:text-2xl text-gray-500`}>
-                    Currently processing for my showcase projects
+                    Currently preparing for my showcase projects
                     <span className='mx-2 font-extrabold text-3xl'>!</span>
                 </h1>
             </div>

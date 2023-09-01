@@ -3,7 +3,7 @@ import LinkContainer from '../layouts/LinkContainer'
 import LayoutContainer from '../layouts/LayoutContainer'
 import ProjectList from './List'
 import Heading from './Heading'
-import UnderProcessing from './UnderProcessing'
+import UnderPreParation from './UnderPreparation'
 
 export default function Projects() {
     return (
@@ -13,7 +13,7 @@ export default function Projects() {
                     <div className='absolute top-80 md:top-1/3 lg:top-1/2 bg-[#080808] inset-0 m-auto -z-10' />
                     <Heading />
                     {/* <ProjectList /> */}
-                    <UnderProcessing/>
+                    <UnderPreParation />
                 </div>
             </LayoutContainer>
         </LinkContainer>
