@@ -57,7 +57,7 @@ export default function AboutMe() {
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(200)
-                                .typeString("Web Developer")
+                                .typeString("Full-Stack Developer")
                                 .callFunction((params) => {
                                     params.elements.cursor.classList.add("hidden");
                                     dispatchTypeOutStatus({ type: "position", payload: true })
