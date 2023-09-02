@@ -1,6 +1,6 @@
 import React from 'react'
 import Navigation from './Navigation'
-import Logo from './Logo'
+import Logo from '../utils/Logo'
 import MobileMenu from './MobileMenu'
 
 

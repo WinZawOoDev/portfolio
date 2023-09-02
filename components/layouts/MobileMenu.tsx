@@ -17,7 +17,7 @@ export default function MobileMenu() {
         <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
-            className='lg:hidden h-full'
+            className='lg:hidden w-fit h-fit'
             onBlur={() => toggleMenu()}
         >
             <HambargerMenu onClick={() => toggleMenu()} />

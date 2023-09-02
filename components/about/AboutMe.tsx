@@ -25,7 +25,7 @@ export default function AboutMe() {
                     }}
                     onInit={(typewriter) => {
                         typewriter
-                            .typeString("Hey, I'm")
+                            .typeString("Hello, I'm")
                             .callFunction((params) => {
                                 params.elements.cursor.classList.add("hidden")
                                 dispatchTypeOutStatus({ type: "intro", payload: true })

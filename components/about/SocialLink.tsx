@@ -36,7 +36,7 @@ export default function SocialLink() {
                             className='mx-2'
                         >
                             <Link href={"https://twitter.com/WinZaw00"} target='_blank' >
-                                <Twitter/>
+                                <Twitter />
                             </Link>
                         </motion.div>
                         }
