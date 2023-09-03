@@ -13,7 +13,7 @@ export default function Logo() {
             className='cursor-pointer'
         >
             <ScrollLink to="about">
-                <svg width="90" height="40" viewBox="0 0 189 97" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='w-20 h-7 md:w-24 md:h-8 outline-none' viewBox="0 0 189 97" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M94 96.5C89.6667 92.1667 65.2 65.2 0 0H50L146.5 96.5H94Z" fill="url(#paint0_linear_54_25)" />
                     <path d="M143.439 69C140.214 65.9016 122.011 46.6197 73.5 0H110.701L182.5 69H143.439Z" fill="url(#paint1_linear_54_25)" />
                     <path d="M188.181 54C185.637 51.5751 170 3.74466e-05 133 0H162.352H188.181V54Z" fill="url(#paint2_linear_54_25)" />

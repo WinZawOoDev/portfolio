@@ -10,7 +10,7 @@ export default function ScrollLink({ children, ...props }: PropsWithChildren<Pic
             spy={true}
             smooth={true}
             hashSpy={true}
-            duration={1000}
+            duration={1300}
         >
             {children}
         </Link>

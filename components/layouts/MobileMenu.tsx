@@ -66,6 +66,7 @@ export default function MobileMenu() {
 }
 
 
+
 function HambargerMenu({ onClick }: { onClick: () => void }) {
 
     return (
@@ -153,3 +154,5 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
         </motion.button>
     )
 }
+
+
