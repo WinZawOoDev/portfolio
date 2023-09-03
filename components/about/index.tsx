@@ -1,11 +1,10 @@
 import React from 'react'
 import LinkContainer from '../layouts/LinkContainer'
-import AboutMe from './AboutMe'
-import SocialLink from './SocialLink'
 import HeroAnimation from './HeroAnimation'
 import BouncePoint from '../utils/BouncePoint'
 import IntroProvider from './IntroProvider'
 import LayoutContainer from '../layouts/LayoutContainer'
+import Intro from './Intro'
 
 export default function About() {
     return (
@@ -13,10 +12,7 @@ export default function About() {
             <LayoutContainer>
                 <IntroProvider>
                     <div className='lg:grid lg:grid-cols-2 lg:place-items-center h-fit lg:h-screen'>
-                        <div className='px-5 md:px-14'>
-                            <AboutMe />
-                            <SocialLink />
-                        </div>
+                        <Intro />
                         <HeroAnimation />
                         <BouncePoint />
                     </div>
