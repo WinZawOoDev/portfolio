@@ -25,7 +25,7 @@ const experiences: contentDescProps[] = [
       end: "10/2022"
     },
     description: "Develop a goods order management system, which orders goods from grocery stores to its suppliers and integrates with SAP system.",
-    techStack: ["PHP(Laravel)", "React.js", "CSS(Bootstrap)", "Database(Mysql)"]
+    techStack: ["PHP(Laravel)", "React.js", "CSS(Bootstrap)", "Database(MySQL)"]
   },
   {
     position: "web developer",
@@ -36,7 +36,7 @@ const experiences: contentDescProps[] = [
       end: "10/2022"
     },
     description: "Develop a membership card payment system API integration. which user can pay their charges with memeber card from point of sale system",
-    techStack: ["PHP(Laravel)", "Database(Mysql)"]
+    techStack: ["PHP(Laravel)", "Database(MySQL)"]
   },
   {
     position: "web developer",
