@@ -14,7 +14,7 @@ const experiences: contentDescProps[] = [
       end: "present"
     },
     description: "Develop a tour management system, which can manage tour itinerary, bus car routes, service prices, customers, borkers, and buses.",
-    techStack: ["Typescript", "React.js(Remix)", "TailwindCss", "ORM(Prisma)", "Database(PostgreSQL)", "Cloud(GCP)"]
+    techStack: ["Typescript", "React.js(Remix)", "CSS(Tailwind)", "ORM(Prisma)", "Database(PostgreSQL)", "Cloud(GCP)"]
   },
   {
     position: "web developer",
@@ -25,7 +25,7 @@ const experiences: contentDescProps[] = [
       end: "10/2022"
     },
     description: "Develop a goods order management system, which orders goods from grocery stores to its suppliers and integrates with SAP system.",
-    techStack: ["PHP(Laravel)", "React.js", "BootstrapCss", "Database(Mysql)"]
+    techStack: ["PHP(Laravel)", "React.js", "CSS(Bootstrap)", "Database(Mysql)"]
   },
   {
     position: "web developer",
@@ -47,7 +47,7 @@ const experiences: contentDescProps[] = [
       end: "10/2022"
     },
     description: "Fix bugs and maintain the pos system, which improves performance, and speed of functionality, and add new features.",
-    techStack: ["PHP(Codeigniter)", "BootstrapCss", "Database(MySQL)"]
+    techStack: ["PHP(Codeigniter)", "CSS(Bootstrap)", "Database(MySQL)"]
   },
 ]
 
