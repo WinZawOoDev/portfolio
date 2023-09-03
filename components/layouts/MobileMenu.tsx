@@ -65,20 +65,18 @@ export default function MobileMenu() {
     )
 }
 
-
-
 function HambargerMenu({ onClick }: { onClick: () => void }) {
 
     return (
         <motion.button
             onClick={onClick}
-            className='absolute right-5 inset-y-0 m-auto z-40 w-8 h-8 outline-none'
+            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-none'
         >
             <motion.span
                 variants={{
                     open: {
                         rotate: 45,
-                        y: 10,
+                        y: 8,
                         transition: {
                             type: "spring",
                             bounce: 0.03,
@@ -97,7 +95,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.2em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
             />
             <motion.span
                 variants={{
@@ -114,7 +112,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                     },
                     closed: {
                         x: -7,
-                        y: 10,
+                        y: 8,
                         opacity: 1,
                         transition: {
                             type: "spring",
@@ -124,13 +122,13 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.2em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
             />
             <motion.span
                 variants={{
                     open: {
                         rotate: -45,
-                        y: 10,
+                        y: 8,
                         transition: {
                             type: "spring",
                             bounce: 0.03,
@@ -140,7 +138,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                     },
                     closed: {
                         rotate: 0,
-                        y: 20,
+                        y: 16,
                         transition: {
                             type: "spring",
                             bounce: 0.03,
@@ -149,7 +147,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.2em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
             />
         </motion.button>
     )
