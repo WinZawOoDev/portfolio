@@ -13,6 +13,6 @@ export default function ScrollProgress() {
     });
 
     return (
-        <motion.div className='fixed top-0 inset-x-0 bg-[#253529] h-1  md:h-[0.1em] rounded-lg z-50 transform origin-top-left' style={{ scaleX }} />
+        <motion.div className='fixed top-0 inset-x-0 bg-[#253529] h-1  md:h-[0.15em] rounded-lg z-50 transform origin-top-left' style={{ scaleX }} />
     )
 }

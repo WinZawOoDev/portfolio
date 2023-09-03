@@ -4,6 +4,7 @@ import React from 'react'
 import { Libre_Franklin } from 'next/font/google'
 import { motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
+import Link from 'next/link'
 
 const libreFranklinFont = Libre_Franklin({ subsets: ["latin"], weight: "800" })
 
@@ -47,7 +48,9 @@ export default function ContentHeading() {
                     transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1 }}
                     className='hidden lg:inline-block outline-none rounded-md mx-5 ring-2 lg:ring-4 ring-[#253529] text-sm lg:text-base px-3 py-2 lg:px-5 lg:py-2 my-7 font-semibold text-[#253529]'
                 >
-                    My Resume
+                    <Link href='/resume.pdf'>
+                        My Resume
+                    </Link>
                 </motion.button>
             </div>
         </div>
