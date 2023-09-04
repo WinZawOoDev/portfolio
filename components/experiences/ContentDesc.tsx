@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Alegreya_Sans, Rubik } from 'next/font/google'
-import {BsArrowUpRight} from 'react-icons/bs'
+import { BsArrowUpRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
 export type contentDescProps = {
