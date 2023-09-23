@@ -75,10 +75,10 @@ export default function AboutMe() {
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(900)
-                                .typeString("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-                                .typeString("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")
-                                .deleteChars(10)
-                                .typeString("Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.")
+                                .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with fronted technologies.")
+                                .typeString(" Passionate about learning new technologies and building reusable components for others. When I was in free time, not in computer")
+                                .deleteChars(15)
+                                .typeString(" reading books and listened to music to improve my productivity and performance. Being a self-taught developer with continuously learns and catches up to new techlonologies time on time.")
                                 .callFunction(() => {
                                     dispatchTypeOutStatus({ type: "content", payload: true })
                                 })

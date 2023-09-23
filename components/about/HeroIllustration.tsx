@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export default function HeroAnimation() {
+export default function HeroIllustration() {
     return (
         <motion.svg
             initial={{ opacity: 0, x: 15 }}
