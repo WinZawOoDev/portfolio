@@ -6,12 +6,23 @@ import LayoutContainer from '../layouts/LayoutContainer'
 
 const experiences: contentDescProps[] = [
   {
+    position: "Full-Stack Developer",
+    company: "Smilax Global", 
+    website: "https://smilaxglobal.com",
+    date: {
+      start: "12/2023",
+      end: "present"
+    },
+    description: "Developing recruitment module for HR System",
+    techStack: ["Typescript", "React(Next.js)", "ShadcnUI", "Node(Nest.js)", "ORM(Prisma)", "Microservice(GRPC)", "Database(PostgreSQL)"],
+  },
+  {
     position: "web developer",
     company: "CloudSourceMyanmar",
     website: "https://www.cloudsource.co.jp",
     date: {
       start: "02/2023",
-      end: "present"
+      end: "11/2023"
     },
     description: "Develop a tour management system, which can manage tour itinerary, bus car routes, service prices, customers, borkers, and buses.",
     techStack: ["Typescript", "React.js(Remix)", "CSS(Tailwind)", "ORM(Prisma)", "Database(PostgreSQL)", "Cloud(GCP)"]
@@ -35,7 +46,7 @@ const experiences: contentDescProps[] = [
       start: "01/2020",
       end: "10/2022"
     },
-    description: "Develop a membership card payment system API integration. which user can pay their charges with memeber card from point of sale system",
+    description: "Develop a membership card payment system API integration. which user can pay their charges with member card from point of sale system",
     techStack: ["PHP(Laravel)", "Database(MySQL)"]
   },
   {
