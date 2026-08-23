@@ -34,7 +34,7 @@ export default function ContentDesc({ position, company, website, date, descript
         y: 0
       }}
       transition={{ type: "spring", duration: 0.5, bounce: 0.4 }}
-      className='relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:border-gray-300 dark:hover:border-[#2a2a36] hover:shadow-md cursor-default my-3 p-6 transition-all duration-200'
+      className='relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] cursor-default my-3 p-6 transition-all duration-200'
     >
       <div className='py-2'>
 
@@ -62,7 +62,7 @@ export default function ContentDesc({ position, company, website, date, descript
       {/* Tech Stack */}
       <div className='flex flex-wrap gap-1.5 items-center mt-4'>
         {techStack.map((tech, index) => (
-          <span key={`${tech}${index}`} className={`${interRegular.className} rounded-full text-[11px] tracking-wide font-medium px-2.5 py-1 bg-gray-100 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-[#2a2a36]`}>
+          <span key={`${tech}${index}`} className={`${interRegular.className} rounded-full text-[11px] tracking-wide font-medium px-2.5 py-1 bg-gray-100/70 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-[#2a2a36]`}>
             {tech}
           </span>))}
       </div>

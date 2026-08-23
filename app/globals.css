@@ -26,12 +26,12 @@ body {
   @apply bg-[#f8f8ff] text-gray-800 dark:bg-[#0d0d12] dark:text-gray-200 transition-colors duration-300 antialiased;
 }
 
-/* Design tokens - card surfaces */
+/* Design tokens - card surfaces - white transparent, dark card */
 .card {
-  @apply bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] rounded-xl shadow-sm;
+  @apply bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] rounded-xl shadow-none dark:shadow-sm;
 }
 .card-hover {
-  @apply hover:shadow-md hover:border-gray-300 dark:hover:border-[#2a2a36] transition-all duration-200;
+  @apply hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] transition-all duration-200;
 }
 
 .dark .logo-svg stop {
