@@ -44,7 +44,7 @@ export default function MobileMenu() {
                         exit={{ opacity: 0 }}
                         onClick={closeMenu}
                         aria-hidden="true"
-                        className='fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden'
+                        className='mobile-backdrop'
                     />
                 )}
             </AnimatePresence>
@@ -73,13 +73,13 @@ export default function MobileMenu() {
                         }
                     }
                 }}
-                className='fixed top-0 right-0 z-50 h-full w-[15em] bg-gray-100 dark:bg-[#15151b] shadow-2xl transition-colors duration-300 lg:hidden'
+                className='mobile-nav'
             >
                 <ul
-                    className='absolute m-auto inset-0 h-fit w-fit text-gray-900 dark:text-gray-100'
+                    className='mobile-nav-list'
                 >
                     {navLinks.map(link => (
-                        <li key={link.id} className={`${navFont.className} my-5 capitalize text-[15px]`}>
+                        <li key={link.id} className={`${navFont.className} mobile-nav-item`}>
                             <ScrollLink
                                 to={link.to}
                                 activeClass='relative flex item-center font-semibold transition-all duration-75 delay-75 transform translate-x-2'
@@ -91,7 +91,7 @@ export default function MobileMenu() {
                             </ScrollLink>
                         </li>
                     ))}
-                    <li className={`${navFont.className} mt-8 pt-6 border-t border-gray-200 dark:border-[#252530] flex items-center justify-between text-[15px]`}>
+                    <li className={`${navFont.className} mobile-nav-theme`}>
                         <span className='capitalize'>theme</span>
                         <ThemeToggle />
                     </li>
@@ -102,7 +102,7 @@ export default function MobileMenu() {
     ) : null
 
     return (
-        <div className='lg:hidden w-8 h-8' aria-hidden="true">
+        <div className='mobile-placeholder' aria-hidden="true">
             {overlay}
         </div>
     )
@@ -117,7 +117,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
             onClick={onClick}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
-            className='fixed right-9 sm:right-11 md:right-11 top-[6px] md:top-2 z-[60] w-8 h-8 outline-hidden cursor-pointer lg:hidden'
+            className='mobile-hamburger'
         >
             <motion.span
                 variants={{
@@ -142,7 +142,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
+                className='hamburger-line'
             />
             <motion.span
                 variants={{
@@ -169,7 +169,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
+                className='hamburger-line'
             />
             <motion.span
                 variants={{
@@ -194,7 +194,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
+                className='hamburger-line'
             />
         </motion.button>
     )
