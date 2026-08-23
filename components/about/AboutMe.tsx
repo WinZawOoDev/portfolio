@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { Spectral, Work_Sans, DM_Sans } from 'next/font/google'
+import { Spectral, Inter } from 'next/font/google'
 import Typewriter from 'typewriter-effect'
 import { useIntroContext } from './IntroProvider';
 
@@ -9,8 +9,8 @@ const spectralFont = Spectral({
     weight: "800",
     subsets: ["latin"]
 })
-const workSansFont = Work_Sans({ weight: "300", subsets: ["latin"] })
-const dmSansFont = DM_Sans({ weight: "600", subsets: ["latin"] });
+const interMedium = Inter({ subsets: ["latin"], weight: "600" })
+const interLight = Inter({ subsets: ["latin"], weight: "300" });
 
 export default function AboutMe() {
 
@@ -51,7 +51,7 @@ export default function AboutMe() {
                 }
             </h1>
 
-            <h4 className={`block ${dmSansFont.className} text-base lg:text-xl text-gray-900 dark:text-gray-100 my-5 font-bold leading-6`}>
+            <h4 className={`block ${interMedium.className} text-base lg:text-xl text-gray-900 dark:text-gray-100 my-5 font-semibold tracking-tight leading-6`}>
                 {typeOutStatus.name && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -68,7 +68,7 @@ export default function AboutMe() {
                 }
             </h4>
 
-            <div className={`${workSansFont.className} text-sm lg:text-base text-center my-4 text-gray-800 dark:text-gray-300`}>
+            <div className={`${interLight.className} text-sm lg:text-base text-center lg:text-left leading-relaxed my-4 text-gray-700 dark:text-gray-300`}>
                 {typeOutStatus.position && (
                     <Typewriter
                         options={{ delay: 1 }}

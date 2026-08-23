@@ -2,6 +2,18 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-surface: #f8f8ff;
+  --color-surface-dark: #0d0d12;
+  --color-card: #ffffff;
+  --color-card-dark: #15151c;
+  --color-card-border: #e5e7eb;
+  --color-card-border-dark: #252530;
+  --color-accent: #253529;
+  --color-accent-hover: #1e2b21;
+  --color-accent-dark: #2e4436;
+}
+
 html {
   color-scheme: light;
 }
@@ -11,7 +23,15 @@ html.dark {
 }
 
 body {
-  @apply bg-[#f8f8ff] text-gray-800 dark:bg-[#0d0d12] dark:text-gray-200 transition-colors duration-300;
+  @apply bg-[#f8f8ff] text-gray-800 dark:bg-[#0d0d12] dark:text-gray-200 transition-colors duration-300 antialiased;
+}
+
+/* Design tokens - card surfaces */
+.card {
+  @apply bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] rounded-xl shadow-sm;
+}
+.card-hover {
+  @apply hover:shadow-md hover:border-gray-300 dark:hover:border-[#2a2a36] transition-all duration-200;
 }
 
 .dark .logo-svg stop {

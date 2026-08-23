@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Alegreya_Sans, Rubik } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
@@ -18,8 +18,8 @@ export type contentDescProps = {
   techStack: string[];
 }
 
-const alegreyaSanFont = Alegreya_Sans({ subsets: ["cyrillic"], weight: "400" })
-const rubik = Rubik({ subsets: ["latin"], weight: "600" })
+const interSemibold = Inter({ subsets: ["latin"], weight: "600" })
+const interRegular = Inter({ subsets: ["latin"], weight: "400" })
 
 export default function ContentDesc({ position, company, website, date, description, techStack }: contentDescProps) {
 
@@ -34,35 +34,35 @@ export default function ContentDesc({ position, company, website, date, descript
         y: 0
       }}
       transition={{ type: "spring", duration: 0.5, bounce: 0.4 }}
-      className='relative rounded-md w-fit mx-5 lg:mx-0 h-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] dark:bg-[#15151c] dark:hover:bg-[#1c1c24] cursor-default my-2 p-6 transition-colors duration-300'
+      className='relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:border-gray-300 dark:hover:border-[#2a2a36] hover:shadow-md cursor-default my-3 p-6 transition-all duration-200'
     >
       <div className='py-2'>
 
         {/* Position */}
-        <div className='flex items-center'>
-          <h5 className={`${rubik.className} font-bold text-lg text-gray-800 dark:text-gray-200 capitalize`}>{position}</h5>
+        <div className='flex flex-wrap items-center gap-2'>
+          <h5 className={`${interSemibold.className} font-semibold text-[15px] lg:text-base text-gray-900 dark:text-gray-100 tracking-tight capitalize`}>{position}</h5>
           <Link href={website} target='_blank' className='group flex items-center'>
-            <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500 dark:text-gray-400`}>{company}</span>
-            <span className='text-gray-400 dark:text-gray-500 transform transition-all delay-75 duration-75 group-hover:scale-110'><BsArrowUpRight /></span>
+            <span className={`group-hover:underline underline-offset-2 text-sm font-normal text-gray-500 dark:text-gray-400`}>{company}</span>
+            <span className='ml-1 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors'><BsArrowUpRight size={12} /></span>
           </Link>
         </div>
 
         {/* Join Date  */}
-        <div className='font-light text-xs mt-1 my-2 text-gray-900 dark:text-gray-100'>
+        <div className={`${interRegular.className} font-normal text-xs mt-1.5 my-2 text-gray-500 dark:text-gray-400`}>
           <span className='tracking-wide'>{date.start}</span>
-          <span className='mx-2'>-</span>
+          <span className='mx-2 text-gray-300 dark:text-gray-600'>—</span>
           <span className='tracking-wide'>{date.end}</span>
         </div>
       </div>
 
-      <p className={`${alegreyaSanFont.className} py-1 text-lg font-light text-gray-700 dark:text-gray-300`}>
+      <p className={`${interRegular.className} py-1 text-[14px] lg:text-[15px] leading-relaxed font-normal text-gray-600 dark:text-gray-300`}>
         {description}
       </p>
 
-      {/* Techical Stack */}
-      <div className='flex flex-wrap gap-1 items-center mt-3'>
+      {/* Tech Stack */}
+      <div className='flex flex-wrap gap-1.5 items-center mt-4'>
         {techStack.map((tech, index) => (
-          <span key={`${tech}${index}`} className='rounded-full text-xs tracking-wide text-[#f2f3f4] font-medium p-2 bg-[#36454f] mx-1'>
+          <span key={`${tech}${index}`} className={`${interRegular.className} rounded-full text-[11px] tracking-wide font-medium px-2.5 py-1 bg-gray-100 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-[#2a2a36]`}>
             {tech}
           </span>))}
       </div>

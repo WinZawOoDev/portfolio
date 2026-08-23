@@ -11,9 +11,9 @@ export default function About() {
         <LinkContainer name='about'>
             <LayoutContainer>
                 <IntroProvider>
-                    <div className='lg:grid lg:grid-cols-2 lg:place-items-center h-fit lg:h-screen'>
+                    <div className='lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-[calc(100vh-80px)] py-24 lg:py-28'>
                         <Intro />
-                        <div className='hidden lg:flex items-center justify-center w-full h-fit dark:bg-[#f4f2f9] dark:rounded-3xl dark:shadow-2xl dark:p-4'>
+                        <div className='hidden lg:flex items-center justify-center w-full h-fit bg-white dark:bg-[#f4f2f9] rounded-3xl shadow-sm border border-gray-200 dark:border-transparent p-6'>
                             <HeroIllustration />
                         </div>
                         <BouncePoint />

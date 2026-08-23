@@ -1,12 +1,12 @@
 "use client"
 
 import React from 'react'
-import { Libre_Franklin } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
 import Link from 'next/link'
 
-const libreFranklinFont = Libre_Franklin({ subsets: ["latin"], weight: "800" })
+const headingFont = Inter({ subsets: ["latin"], weight: "800" })
 
 export default function ContentHeading() {
 
@@ -17,7 +17,7 @@ export default function ContentHeading() {
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", duration: 0.5, delay: 0.1 }}
-                    className={`${libreFranklinFont.className} text-3xl lg:text-4xl font-bold text-gray-700 dark:text-gray-200`}
+                    className={`${headingFont.className} text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100`}
                 >
                     Working Experiences.
                 </motion.h1>
@@ -25,7 +25,7 @@ export default function ContentHeading() {
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", duration: 0.6, delay: 0.2 }}
-                    className='block text-base lg:text-lg text-gray-600 dark:text-gray-400'
+                    className='block text-base lg:text-lg text-gray-500 dark:text-gray-400 font-light'
                 >
                     as a developer.
                 </motion.span>
@@ -36,7 +36,7 @@ export default function ContentHeading() {
                         initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2 }}
-                        className='hidden lg:inline-block outline-none rounded-md ring-2 lg:ring-4 ring-gray-600 dark:ring-[#3d5546] bg-[#253529] dark:bg-[#2e4436] text-sm lg:text-base px-3 py-2  lg:px-5 lg:py-2 my-7 font-semibold text-white'
+                        className='hidden lg:inline-flex items-center outline-none rounded-lg bg-[#253529] hover:bg-[#1e2b21] dark:bg-[#2e4436] dark:hover:bg-[#253529] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-white shadow-sm hover:shadow transition-all cursor-pointer'
                     >
                         Contact me
                     </motion.button>
@@ -46,7 +46,7 @@ export default function ContentHeading() {
                     initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1 }}
-                    className='hidden lg:inline-block outline-none rounded-md mx-5 ring-2 lg:ring-4 ring-[#253529] dark:ring-[#9dbfa8] text-sm lg:text-base px-3 py-2 lg:px-5 lg:py-2 my-7 font-semibold text-[#253529] dark:text-[#9dbfa8]'
+                    className='hidden lg:inline-flex outline-none rounded-lg mx-3 border border-[#253529] dark:border-[#9dbfa8] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-[#253529] dark:text-[#9dbfa8] hover:bg-[#253529] hover:text-white dark:hover:bg-[#9dbfa8] dark:hover:text-[#0d0d12] transition-colors cursor-pointer'
                 >
                     <Link href='/resume.pdf'>
                         My Resume

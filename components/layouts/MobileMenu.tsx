@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
 import { navLinks } from './Navigation'
 
-const ibmFont = IBM_Plex_Sans({ subsets: ["latin"], weight: "400" })
+const navFont = Inter({ subsets: ["latin"], weight: "500" })
 
 export default function MobileMenu() {
 
@@ -73,13 +73,13 @@ export default function MobileMenu() {
                 className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 dark:bg-[#15151b] shadow-2xl transition-colors duration-300'
             >
                 <ul
-                    className='absolute m-auto inset-0 h-fit w-fit text-gray-800 dark:text-gray-200'
+                    className='absolute m-auto inset-0 h-fit w-fit text-gray-900 dark:text-gray-100'
                 >
                     {navLinks.map(link => (
-                        <li key={link.id} className={`${ibmFont.className} my-5 capitalize`}>
+                        <li key={link.id} className={`${navFont.className} my-5 capitalize text-[15px]`}>
                             <ScrollLink
                                 to={link.to}
-                                activeClass='relative flex item-center font-medium transition-all duration-75 delay-75 transform  translate-x-4'
+                                activeClass='relative flex item-center font-semibold transition-all duration-75 delay-75 transform translate-x-2'
                                 onClick={closeMenu}
                             >
                                 <span className='cursor-pointer'>

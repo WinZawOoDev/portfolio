@@ -96,12 +96,14 @@ export default function List() {
             variants={container}
             initial="hidden"
             whileInView="visible"
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center px-10 mx-auto w-full md:w-fit  mt-14'
+            viewport={{ once: true, margin: "-50px" }}
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 place-items-stretch mx-auto w-full max-w-6xl mt-12'
         >
             {projects.map(project => (
                 <motion.li
                     key={project.id}
                     variants={item}
+                    className="flex"
                 >
                     <Card
                         imageSource={project.imageSource}
