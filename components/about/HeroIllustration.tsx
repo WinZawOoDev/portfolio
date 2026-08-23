@@ -3,13 +3,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+const bytes = [
+    { text: "01011010", top: "12%", left: "8%", delay: 0, size: "text-[10px]" },
+    { text: "10101011", top: "18%", left: "82%", delay: 0.5, size: "text-[9px]" },
+    { text: "1100", top: "45%", left: "5%", delay: 1, size: "text-[11px]" },
+    { text: "001101", top: "72%", left: "88%", delay: 1.5, size: "text-[10px]" },
+    { text: "111000", top: "85%", left: "15%", delay: 0.8, size: "text-[9px]" },
+    { text: "0101", top: "35%", left: "90%", delay: 1.2, size: "text-[12px]" },
+]
+
 export default function HeroIllustration() {
     return (
-        <motion.svg
-            initial={{ opacity: 0, x: 15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-            className='w-full max-w-[30em] h-auto hero-illustration' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
+        <div className="relative w-full max-w-[30em] h-auto">
+            <motion.svg
+                initial={{ opacity: 0, x: 15 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                className='w-full h-auto hero-illustration block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
         >
             <motion.g
                 id="freepik--background-complete--inject-40"
@@ -302,7 +312,7 @@ export default function HeroIllustration() {
                         fill: "#e0e0e0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={255.75}
                     y={363.1}
                     width={42.3}
@@ -311,8 +321,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={363.1}
                     width={42.3}
@@ -322,8 +332,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.34}
                     y={363.1}
                     width={42.3}
@@ -332,22 +342,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M279.46,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.46,369.31Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={276.85}
                     cy={369.31}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.29}
                     y={367.83}
                     width={2.97}
@@ -355,8 +365,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={349.54}
                     width={42.3}
@@ -365,8 +375,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={349.54}
                     width={42.3}
@@ -376,8 +386,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.34}
                     y={349.54}
                     width={42.3}
@@ -386,24 +396,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.85}
                     cy={355.75}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.85}
                     cy={355.75}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.29}
                     y={354.27}
                     width={2.97}
@@ -411,8 +421,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={335.98}
                     width={42.3}
@@ -421,8 +431,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={335.98}
                     width={42.3}
@@ -432,8 +442,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.34}
                     y={335.98}
                     width={42.3}
@@ -442,7 +452,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M279.46,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.46,342.19Z"
                     style={{
@@ -455,7 +465,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={268.29}
                     y={340.71}
                     width={2.97}
@@ -463,8 +473,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={322.42}
                     width={42.3}
@@ -473,8 +483,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.75}
                     y={322.42}
                     width={42.3}
@@ -484,8 +494,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.34}
                     y={322.42}
                     width={42.3}
@@ -494,24 +504,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.85}
                     cy={328.63}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.85}
                     cy={328.63}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.29}
                     y={327.15}
                     width={2.97}
@@ -519,8 +529,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={255.83}
                     y={308.86}
                     width={42.3}
@@ -529,8 +539,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.83}
                     y={308.86}
                     width={42.3}
@@ -540,8 +550,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.42}
                     y={308.86}
                     width={42.3}
@@ -550,24 +560,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.94}
                     cy={315.07}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={276.94}
                     cy={315.07}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.38}
                     y={313.59}
                     width={2.97}
@@ -575,8 +585,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={255.92}
                     y={295.3}
                     width={42.3}
@@ -585,8 +595,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={255.92}
                     y={295.3}
                     width={42.3}
@@ -596,8 +606,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.51}
                     y={295.3}
                     width={42.3}
@@ -606,22 +616,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M279.63,301.51A2.61,2.61,0,1,1,277,298.9,2.61,2.61,0,0,1,279.63,301.51Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={277.02}
                     cy={301.51}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.46}
                     y={300.03}
                     width={2.97}
@@ -629,8 +639,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256}
                     y={281.74}
                     width={42.3}
@@ -639,8 +649,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256}
                     y={281.74}
                     width={42.3}
@@ -650,8 +660,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.6}
                     y={281.74}
                     width={42.3}
@@ -660,22 +670,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M279.72,288a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.72,288Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={277.11}
                     cy={287.95}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.55}
                     y={286.47}
                     width={2.97}
@@ -683,8 +693,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.09}
                     y={268.18}
                     width={42.3}
@@ -693,8 +703,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.09}
                     y={268.18}
                     width={42.3}
@@ -704,8 +714,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.68}
                     y={268.18}
                     width={42.3}
@@ -714,7 +724,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M279.8,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.8,274.39Z"
                     style={{
@@ -727,7 +737,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={268.63}
                     y={272.91}
                     width={2.97}
@@ -735,8 +745,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.17}
                     y={254.62}
                     width={42.3}
@@ -745,8 +755,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.17}
                     y={254.62}
                     width={42.3}
@@ -756,8 +766,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.77}
                     y={254.62}
                     width={42.3}
@@ -766,22 +776,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.28}
                     cy={260.83}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M278.61,260.83a1.33,1.33,0,1,1-1.33-1.33A1.34,1.34,0,0,1,278.61,260.83Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={268.72}
                     y={259.35}
                     width={2.97}
@@ -789,8 +799,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.26}
                     y={241.06}
                     width={42.3}
@@ -799,8 +809,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.26}
                     y={241.06}
                     width={42.3}
@@ -810,8 +820,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.85}
                     y={241.06}
                     width={42.3}
@@ -820,24 +830,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.37}
                     cy={247.27}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.37}
                     cy={247.27}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.8}
                     y={245.79}
                     width={2.97}
@@ -845,8 +855,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.35}
                     y={227.5}
                     width={42.3}
@@ -855,8 +865,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.35}
                     y={227.5}
                     width={42.3}
@@ -866,8 +876,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={241.94}
                     y={227.5}
                     width={42.3}
@@ -876,24 +886,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.45}
                     cy={233.71}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.45}
                     cy={233.71}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.89}
                     y={232.22}
                     width={2.97}
@@ -901,8 +911,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.43}
                     y={213.94}
                     width={42.3}
@@ -911,8 +921,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.43}
                     y={213.94}
                     width={42.3}
@@ -922,8 +932,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.02}
                     y={213.94}
                     width={42.3}
@@ -932,22 +942,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M280.15,220.15a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.15,220.15Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={277.54}
                     cy={220.15}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={268.98}
                     y={218.66}
                     width={2.97}
@@ -955,8 +965,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.52}
                     y={200.38}
                     width={42.3}
@@ -965,8 +975,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.52}
                     y={200.38}
                     width={42.3}
@@ -976,8 +986,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.11}
                     y={200.38}
                     width={42.3}
@@ -986,22 +996,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M280.23,206.59a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.23,206.59Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={277.62}
                     cy={206.59}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={269.06}
                     y={205.1}
                     width={2.97}
@@ -1009,8 +1019,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.6}
                     y={186.82}
                     width={42.3}
@@ -1019,8 +1029,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.6}
                     y={186.82}
                     width={42.3}
@@ -1030,8 +1040,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.19}
                     y={186.82}
                     width={42.3}
@@ -1040,7 +1050,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M280.32,193a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.32,193Z"
                     style={{
@@ -1053,7 +1063,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={269.15}
                     y={191.54}
                     width={2.97}
@@ -1061,8 +1071,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.69}
                     y={173.26}
                     width={42.3}
@@ -1071,8 +1081,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.69}
                     y={173.26}
                     width={42.3}
@@ -1082,8 +1092,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.28}
                     y={173.26}
                     width={42.3}
@@ -1092,22 +1102,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.79}
                     cy={179.47}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M279.12,179.47a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,279.12,179.47Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={269.23}
                     y={177.98}
                     width={2.97}
@@ -1115,8 +1125,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.77}
                     y={159.7}
                     width={42.3}
@@ -1125,8 +1135,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.77}
                     y={159.7}
                     width={42.3}
@@ -1136,8 +1146,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.36}
                     y={159.7}
                     width={42.3}
@@ -1146,22 +1156,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.88}
                     cy={165.91}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M279.21,165.91a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,279.21,165.91Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={269.32}
                     y={164.42}
                     width={2.97}
@@ -1169,8 +1179,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={256.86}
                     y={146.14}
                     width={42.3}
@@ -1179,8 +1189,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={256.86}
                     y={146.14}
                     width={42.3}
@@ -1190,8 +1200,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={242.45}
                     y={146.14}
                     width={42.3}
@@ -1200,24 +1210,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.96}
                     cy={152.35}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={277.96}
                     cy={152.35}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={269.4}
                     y={150.86}
                     width={2.97}
@@ -1225,8 +1235,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={363.1}
                     width={42.3}
@@ -1235,8 +1245,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={363.1}
                     width={42.3}
@@ -1246,8 +1256,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.77}
                     y={363.1}
                     width={42.3}
@@ -1256,7 +1266,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M331.89,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,331.89,369.31Z"
                     style={{
@@ -1269,7 +1279,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={320.72}
                     y={367.83}
                     width={2.97}
@@ -1277,8 +1287,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={349.54}
                     width={42.3}
@@ -1287,8 +1297,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={349.54}
                     width={42.3}
@@ -1298,8 +1308,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.77}
                     y={349.54}
                     width={42.3}
@@ -1308,22 +1318,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.28}
                     cy={355.75}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M330.61,355.75a1.33,1.33,0,1,1-1.33-1.32A1.33,1.33,0,0,1,330.61,355.75Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={320.72}
                     y={354.27}
                     width={2.97}
@@ -1331,8 +1341,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={335.98}
                     width={42.3}
@@ -1341,8 +1351,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={335.98}
                     width={42.3}
@@ -1352,8 +1362,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.77}
                     y={335.98}
                     width={42.3}
@@ -1362,7 +1372,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M331.89,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,331.89,342.19Z"
                     style={{
@@ -1375,7 +1385,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={320.72}
                     y={340.71}
                     width={2.97}
@@ -1383,8 +1393,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={322.42}
                     width={42.3}
@@ -1393,8 +1403,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.18}
                     y={322.42}
                     width={42.3}
@@ -1404,8 +1414,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.77}
                     y={322.42}
                     width={42.3}
@@ -1414,22 +1424,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.28}
                     cy={328.63}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M330.61,328.63a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,330.61,328.63Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={320.72}
                     y={327.15}
                     width={2.97}
@@ -1437,8 +1447,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.26}
                     y={308.86}
                     width={42.3}
@@ -1447,8 +1457,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.26}
                     y={308.86}
                     width={42.3}
@@ -1458,8 +1468,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.85}
                     y={308.86}
                     width={42.3}
@@ -1468,24 +1478,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.37}
                     cy={315.07}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.37}
                     cy={315.07}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={320.81}
                     y={313.59}
                     width={2.97}
@@ -1493,8 +1503,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.35}
                     y={295.3}
                     width={42.3}
@@ -1503,8 +1513,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.35}
                     y={295.3}
                     width={42.3}
@@ -1514,8 +1524,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={293.94}
                     y={295.3}
                     width={42.3}
@@ -1524,24 +1534,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.45}
                     cy={301.51}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.45}
                     cy={301.51}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={320.89}
                     y={300.03}
                     width={2.97}
@@ -1549,8 +1559,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.43}
                     y={281.74}
                     width={42.3}
@@ -1559,8 +1569,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.43}
                     y={281.74}
                     width={42.3}
@@ -1570,8 +1580,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.02}
                     y={281.74}
                     width={42.3}
@@ -1580,22 +1590,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.15,288a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.15,288Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={329.54}
                     cy={287.95}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={320.98}
                     y={286.47}
                     width={2.97}
@@ -1603,8 +1613,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.52}
                     y={268.18}
                     width={42.3}
@@ -1613,8 +1623,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.52}
                     y={268.18}
                     width={42.3}
@@ -1624,8 +1634,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.11}
                     y={268.18}
                     width={42.3}
@@ -1634,22 +1644,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.23,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.23,274.39Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={329.62}
                     cy={274.39}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={321.06}
                     y={272.91}
                     width={2.97}
@@ -1657,8 +1667,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.6}
                     y={254.62}
                     width={42.3}
@@ -1667,8 +1677,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.6}
                     y={254.62}
                     width={42.3}
@@ -1678,8 +1688,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.2}
                     y={254.62}
                     width={42.3}
@@ -1688,7 +1698,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.32,260.83a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.32,260.83Z"
                     style={{
@@ -1701,7 +1711,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={321.15}
                     y={259.35}
                     width={2.97}
@@ -1709,8 +1719,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.69}
                     y={241.06}
                     width={42.3}
@@ -1719,8 +1729,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.69}
                     y={241.06}
                     width={42.3}
@@ -1730,8 +1740,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.28}
                     y={241.06}
                     width={42.3}
@@ -1740,22 +1750,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.79}
                     cy={247.27}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M331.12,247.27a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,331.12,247.27Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={321.23}
                     y={245.79}
                     width={2.97}
@@ -1763,8 +1773,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.77}
                     y={227.5}
                     width={42.3}
@@ -1773,8 +1783,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.77}
                     y={227.5}
                     width={42.3}
@@ -1784,8 +1794,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.37}
                     y={227.5}
                     width={42.3}
@@ -1794,24 +1804,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.88}
                     cy={233.71}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.88}
                     cy={233.71}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={321.32}
                     y={232.22}
                     width={2.97}
@@ -1819,8 +1829,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.86}
                     y={213.94}
                     width={42.3}
@@ -1829,8 +1839,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.86}
                     y={213.94}
                     width={42.3}
@@ -1840,8 +1850,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.45}
                     y={213.94}
                     width={42.3}
@@ -1850,24 +1860,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.97}
                     cy={220.15}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={329.97}
                     cy={220.15}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={321.4}
                     y={218.66}
                     width={2.97}
@@ -1875,8 +1885,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={308.95}
                     y={200.38}
                     width={42.3}
@@ -1885,8 +1895,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={308.95}
                     y={200.38}
                     width={42.3}
@@ -1896,8 +1906,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.54}
                     y={200.38}
                     width={42.3}
@@ -1906,22 +1916,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.66,206.59a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.66,206.59Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={330.05}
                     cy={206.59}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={321.49}
                     y={205.1}
                     width={2.97}
@@ -1929,8 +1939,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={309.03}
                     y={186.82}
                     width={42.3}
@@ -1939,8 +1949,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={309.03}
                     y={186.82}
                     width={42.3}
@@ -1950,8 +1960,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.62}
                     y={186.82}
                     width={42.3}
@@ -1960,22 +1970,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.75,193a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.75,193Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={330.14}
                     cy={193.03}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={321.58}
                     y={191.54}
                     width={2.97}
@@ -1983,8 +1993,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={309.12}
                     y={173.26}
                     width={42.3}
@@ -1993,8 +2003,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={309.12}
                     y={173.26}
                     width={42.3}
@@ -2004,8 +2014,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.71}
                     y={173.26}
                     width={42.3}
@@ -2014,7 +2024,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.83,179.47a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.83,179.47Z"
                     style={{
@@ -2027,7 +2037,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={321.66}
                     y={177.98}
                     width={2.97}
@@ -2035,8 +2045,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={309.2}
                     y={159.7}
                     width={42.3}
@@ -2045,8 +2055,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={309.2}
                     y={159.7}
                     width={42.3}
@@ -2056,8 +2066,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.79}
                     y={159.7}
                     width={42.3}
@@ -2066,7 +2076,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M332.92,165.91a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.92,165.91Z"
                     style={{
@@ -2079,7 +2089,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={321.75}
                     y={164.42}
                     width={2.97}
@@ -2087,8 +2097,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={309.29}
                     y={146.14}
                     width={42.3}
@@ -2097,8 +2107,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={309.29}
                     y={146.14}
                     width={42.3}
@@ -2108,8 +2118,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={294.88}
                     y={146.14}
                     width={42.3}
@@ -2118,22 +2128,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={330.39}
                     cy={152.35}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M331.72,152.35a1.33,1.33,0,1,1-1.33-1.33A1.32,1.32,0,0,1,331.72,152.35Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={321.83}
                     y={150.86}
                     width={2.97}
@@ -2141,8 +2151,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={363.1}
                     width={42.3}
@@ -2151,8 +2161,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={363.1}
                     width={42.3}
@@ -2162,8 +2172,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.2}
                     y={363.1}
                     width={42.3}
@@ -2172,7 +2182,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.32,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,369.31Z"
                     style={{
@@ -2185,7 +2195,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.15}
                     y={367.83}
                     width={2.97}
@@ -2193,8 +2203,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={349.54}
                     width={42.3}
@@ -2203,8 +2213,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={349.54}
                     width={42.3}
@@ -2214,8 +2224,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.2}
                     y={349.54}
                     width={42.3}
@@ -2224,7 +2234,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.32,355.75a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,355.75Z"
                     style={{
@@ -2237,7 +2247,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.15}
                     y={354.27}
                     width={2.97}
@@ -2245,8 +2255,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={335.98}
                     width={42.3}
@@ -2255,8 +2265,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={335.98}
                     width={42.3}
@@ -2266,8 +2276,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.2}
                     y={335.98}
                     width={42.3}
@@ -2276,7 +2286,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.32,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,342.19Z"
                     style={{
@@ -2289,7 +2299,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.15}
                     y={340.71}
                     width={2.97}
@@ -2297,8 +2307,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={322.42}
                     width={42.3}
@@ -2307,8 +2317,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.61}
                     y={322.42}
                     width={42.3}
@@ -2318,8 +2328,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.2}
                     y={322.42}
                     width={42.3}
@@ -2328,7 +2338,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.32,328.63a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,328.63Z"
                     style={{
@@ -2341,7 +2351,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.15}
                     y={327.15}
                     width={2.97}
@@ -2349,8 +2359,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.69}
                     y={308.86}
                     width={42.3}
@@ -2359,8 +2369,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.69}
                     y={308.86}
                     width={42.3}
@@ -2370,8 +2380,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.28}
                     y={308.86}
                     width={42.3}
@@ -2380,22 +2390,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={381.8}
                     cy={315.07}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M383.12,315.07a1.33,1.33,0,1,1-1.32-1.33A1.32,1.32,0,0,1,383.12,315.07Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.24}
                     y={313.59}
                     width={2.97}
@@ -2403,8 +2413,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.78}
                     y={295.3}
                     width={42.3}
@@ -2413,8 +2423,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.78}
                     y={295.3}
                     width={42.3}
@@ -2424,8 +2434,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.37}
                     y={295.3}
                     width={42.3}
@@ -2434,24 +2444,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={381.88}
                     cy={301.51}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={381.88}
                     cy={301.51}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={373.32}
                     y={300.03}
                     width={2.97}
@@ -2459,8 +2469,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.86}
                     y={281.74}
                     width={42.3}
@@ -2469,8 +2479,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.86}
                     y={281.74}
                     width={42.3}
@@ -2480,8 +2490,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.45}
                     y={281.74}
                     width={42.3}
@@ -2490,24 +2500,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={381.97}
                     cy={287.95}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={381.97}
                     cy={287.95}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={373.41}
                     y={286.47}
                     width={2.97}
@@ -2515,8 +2525,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={360.95}
                     y={268.18}
                     width={42.3}
@@ -2525,8 +2535,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={360.95}
                     y={268.18}
                     width={42.3}
@@ -2536,8 +2546,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.54}
                     y={268.18}
                     width={42.3}
@@ -2546,22 +2556,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.66,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.66,274.39Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={382.05}
                     cy={274.39}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={373.49}
                     y={272.91}
                     width={2.97}
@@ -2569,8 +2579,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.03}
                     y={254.62}
                     width={42.3}
@@ -2579,8 +2589,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.03}
                     y={254.62}
                     width={42.3}
@@ -2590,8 +2600,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.62}
                     y={254.62}
                     width={42.3}
@@ -2600,22 +2610,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.75,260.83a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.75,260.83Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={382.14}
                     cy={260.83}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={373.58}
                     y={259.35}
                     width={2.97}
@@ -2623,8 +2633,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.12}
                     y={241.06}
                     width={42.3}
@@ -2633,8 +2643,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.12}
                     y={241.06}
                     width={42.3}
@@ -2644,8 +2654,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.71}
                     y={241.06}
                     width={42.3}
@@ -2654,7 +2664,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M384.83,247.27a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.83,247.27Z"
                     style={{
@@ -2667,7 +2677,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.66}
                     y={245.79}
                     width={2.97}
@@ -2675,8 +2685,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.2}
                     y={227.5}
                     width={42.3}
@@ -2685,8 +2695,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.2}
                     y={227.5}
                     width={42.3}
@@ -2696,8 +2706,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.8}
                     y={227.5}
                     width={42.3}
@@ -2706,22 +2716,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.31}
                     cy={233.71}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M383.64,233.71a1.33,1.33,0,1,1-1.33-1.33A1.34,1.34,0,0,1,383.64,233.71Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.75}
                     y={232.22}
                     width={2.97}
@@ -2729,8 +2739,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.29}
                     y={213.94}
                     width={42.3}
@@ -2739,8 +2749,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.29}
                     y={213.94}
                     width={42.3}
@@ -2750,8 +2760,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.88}
                     y={213.94}
                     width={42.3}
@@ -2760,22 +2770,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.39}
                     cy={220.15}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M383.72,220.15a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,383.72,220.15Z"
                     style={{
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={373.83}
                     y={218.66}
                     width={2.97}
@@ -2783,8 +2793,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.37}
                     y={200.38}
                     width={42.3}
@@ -2793,8 +2803,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.37}
                     y={200.38}
                     width={42.3}
@@ -2804,8 +2814,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={346.97}
                     y={200.38}
                     width={42.3}
@@ -2814,24 +2824,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.48}
                     cy={206.59}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.48}
                     cy={206.59}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={373.92}
                     y={205.1}
                     width={2.97}
@@ -2839,8 +2849,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.46}
                     y={186.82}
                     width={42.3}
@@ -2849,8 +2859,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.46}
                     y={186.82}
                     width={42.3}
@@ -2860,8 +2870,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={347.05}
                     y={186.82}
                     width={42.3}
@@ -2870,24 +2880,24 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.57}
                     cy={193.03}
                     r={2.61}
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={382.57}
                     cy={193.03}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={374}
                     y={191.54}
                     width={2.97}
@@ -2895,8 +2905,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.55}
                     y={173.26}
                     width={42.3}
@@ -2905,8 +2915,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.55}
                     y={173.26}
                     width={42.3}
@@ -2916,8 +2926,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={347.14}
                     y={173.26}
                     width={42.3}
@@ -2926,22 +2936,22 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M385.26,179.47a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.26,179.47Z"
                     style={{
                         fill: "#fafafa",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={382.65}
                     cy={179.47}
                     r={1.33}
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={374.09}
                     y={177.98}
                     width={2.97}
@@ -2949,8 +2959,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.63}
                     y={159.7}
                     width={42.3}
@@ -2959,8 +2969,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.63}
                     y={159.7}
                     width={42.3}
@@ -2970,8 +2980,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={347.22}
                     y={159.7}
                     width={42.3}
@@ -2980,7 +2990,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M385.35,165.91a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.35,165.91Z"
                     style={{
@@ -2993,7 +3003,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={374.18}
                     y={164.42}
                     width={2.97}
@@ -3001,8 +3011,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.rect
                     x={361.72}
                     y={146.14}
                     width={42.3}
@@ -3011,8 +3021,8 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={361.72}
                     y={146.14}
                     width={42.3}
@@ -3022,8 +3032,8 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                />
-                <rect
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                <motion.rect
                     x={347.31}
                     y={146.14}
                     width={42.3}
@@ -3032,7 +3042,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
                 <path
                     d="M385.43,152.35a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.43,152.35Z"
                     style={{
@@ -3045,7 +3055,7 @@ export default function HeroIllustration() {
                         fill: "#f0f0f0",
                     }}
                 />
-                <rect
+                <motion.rect
                     x={374.26}
                     y={150.86}
                     width={2.97}
@@ -3053,7 +3063,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
             </motion.g>
             <motion.g id="freepik--Shadow--inject-40"
                 initial={{ opacity: 0, scale: 0 }}
@@ -6955,22 +6965,22 @@ export default function HeroIllustration() {
                         isolation: "isolate",
                     }}
                 />
-                <circle
+                <motion.circle
                     cx={282.08}
                     cy={410.95}
                     r={7.47}
                     style={{
                         fill: "#263238",
                     }}
-                />
-                <circle
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                <motion.circle
                     cx={355.26}
                     cy={410.95}
                     r={7.47}
                     style={{
                         fill: "#263238",
                     }}
-                />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
                 <path
                     d="M311.05,325h15.35a0,0,0,0,1,0,0v31.93a4.13,4.13,0,0,1-4.13,4.13h-7.09a4.13,4.13,0,0,1-4.13-4.13V325A0,0,0,0,1,311.05,325Z"
                     style={{
@@ -7057,7 +7067,27 @@ export default function HeroIllustration() {
                         isolation: "isolate",
                     }}
                 />
+            <motion.text x="255" y="155" fontFamily="monospace" fontSize="9" initial={{ opacity: 0, y: 4 }} animate={{ opacity: [0, 0.7, 0], y: [4, -6, 4] }} transition={{ duration: 3.2, repeat: Infinity, delay: 0, ease: "easeInOut" }} className="fill-gray-400 dark:fill-gray-500 select-none">01011010</motion.text>
+            <motion.text x="320" y="185" fontFamily="monospace" fontSize="8" initial={{ opacity: 0, y: 4 }} animate={{ opacity: [0, 0.7, 0], y: [4, -8, 4] }} transition={{ duration: 3.6, repeat: Infinity, delay: 0.6, ease: "easeInOut" }} className="fill-gray-400 dark:fill-gray-500 select-none">10101011</motion.text>
+            <motion.text x="245" y="275" fontFamily="monospace" fontSize="10" initial={{ opacity: 0, y: 4 }} animate={{ opacity: [0, 0.7, 0], y: [4, -6, 4] }} transition={{ duration: 3.0, repeat: Infinity, delay: 1.1, ease: "easeInOut" }} className="fill-gray-400 dark:fill-gray-500 select-none">1100</motion.text>
+            <motion.text x="335" y="310" fontFamily="monospace" fontSize="9" initial={{ opacity: 0, y: 4 }} animate={{ opacity: [0, 0.7, 0], y: [4, -10, 4] }} transition={{ duration: 3.4, repeat: Infinity, delay: 1.4, ease: "easeInOut" }} className="fill-gray-400 dark:fill-gray-500 select-none">001101</motion.text>
+            <motion.text x="265" y="355" fontFamily="monospace" fontSize="8" initial={{ opacity: 0, y: 4 }} animate={{ opacity: [0, 0.7, 0], y: [4, -7, 4] }} transition={{ duration: 3.1, repeat: Infinity, delay: 0.9, ease: "easeInOut" }} className="fill-gray-400 dark:fill-gray-500 select-none">111000</motion.text>
             </motion.g>
         </motion.svg>
+            <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+                {bytes.map((b, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: [0, 0.9, 0], y: [8, -12, 8] }}
+                        transition={{ duration: 3 + i * 0.4, repeat: Infinity, delay: b.delay, ease: "easeInOut" }}
+                        className={`absolute font-mono tracking-widest select-none text-gray-400/70 dark:text-gray-500/60 ${b.size}`}
+                        style={{ top: b.top, left: b.left }}
+                    >
+                        {b.text}
+                    </motion.div>
+                ))}
+            </div>
+        </div>
     )
 }
