@@ -12,6 +12,15 @@ const bytes = [
     { text: "0101", top: "35%", left: "90%", delay: 1.2, size: "text-[12px]" },
 ]
 
+const codeContainer = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.02, delayChildren: 0.5, ease: "easeInOut" as const } },
+}
+const codeItem = {
+    hidden: { opacity: 0, y: 8, scale: 0.9 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: "easeInOut" as const } },
+}
+
 export default function HeroIllustration() {
     return (
         <div className="relative w-full max-w-[30em] h-auto">
@@ -321,7 +330,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={363.1}
@@ -332,7 +341,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.34}
                     y={363.1}
@@ -342,7 +351,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M279.46,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.46,369.31Z"
                     style={{
@@ -356,7 +365,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.29}
                     y={367.83}
@@ -365,7 +374,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={349.54}
@@ -375,7 +384,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={349.54}
@@ -386,7 +395,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.34}
                     y={349.54}
@@ -396,7 +405,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.85}
                     cy={355.75}
@@ -404,7 +413,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.85}
                     cy={355.75}
@@ -412,7 +421,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.29}
                     y={354.27}
@@ -421,7 +430,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={335.98}
@@ -431,7 +440,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={335.98}
@@ -442,7 +451,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.34}
                     y={335.98}
@@ -452,7 +461,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M279.46,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.46,342.19Z"
                     style={{
@@ -473,7 +482,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={322.42}
@@ -483,7 +492,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.75}
                     y={322.42}
@@ -494,7 +503,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.34}
                     y={322.42}
@@ -504,7 +513,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.85}
                     cy={328.63}
@@ -512,7 +521,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.85}
                     cy={328.63}
@@ -520,7 +529,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.29}
                     y={327.15}
@@ -529,7 +538,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.83}
                     y={308.86}
@@ -539,7 +548,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.83}
                     y={308.86}
@@ -550,7 +559,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.42}
                     y={308.86}
@@ -560,7 +569,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.94}
                     cy={315.07}
@@ -568,7 +577,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={276.94}
                     cy={315.07}
@@ -576,7 +585,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.38}
                     y={313.59}
@@ -585,7 +594,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.92}
                     y={295.3}
@@ -595,7 +604,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={255.92}
                     y={295.3}
@@ -606,7 +615,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.51}
                     y={295.3}
@@ -616,7 +625,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M279.63,301.51A2.61,2.61,0,1,1,277,298.9,2.61,2.61,0,0,1,279.63,301.51Z"
                     style={{
@@ -630,7 +639,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.46}
                     y={300.03}
@@ -639,7 +648,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256}
                     y={281.74}
@@ -649,7 +658,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256}
                     y={281.74}
@@ -660,7 +669,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.6}
                     y={281.74}
@@ -670,7 +679,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M279.72,288a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.72,288Z"
                     style={{
@@ -684,7 +693,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.55}
                     y={286.47}
@@ -693,7 +702,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.09}
                     y={268.18}
@@ -703,7 +712,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.09}
                     y={268.18}
@@ -714,7 +723,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.68}
                     y={268.18}
@@ -724,7 +733,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M279.8,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,279.8,274.39Z"
                     style={{
@@ -745,7 +754,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.17}
                     y={254.62}
@@ -755,7 +764,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.17}
                     y={254.62}
@@ -766,7 +775,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.77}
                     y={254.62}
@@ -776,7 +785,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.28}
                     cy={260.83}
@@ -784,7 +793,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M278.61,260.83a1.33,1.33,0,1,1-1.33-1.33A1.34,1.34,0,0,1,278.61,260.83Z"
                     style={{
@@ -799,7 +808,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.26}
                     y={241.06}
@@ -809,7 +818,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.26}
                     y={241.06}
@@ -820,7 +829,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.85}
                     y={241.06}
@@ -830,7 +839,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.37}
                     cy={247.27}
@@ -838,7 +847,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.37}
                     cy={247.27}
@@ -846,7 +855,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.8}
                     y={245.79}
@@ -855,7 +864,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.35}
                     y={227.5}
@@ -865,7 +874,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.35}
                     y={227.5}
@@ -876,7 +885,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={241.94}
                     y={227.5}
@@ -886,7 +895,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.45}
                     cy={233.71}
@@ -894,7 +903,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.45}
                     cy={233.71}
@@ -902,7 +911,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.89}
                     y={232.22}
@@ -911,7 +920,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.43}
                     y={213.94}
@@ -921,7 +930,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.43}
                     y={213.94}
@@ -932,7 +941,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.02}
                     y={213.94}
@@ -942,7 +951,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M280.15,220.15a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.15,220.15Z"
                     style={{
@@ -956,7 +965,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={268.98}
                     y={218.66}
@@ -965,7 +974,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.52}
                     y={200.38}
@@ -975,7 +984,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.52}
                     y={200.38}
@@ -986,7 +995,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.11}
                     y={200.38}
@@ -996,7 +1005,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M280.23,206.59a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.23,206.59Z"
                     style={{
@@ -1010,7 +1019,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={269.06}
                     y={205.1}
@@ -1019,7 +1028,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.6}
                     y={186.82}
@@ -1029,7 +1038,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.6}
                     y={186.82}
@@ -1040,7 +1049,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.19}
                     y={186.82}
@@ -1050,7 +1059,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M280.32,193a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,280.32,193Z"
                     style={{
@@ -1071,7 +1080,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.69}
                     y={173.26}
@@ -1081,7 +1090,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.69}
                     y={173.26}
@@ -1092,7 +1101,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.28}
                     y={173.26}
@@ -1102,7 +1111,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.79}
                     cy={179.47}
@@ -1110,7 +1119,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M279.12,179.47a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,279.12,179.47Z"
                     style={{
@@ -1125,7 +1134,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.77}
                     y={159.7}
@@ -1135,7 +1144,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.77}
                     y={159.7}
@@ -1146,7 +1155,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.36}
                     y={159.7}
@@ -1156,7 +1165,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.88}
                     cy={165.91}
@@ -1164,7 +1173,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M279.21,165.91a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,279.21,165.91Z"
                     style={{
@@ -1179,7 +1188,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.86}
                     y={146.14}
@@ -1189,7 +1198,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={256.86}
                     y={146.14}
@@ -1200,7 +1209,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={242.45}
                     y={146.14}
@@ -1210,7 +1219,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.96}
                     cy={152.35}
@@ -1218,7 +1227,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={277.96}
                     cy={152.35}
@@ -1226,7 +1235,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={269.4}
                     y={150.86}
@@ -1235,7 +1244,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={363.1}
@@ -1245,7 +1254,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={363.1}
@@ -1256,7 +1265,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.77}
                     y={363.1}
@@ -1266,7 +1275,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M331.89,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,331.89,369.31Z"
                     style={{
@@ -1287,7 +1296,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={349.54}
@@ -1297,7 +1306,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={349.54}
@@ -1308,7 +1317,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.77}
                     y={349.54}
@@ -1318,7 +1327,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.28}
                     cy={355.75}
@@ -1326,7 +1335,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M330.61,355.75a1.33,1.33,0,1,1-1.33-1.32A1.33,1.33,0,0,1,330.61,355.75Z"
                     style={{
@@ -1341,7 +1350,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={335.98}
@@ -1351,7 +1360,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={335.98}
@@ -1362,7 +1371,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.77}
                     y={335.98}
@@ -1372,7 +1381,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M331.89,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,331.89,342.19Z"
                     style={{
@@ -1393,7 +1402,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={322.42}
@@ -1403,7 +1412,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.18}
                     y={322.42}
@@ -1414,7 +1423,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.77}
                     y={322.42}
@@ -1424,7 +1433,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.28}
                     cy={328.63}
@@ -1432,7 +1441,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M330.61,328.63a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,330.61,328.63Z"
                     style={{
@@ -1447,7 +1456,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.26}
                     y={308.86}
@@ -1457,7 +1466,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.26}
                     y={308.86}
@@ -1468,7 +1477,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.85}
                     y={308.86}
@@ -1478,7 +1487,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.37}
                     cy={315.07}
@@ -1486,7 +1495,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.37}
                     cy={315.07}
@@ -1494,7 +1503,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={320.81}
                     y={313.59}
@@ -1503,7 +1512,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.35}
                     y={295.3}
@@ -1513,7 +1522,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.35}
                     y={295.3}
@@ -1524,7 +1533,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={293.94}
                     y={295.3}
@@ -1534,7 +1543,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.45}
                     cy={301.51}
@@ -1542,7 +1551,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.45}
                     cy={301.51}
@@ -1550,7 +1559,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={320.89}
                     y={300.03}
@@ -1559,7 +1568,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.43}
                     y={281.74}
@@ -1569,7 +1578,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.43}
                     y={281.74}
@@ -1580,7 +1589,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.02}
                     y={281.74}
@@ -1590,7 +1599,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.15,288a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.15,288Z"
                     style={{
@@ -1604,7 +1613,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={320.98}
                     y={286.47}
@@ -1613,7 +1622,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.52}
                     y={268.18}
@@ -1623,7 +1632,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.52}
                     y={268.18}
@@ -1634,7 +1643,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.11}
                     y={268.18}
@@ -1644,7 +1653,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.23,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.23,274.39Z"
                     style={{
@@ -1658,7 +1667,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={321.06}
                     y={272.91}
@@ -1667,7 +1676,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.6}
                     y={254.62}
@@ -1677,7 +1686,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.6}
                     y={254.62}
@@ -1688,7 +1697,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.2}
                     y={254.62}
@@ -1698,7 +1707,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.32,260.83a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.32,260.83Z"
                     style={{
@@ -1719,7 +1728,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.69}
                     y={241.06}
@@ -1729,7 +1738,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.69}
                     y={241.06}
@@ -1740,7 +1749,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.28}
                     y={241.06}
@@ -1750,7 +1759,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.79}
                     cy={247.27}
@@ -1758,7 +1767,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M331.12,247.27a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,331.12,247.27Z"
                     style={{
@@ -1773,7 +1782,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.77}
                     y={227.5}
@@ -1783,7 +1792,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.77}
                     y={227.5}
@@ -1794,7 +1803,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.37}
                     y={227.5}
@@ -1804,7 +1813,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.88}
                     cy={233.71}
@@ -1812,7 +1821,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.88}
                     cy={233.71}
@@ -1820,7 +1829,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={321.32}
                     y={232.22}
@@ -1829,7 +1838,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.86}
                     y={213.94}
@@ -1839,7 +1848,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.86}
                     y={213.94}
@@ -1850,7 +1859,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.45}
                     y={213.94}
@@ -1860,7 +1869,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.97}
                     cy={220.15}
@@ -1868,7 +1877,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={329.97}
                     cy={220.15}
@@ -1876,7 +1885,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={321.4}
                     y={218.66}
@@ -1885,7 +1894,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.95}
                     y={200.38}
@@ -1895,7 +1904,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={308.95}
                     y={200.38}
@@ -1906,7 +1915,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.54}
                     y={200.38}
@@ -1916,7 +1925,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.66,206.59a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.66,206.59Z"
                     style={{
@@ -1930,7 +1939,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={321.49}
                     y={205.1}
@@ -1939,7 +1948,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.03}
                     y={186.82}
@@ -1949,7 +1958,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.03}
                     y={186.82}
@@ -1960,7 +1969,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.62}
                     y={186.82}
@@ -1970,7 +1979,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.75,193a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.75,193Z"
                     style={{
@@ -1984,7 +1993,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={321.58}
                     y={191.54}
@@ -1993,7 +2002,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.12}
                     y={173.26}
@@ -2003,7 +2012,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.12}
                     y={173.26}
@@ -2014,7 +2023,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.71}
                     y={173.26}
@@ -2024,7 +2033,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.83,179.47a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.83,179.47Z"
                     style={{
@@ -2045,7 +2054,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.2}
                     y={159.7}
@@ -2055,7 +2064,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.2}
                     y={159.7}
@@ -2066,7 +2075,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.79}
                     y={159.7}
@@ -2076,7 +2085,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M332.92,165.91a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,332.92,165.91Z"
                     style={{
@@ -2097,7 +2106,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.29}
                     y={146.14}
@@ -2107,7 +2116,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={309.29}
                     y={146.14}
@@ -2118,7 +2127,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={294.88}
                     y={146.14}
@@ -2128,7 +2137,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={330.39}
                     cy={152.35}
@@ -2136,7 +2145,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M331.72,152.35a1.33,1.33,0,1,1-1.33-1.33A1.32,1.32,0,0,1,331.72,152.35Z"
                     style={{
@@ -2151,7 +2160,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={363.1}
@@ -2161,7 +2170,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={363.1}
@@ -2172,7 +2181,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.2}
                     y={363.1}
@@ -2182,7 +2191,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.32,369.31a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,369.31Z"
                     style={{
@@ -2203,7 +2212,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={349.54}
@@ -2213,7 +2222,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={349.54}
@@ -2224,7 +2233,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.2}
                     y={349.54}
@@ -2234,7 +2243,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.32,355.75a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,355.75Z"
                     style={{
@@ -2255,7 +2264,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={335.98}
@@ -2265,7 +2274,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={335.98}
@@ -2276,7 +2285,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.2}
                     y={335.98}
@@ -2286,7 +2295,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.32,342.19a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,342.19Z"
                     style={{
@@ -2307,7 +2316,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={322.42}
@@ -2317,7 +2326,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.61}
                     y={322.42}
@@ -2328,7 +2337,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.2}
                     y={322.42}
@@ -2338,7 +2347,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.32,328.63a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.32,328.63Z"
                     style={{
@@ -2359,7 +2368,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.69}
                     y={308.86}
@@ -2369,7 +2378,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.69}
                     y={308.86}
@@ -2380,7 +2389,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.28}
                     y={308.86}
@@ -2390,7 +2399,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={381.8}
                     cy={315.07}
@@ -2398,7 +2407,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M383.12,315.07a1.33,1.33,0,1,1-1.32-1.33A1.32,1.32,0,0,1,383.12,315.07Z"
                     style={{
@@ -2413,7 +2422,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.78}
                     y={295.3}
@@ -2423,7 +2432,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.78}
                     y={295.3}
@@ -2434,7 +2443,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.37}
                     y={295.3}
@@ -2444,7 +2453,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={381.88}
                     cy={301.51}
@@ -2452,7 +2461,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={381.88}
                     cy={301.51}
@@ -2460,7 +2469,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={373.32}
                     y={300.03}
@@ -2469,7 +2478,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.86}
                     y={281.74}
@@ -2479,7 +2488,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.86}
                     y={281.74}
@@ -2490,7 +2499,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.45}
                     y={281.74}
@@ -2500,7 +2509,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={381.97}
                     cy={287.95}
@@ -2508,7 +2517,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={381.97}
                     cy={287.95}
@@ -2516,7 +2525,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={373.41}
                     y={286.47}
@@ -2525,7 +2534,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.95}
                     y={268.18}
@@ -2535,7 +2544,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={360.95}
                     y={268.18}
@@ -2546,7 +2555,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.54}
                     y={268.18}
@@ -2556,7 +2565,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.66,274.39a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.66,274.39Z"
                     style={{
@@ -2570,7 +2579,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={373.49}
                     y={272.91}
@@ -2579,7 +2588,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.03}
                     y={254.62}
@@ -2589,7 +2598,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.03}
                     y={254.62}
@@ -2600,7 +2609,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.62}
                     y={254.62}
@@ -2610,7 +2619,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.75,260.83a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.75,260.83Z"
                     style={{
@@ -2624,7 +2633,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={373.58}
                     y={259.35}
@@ -2633,7 +2642,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.12}
                     y={241.06}
@@ -2643,7 +2652,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.12}
                     y={241.06}
@@ -2654,7 +2663,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.71}
                     y={241.06}
@@ -2664,7 +2673,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M384.83,247.27a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,384.83,247.27Z"
                     style={{
@@ -2685,7 +2694,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.2}
                     y={227.5}
@@ -2695,7 +2704,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.2}
                     y={227.5}
@@ -2706,7 +2715,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.8}
                     y={227.5}
@@ -2716,7 +2725,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.31}
                     cy={233.71}
@@ -2724,7 +2733,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M383.64,233.71a1.33,1.33,0,1,1-1.33-1.33A1.34,1.34,0,0,1,383.64,233.71Z"
                     style={{
@@ -2739,7 +2748,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.29}
                     y={213.94}
@@ -2749,7 +2758,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.29}
                     y={213.94}
@@ -2760,7 +2769,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.88}
                     y={213.94}
@@ -2770,7 +2779,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.39}
                     cy={220.15}
@@ -2778,7 +2787,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M383.72,220.15a1.33,1.33,0,1,1-1.33-1.33A1.33,1.33,0,0,1,383.72,220.15Z"
                     style={{
@@ -2793,7 +2802,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.37}
                     y={200.38}
@@ -2803,7 +2812,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.37}
                     y={200.38}
@@ -2814,7 +2823,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={346.97}
                     y={200.38}
@@ -2824,7 +2833,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.48}
                     cy={206.59}
@@ -2832,7 +2841,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.48}
                     cy={206.59}
@@ -2840,7 +2849,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={373.92}
                     y={205.1}
@@ -2849,7 +2858,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.46}
                     y={186.82}
@@ -2859,7 +2868,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.46}
                     y={186.82}
@@ -2870,7 +2879,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={347.05}
                     y={186.82}
@@ -2880,7 +2889,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.57}
                     cy={193.03}
@@ -2888,7 +2897,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={382.57}
                     cy={193.03}
@@ -2896,7 +2905,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={374}
                     y={191.54}
@@ -2905,7 +2914,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.55}
                     y={173.26}
@@ -2915,7 +2924,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.55}
                     y={173.26}
@@ -2926,7 +2935,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={347.14}
                     y={173.26}
@@ -2936,7 +2945,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M385.26,179.47a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.26,179.47Z"
                     style={{
@@ -2950,7 +2959,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={374.09}
                     y={177.98}
@@ -2959,7 +2968,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.63}
                     y={159.7}
@@ -2969,7 +2978,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.63}
                     y={159.7}
@@ -2980,7 +2989,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={347.22}
                     y={159.7}
@@ -2990,7 +2999,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M385.35,165.91a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.35,165.91Z"
                     style={{
@@ -3011,7 +3020,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.72}
                     y={146.14}
@@ -3021,7 +3030,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={361.72}
                     y={146.14}
@@ -3032,7 +3041,7 @@ export default function HeroIllustration() {
                         fill: "#e6e6e6",
                         isolation: "isolate",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <motion.rect
                     x={347.31}
                     y={146.14}
@@ -3042,7 +3051,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#f0f0f0",
                     }}
-                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scaleX: 0 }} whileInView={{ opacity: 1, scaleX: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, ease: "easeInOut" }} />
                 <path
                     d="M385.43,152.35a2.61,2.61,0,1,1-2.61-2.61A2.61,2.61,0,0,1,385.43,152.35Z"
                     style={{
@@ -3063,7 +3072,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#fafafa",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
             </motion.g>
             <motion.g id="freepik--Shadow--inject-40"
                 initial={{ opacity: 0, scale: 0 }}
@@ -3082,1505 +3091,1506 @@ export default function HeroIllustration() {
                 />
             </motion.g>
             <motion.g id="freepik--Code--inject-40"
-                initial={{ opacity: 0, y: -900, scale: 5 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 3.5, delay: 4, ease: "easeInOut" }}
+                variants={codeContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
             >
-                <path
+                <motion.path variants={codeItem}
                     d="M107.11,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.43-.17.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M94.73,136.35a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M115.67,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M143.4,86.36V80.94h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M115,125.07a1.68,1.68,0,0,1-2.88,1.18,1.59,1.59,0,0,1-.49-1.18v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M124.56,154.06v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M129.92,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M131.69,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M137.05,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.71,1.71,0,0,1,1.69-1.69,1.63,1.63,0,0,1,1.19.5,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.61.61,0,0,0-.43.17.6.6,0,0,0-.17.44v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M190.12,139.32V133.9h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M144.17,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M145.94,154.06v-5.42H145v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6H147v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M151.3,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.68,1.68,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M136.16,113.35v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M158.42,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M160.18,154.06v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M165.55,152.45a1.69,1.69,0,0,1-1.69,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.68,1.68,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M168.59,139.32V133.9h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M172.67,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44A.63.63,0,0,0,171,148a.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M168.93,98.87V93.45H168v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H170v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M198.8,75.63V70.21h-.9v-.75a1.5,1.5,0,0,0,.73-.28,1.47,1.47,0,0,0,.49-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M161.25,123.23a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M184.08,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19ZM183,148.59a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.17.44v3.85a.57.57,0,0,0,.17.43.61.61,0,0,0,1-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M188.36,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.63.63,0,0,0-.43.17.64.64,0,0,0-.17.44v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M192.64,152.45a1.67,1.67,0,0,1-1.68,1.68,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.43-.17.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M200,108.23a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M201.2,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M190.54,121.46a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M207.25,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M210.09,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M212.92,154.06v-5.42H212v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6H214v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M215,124.83V119.4h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59H216v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M218.6,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M221.44,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M237.92,132.75a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68V128.9a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M231.08,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.63.63,0,0,0-.43.17.64.64,0,0,0-.17.44v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M232.84,154.06v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.36,1.36,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M69.77,310.16v-5.43h-.91V304a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M72.61,310.16v-5.43H71.7V304a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M82.25,308.55a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.61,1.61,0,0,1,1.19-.49,1.65,1.65,0,0,1,1.19.49,1.63,1.63,0,0,1,.49,1.2Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M84,310.16v-5.43h-.9V304a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M248.71,117.86a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.71,1.71,0,0,1-1.69-1.68V114a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M76.89,158.39V153H76v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H78v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M66.46,147.72a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M114.29,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V190.2a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.58.58,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M118.57,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M120.34,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M125.7,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.71,1.71,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M127.46,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M132.82,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2A1.59,1.59,0,0,1,130,189a1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M134.59,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M140,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.68,1.68,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.57.57,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M268.3,175.63v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M273.66,174a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49A1.67,1.67,0,0,1,270.3,174v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V174a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M275.43,175.63v-5.42h-.91v-.75a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M280.79,174a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.67,1.67,0,0,1,1.2-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.11-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V174a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M306.6,175.07a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M301.42,125.78a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.69,1.69,0,1,1,3.37,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.59.59,0,0,0-.17.43v3.85a.6.6,0,0,0,.17.44.58.58,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M164.52,195.65v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M167.36,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M170.2,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M173,195.65v-5.42h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M175.87,195.65v-5.42H175v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M181.23,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M183,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M188.36,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49A1.65,1.65,0,0,1,185,194V190.2a1.68,1.68,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.64.64,0,0,0-.17.44V194a.63.63,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M190.12,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M273,91.2a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V87.35a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M197.25,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M202.61,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.71,1.71,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M206.89,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19V190.2A1.68,1.68,0,0,1,206.4,189a1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.6.6,0,0,0-.43.18.64.64,0,0,0-.17.44V194a.63.63,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M211.17,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V190.2a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M215.45,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M217.22,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M220.05,195.65v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.75v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M222.89,195.65v-5.42H222v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6H224v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M312.75,152.46a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.84a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M250.08,187.91v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.44,1.44,0,0,0,.5-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M255.44,186.3a1.69,1.69,0,0,1-2.88,1.19,1.61,1.61,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.58.58,0,0,0-.18-.43.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.57.57,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M257.2,187.91v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.37,1.37,0,0,0,.5-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M51.64,237.39V232h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M80.34,232.83a1.69,1.69,0,1,1-3.37,0V229a1.69,1.69,0,0,1,2.88-1.2,1.67,1.67,0,0,1,.49,1.2ZM79.23,229A.61.61,0,0,0,78,229v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M111.78,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M117.14,207.9a1.67,1.67,0,0,1-1.68,1.69,1.71,1.71,0,0,1-1.69-1.69v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19ZM116,204a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M121.42,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M125.7,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM124.6,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M127.47,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M132.83,207.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M134.59,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M140,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M141.72,229.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M147.08,227.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.68,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19ZM146,224a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M148.84,229.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M154.2,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM153.1,224a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M129.47,250.8A1.61,1.61,0,0,1,129,252a1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V247a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M162.76,227.9a1.63,1.63,0,0,1-.49,1.2,1.68,1.68,0,0,1-2.38,0,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M167.05,227.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19ZM165.94,224a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M171.33,227.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M175.61,227.9a1.69,1.69,0,0,1-1.68,1.69,1.71,1.71,0,0,1-1.69-1.69v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M179.89,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M181.65,209.51v-5.42h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M184.49,209.51v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M187.33,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M190.17,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M193,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M195.84,209.51v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M201.2,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM200.1,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M205.48,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M207.25,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M212.61,207.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.56.56,0,0,0-.42.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.56.56,0,0,0,.42.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M214.37,209.51v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M217.21,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M220.05,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M222.89,209.51v-5.42H222v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59H224v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M228.25,207.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19ZM227.14,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M230,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M235.37,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49A1.71,1.71,0,0,1,232,207.9v-3.84a1.6,1.6,0,0,1,.5-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M237.13,209.51v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M106.42,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M63,87.89V82.47h-.91v-.75a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M113.54,180.18a1.68,1.68,0,0,1-2.87,1.19,1.63,1.63,0,0,1-.5-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.57.57,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M115.3,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M72.08,209.6a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69ZM71,205.74a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M122.43,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M127.79,180.18a1.68,1.68,0,0,1-2.87,1.19,1.63,1.63,0,0,1-.5-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M132.07,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M136.35,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M138.12,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M143.48,180.18a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.68,1.68,0,0,1,2.38,0,1.63,1.63,0,0,1,.49,1.19Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.57.57,0,0,0,.43.17.6.6,0,0,0,.44-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M145.24,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.34,1.34,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M150.6,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M54.53,186.89a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.18V183A1.69,1.69,0,0,1,54,181.85a1.66,1.66,0,0,1,.49,1.19ZM53.43,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M58.81,186.89a1.65,1.65,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.71,1.71,0,0,1-1.69-1.68V183a1.69,1.69,0,1,1,3.37,0ZM57.71,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M60.57,188.49v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M65.93,186.89a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18V183a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19ZM64.83,183a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M67.7,188.49v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M73.06,186.89a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.18V183a1.69,1.69,0,1,1,3.37,0ZM72,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.56.56,0,0,0-.42.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.56.56,0,0,0,.42.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M152.37,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M157.73,180.18a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.61,1.61,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.57.57,0,0,0,.43.17.6.6,0,0,0,.44-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M159.49,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M164.85,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M169.13,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M173.41,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M177.7,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.59.59,0,0,0-.17.43v3.85a.6.6,0,0,0,.17.44.57.57,0,0,0,.43.17.56.56,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M222.21,245.83a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V242a1.69,1.69,0,0,1,2.88-1.2,1.66,1.66,0,0,1,.48,1.2Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M186.26,180.18a1.65,1.65,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.63,1.63,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.87,1.2Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M190.54,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M192.31,181.79v-5.43h-.91v-.74a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M195.14,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M198,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H199v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M200.82,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M204.49,141.56v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M206.49,181.79v-5.43h-.9v-.74a1.56,1.56,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M211.85,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M216.13,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M217.9,181.79v-5.43H217v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H219v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M223.26,180.18a1.69,1.69,0,0,1-1.68,1.68,1.59,1.59,0,0,1-1.19-.49,1.63,1.63,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.87,1.2Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M225,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M260.46,160.1v-5.43h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M230.7,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M233.54,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M238.9,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M106.45,284.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.59,1.59,0,0,1,1.19.49,1.63,1.63,0,0,1,.49,1.2Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M108.22,286.38V281h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M113.58,284.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.38,0,1.67,1.67,0,0,1,.49,1.2Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M115.34,286.38V281h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M120.66,221.77a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M122.43,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M97,253.32a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.59,1.59,0,0,1-.49-1.18v-3.85a1.61,1.61,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M132.07,221.77a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM131,217.9a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M136.35,221.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M138.12,243.38V238h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M143.48,241.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M145.24,243.38V238h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.34,1.34,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M150.6,241.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M152.37,243.38V238h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M157.73,241.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M159.49,243.38V238h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M164.85,241.77a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M153.16,272.89a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M157.44,272.89a1.66,1.66,0,0,1-1.68,1.68,1.69,1.69,0,0,1-1.69-1.68v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M161.72,272.89a1.63,1.63,0,0,1-.49,1.2,1.65,1.65,0,0,1-1.19.48,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M166.28,317.53a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18v-3.85A1.67,1.67,0,0,1,164.6,312a1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M170.28,272.89a1.68,1.68,0,0,1-2.87,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M174.57,272.89a1.69,1.69,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.68,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M192.31,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M195.14,223.38V218h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M198,223.38V218h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H199v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M200.82,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M203.65,223.38V218h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M184.87,252.4V247H184v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M211.85,221.77a1.67,1.67,0,0,1-1.68,1.68A1.65,1.65,0,0,1,209,223a1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M216.13,221.77a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19ZM215,217.9a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M217.9,223.38V218H217v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H219v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M223.26,221.77a1.69,1.69,0,0,1-3.37,0v-3.85a1.63,1.63,0,0,1,.5-1.19,1.68,1.68,0,0,1,2.87,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M225,223.38V218h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M227.86,223.38V218H227v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M250.11,292.48v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M252.94,292.48v-5.43H252v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59H254v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M258.3,290.87a1.68,1.68,0,1,1-3.36,0V287a1.69,1.69,0,0,1,2.88-1.2,1.66,1.66,0,0,1,.48,1.2ZM257.2,287a.61.61,0,0,0-1.22,0v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M187.72,297.16a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M108.88,167.92V162.5H108v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M114.24,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87A.58.58,0,0,0,113,162a.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M116,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M83.7,177.63a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.68v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M123.13,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M128.49,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M132.77,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M113.11,93.75a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V89.91a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69ZM112,89.89a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.84a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M114.88,95.36V89.94H114v-.75a1.47,1.47,0,0,0,.73-.28,1.51,1.51,0,0,0,.5-.6h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M144.17,166.32a1.62,1.62,0,0,1-.49,1.19,1.69,1.69,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M145.94,167.92V162.5H145v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H147v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M133.93,140a1.61,1.61,0,0,1-.49,1.19,1.65,1.65,0,0,1-1.19.49,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M135.7,141.56v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M141.06,140a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M142.82,141.56v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M118.31,69.16a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19V65.31a1.63,1.63,0,0,1,.5-1.19,1.59,1.59,0,0,1,1.19-.49,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M120.07,70.77V65.34h-.9V64.6a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M125.43,69.16a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V65.31a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M127.2,70.77V65.34h-.91V64.6a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M165.55,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,1,1,3.37,0Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M167.31,167.92V162.5h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M172.67,166.32a1.62,1.62,0,0,1-.49,1.19A1.66,1.66,0,0,1,171,168a1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M174.44,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M179.8,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M181.56,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M186.92,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M188.69,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M194.05,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M195.81,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M201.17,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M205.45,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M209.73,166.32a1.62,1.62,0,0,1-.49,1.19,1.69,1.69,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M214,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.65,1.65,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1-.43.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.61.61,0,0,0,1-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M332.37,174.69v-5.42h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M337.73,173.08a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.62,1.62,0,0,1,1.19.5,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.58.58,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M339.49,174.69v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M344.85,173.08a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84A1.63,1.63,0,0,1,342,168a1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M346.62,174.69v-5.42h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M374.2,192.7a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.58.58,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M356.26,173.08a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M360.54,173.08a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M372.52,144.11a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.62,1.62,0,0,1,1.19.5,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.6.6,0,0,0-.43.18.64.64,0,0,0-.17.44v3.84a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M248.93,143.48a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.67,1.67,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M224.65,100.45a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18V96.6a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M257.5,143.48a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.66,1.66,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M259.26,145.09v-5.42h-.9v-.75a1.56,1.56,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M262.1,145.09v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M264.94,145.09v-5.42H264v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H266v7.05Z"
                     style={{
                         fill: "#3D3D3D",
                     }}
                 />
-                <path
+                <motion.path variants={codeItem}
                     d="M279.83,119.45V114h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                     style={{
                         fill: "#3D3D3D",
@@ -4592,1501 +4602,1501 @@ export default function HeroIllustration() {
                         isolation: "isolate",
                     }}
                 >
-                    <path
+                    <motion.path variants={codeItem}
                         d="M107.11,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.43-.17.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M94.73,136.35a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M115.67,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M143.4,86.36V80.94h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M115,125.07a1.68,1.68,0,0,1-2.88,1.18,1.59,1.59,0,0,1-.49-1.18v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M124.56,154.06v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M129.92,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M131.69,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M137.05,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.71,1.71,0,0,1,1.69-1.69,1.63,1.63,0,0,1,1.19.5,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.61.61,0,0,0-.43.17.6.6,0,0,0-.17.44v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M190.12,139.32V133.9h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M144.17,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M145.94,154.06v-5.42H145v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6H147v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M151.3,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.68,1.68,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M136.16,113.35v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M158.42,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M160.18,154.06v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M165.55,152.45a1.69,1.69,0,0,1-1.69,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.68,1.68,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M168.59,139.32V133.9h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M172.67,152.45a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44A.63.63,0,0,0,171,148a.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M168.93,98.87V93.45H168v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H170v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M198.8,75.63V70.21h-.9v-.75a1.5,1.5,0,0,0,.73-.28,1.47,1.47,0,0,0,.49-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M161.25,123.23a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M184.08,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19ZM183,148.59a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.17.44v3.85a.57.57,0,0,0,.17.43.61.61,0,0,0,1-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M188.36,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.63.63,0,0,0-.43.17.64.64,0,0,0-.17.44v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M192.64,152.45a1.67,1.67,0,0,1-1.68,1.68,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.43-.17.6.6,0,0,0-.43.17.6.6,0,0,0-.18.44v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M200,108.23a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M201.2,152.45a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.6,1.6,0,0,1,1.19.5,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.63.63,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M190.54,121.46a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M207.25,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M210.09,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M212.92,154.06v-5.42H212v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6H214v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M215,124.83V119.4h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59H216v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M218.6,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M221.44,154.06v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M237.92,132.75a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68V128.9a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M231.08,152.45a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.6.6,0,0,0-.18-.44.64.64,0,0,0-.44-.17.63.63,0,0,0-.43.17.64.64,0,0,0-.17.44v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M232.84,154.06v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.36,1.36,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M69.77,310.16v-5.43h-.91V304a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M72.61,310.16v-5.43H71.7V304a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M82.25,308.55a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.61,1.61,0,0,1,1.19-.49,1.65,1.65,0,0,1,1.19.49,1.63,1.63,0,0,1,.49,1.2Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M84,310.16v-5.43h-.9V304a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M248.71,117.86a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.71,1.71,0,0,1-1.69-1.68V114a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M76.89,158.39V153H76v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H78v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M66.46,147.72a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M114.29,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V190.2a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.58.58,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M118.57,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M120.34,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M125.7,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.71,1.71,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M127.46,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M132.82,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2A1.59,1.59,0,0,1,130,189a1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M134.59,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M140,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.68,1.68,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.49,1.19Zm-1.11-3.86a.6.6,0,0,0-.18-.44.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.57.57,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M268.3,175.63v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M273.66,174a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49A1.67,1.67,0,0,1,270.3,174v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V174a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M275.43,175.63v-5.42h-.91v-.75a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M280.79,174a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.67,1.67,0,0,1,1.2-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.11-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V174a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M306.6,175.07a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M301.42,125.78a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19v-3.84a1.69,1.69,0,1,1,3.37,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.59.59,0,0,0-.17.43v3.85a.6.6,0,0,0,.17.44.58.58,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M164.52,195.65v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M167.36,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M170.2,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M173,195.65v-5.42h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.51,1.51,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M175.87,195.65v-5.42H175v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M181.23,194a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M183,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M188.36,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49A1.65,1.65,0,0,1,185,194V190.2a1.68,1.68,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.64.64,0,0,0-.17.44V194a.63.63,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M190.12,195.65v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M273,91.2a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V87.35a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M197.25,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M202.61,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.61,1.61,0,0,1-.49-1.19V190.2a1.71,1.71,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.61.61,0,0,0-.62-.62.58.58,0,0,0-.43.18.6.6,0,0,0-.17.44V194a.59.59,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M206.89,194a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19V190.2A1.68,1.68,0,0,1,206.4,189a1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.6.6,0,0,0-.43.18.64.64,0,0,0-.17.44V194a.63.63,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M211.17,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V190.2a1.6,1.6,0,0,1,.5-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M215.45,194a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68V190.2a1.59,1.59,0,0,1,.49-1.19,1.63,1.63,0,0,1,1.19-.5,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44V194a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M217.22,195.65v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.43,1.43,0,0,0,.5-.6h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M220.05,195.65v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.41,1.41,0,0,0,.49-.6h.75v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M222.89,195.65v-5.42H222v-.74a1.59,1.59,0,0,0,.72-.29,1.43,1.43,0,0,0,.5-.6H224v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M312.75,152.46a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.84a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M250.08,187.91v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.44,1.44,0,0,0,.5-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M255.44,186.3a1.69,1.69,0,0,1-2.88,1.19,1.61,1.61,0,0,1-.49-1.19v-3.84a1.68,1.68,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.86a.58.58,0,0,0-.18-.43.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.57.57,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M257.2,187.91v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.37,1.37,0,0,0,.5-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M51.64,237.39V232h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M80.34,232.83a1.69,1.69,0,1,1-3.37,0V229a1.69,1.69,0,0,1,2.88-1.2,1.67,1.67,0,0,1,.49,1.2ZM79.23,229A.61.61,0,0,0,78,229v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M111.78,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M117.14,207.9a1.67,1.67,0,0,1-1.68,1.69,1.71,1.71,0,0,1-1.69-1.69v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19ZM116,204a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M121.42,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M125.7,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM124.6,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M127.47,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M132.83,207.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M134.59,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M140,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M141.72,229.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M147.08,227.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.68,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19ZM146,224a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M148.84,229.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M154.2,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM153.1,224a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M129.47,250.8A1.61,1.61,0,0,1,129,252a1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V247a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M162.76,227.9a1.63,1.63,0,0,1-.49,1.2,1.68,1.68,0,0,1-2.38,0,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M167.05,227.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19ZM165.94,224a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M171.33,227.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M175.61,227.9a1.69,1.69,0,0,1-1.68,1.69,1.71,1.71,0,0,1-1.69-1.69v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M179.89,227.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.69v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M181.65,209.51v-5.42h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M184.49,209.51v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M187.33,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M190.17,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M193,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M195.84,209.51v-5.42h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M201.2,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM200.1,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M205.48,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M207.25,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M212.61,207.9a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.56.56,0,0,0-.42.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.56.56,0,0,0,.42.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M214.37,209.51v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M217.21,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M220.05,209.51v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M222.89,209.51v-5.42H222v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59H224v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M228.25,207.9a1.68,1.68,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19ZM227.14,204a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M230,209.51v-5.42h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M235.37,207.9a1.63,1.63,0,0,1-.49,1.2,1.66,1.66,0,0,1-1.19.49A1.71,1.71,0,0,1,232,207.9v-3.84a1.6,1.6,0,0,1,.5-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M237.13,209.51v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M106.42,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M63,87.89V82.47h-.91v-.75a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M113.54,180.18a1.68,1.68,0,0,1-2.87,1.19,1.63,1.63,0,0,1-.5-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.57.57,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M115.3,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M72.08,209.6a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69ZM71,205.74a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M122.43,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M127.79,180.18a1.68,1.68,0,0,1-2.87,1.19,1.63,1.63,0,0,1-.5-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M132.07,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M136.35,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M138.12,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M143.48,180.18a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.68,1.68,0,0,1,2.38,0,1.63,1.63,0,0,1,.49,1.19Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.57.57,0,0,0,.43.17.6.6,0,0,0,.44-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M145.24,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.34,1.34,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M150.6,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M54.53,186.89a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.18V183A1.69,1.69,0,0,1,54,181.85a1.66,1.66,0,0,1,.49,1.19ZM53.43,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M58.81,186.89a1.65,1.65,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.71,1.71,0,0,1-1.69-1.68V183a1.69,1.69,0,1,1,3.37,0ZM57.71,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M60.57,188.49v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M65.93,186.89a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18V183a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19ZM64.83,183a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M67.7,188.49v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M73.06,186.89a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.18V183a1.69,1.69,0,1,1,3.37,0ZM72,183a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.56.56,0,0,0-.42.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.56.56,0,0,0,.42.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M152.37,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M157.73,180.18a1.69,1.69,0,0,1-2.88,1.19,1.66,1.66,0,0,1-.49-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.61,1.61,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.57.57,0,0,0,.43.17.6.6,0,0,0,.44-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M159.49,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M164.85,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M169.13,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M173.41,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M177.7,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.57.57,0,0,0-.43-.18.58.58,0,0,0-.43.18.59.59,0,0,0-.17.43v3.85a.6.6,0,0,0,.17.44.57.57,0,0,0,.43.17.56.56,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M222.21,245.83a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V242a1.69,1.69,0,0,1,2.88-1.2,1.66,1.66,0,0,1,.48,1.2Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M186.26,180.18a1.65,1.65,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.63,1.63,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.87,1.2Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M190.54,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M192.31,181.79v-5.43h-.91v-.74a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M195.14,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M198,181.79v-5.43h-.9v-.74a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H199v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M200.82,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M204.49,141.56v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M206.49,181.79v-5.43h-.9v-.74a1.56,1.56,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M211.85,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M216.13,180.18a1.68,1.68,0,1,1-3.36,0v-3.84a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M217.9,181.79v-5.43H217v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H219v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M223.26,180.18a1.69,1.69,0,0,1-1.68,1.68,1.59,1.59,0,0,1-1.19-.49,1.63,1.63,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.87,1.2Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.56.56,0,0,0,.43.17.59.59,0,0,0,.43-.17.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M225,181.79v-5.43h-.9v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M260.46,160.1v-5.43h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M230.7,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M233.54,181.79v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M238.9,180.18a1.69,1.69,0,1,1-3.37,0v-3.84a1.67,1.67,0,0,1,.49-1.2,1.69,1.69,0,0,1,2.88,1.2Zm-1.11-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M106.45,284.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.84a1.67,1.67,0,0,1,1.68-1.69,1.59,1.59,0,0,1,1.19.49,1.63,1.63,0,0,1,.49,1.2Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M108.22,286.38V281h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M113.58,284.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.84a1.64,1.64,0,0,1,.5-1.2,1.69,1.69,0,0,1,2.38,0,1.67,1.67,0,0,1,.49,1.2Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M115.34,286.38V281h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M120.66,221.77a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M122.43,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M97,253.32a1.62,1.62,0,0,1-.5,1.19,1.68,1.68,0,0,1-2.38,0,1.59,1.59,0,0,1-.49-1.18v-3.85a1.61,1.61,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M132.07,221.77a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19ZM131,217.9a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M136.35,221.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M138.12,243.38V238h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M143.48,241.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M145.24,243.38V238h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.34,1.34,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M150.6,241.77a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M152.37,243.38V238h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M157.73,241.77a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.63,1.63,0,0,1,.5-1.19,1.69,1.69,0,0,1,2.38,0,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M159.49,243.38V238h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M164.85,241.77a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M153.16,272.89a1.69,1.69,0,1,1-3.37,0v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M157.44,272.89a1.66,1.66,0,0,1-1.68,1.68,1.69,1.69,0,0,1-1.69-1.68v-3.84a1.69,1.69,0,0,1,2.88-1.19,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M161.72,272.89a1.63,1.63,0,0,1-.49,1.2,1.65,1.65,0,0,1-1.19.48,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.59,1.59,0,0,1,.49-1.19,1.62,1.62,0,0,1,1.19-.49,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M166.28,317.53a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.63,1.63,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18v-3.85A1.67,1.67,0,0,1,164.6,312a1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M170.28,272.89a1.68,1.68,0,0,1-2.87,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.59,1.59,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.86a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M174.57,272.89a1.69,1.69,0,0,1-2.88,1.19,1.59,1.59,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.68,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.86a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M192.31,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M195.14,223.38V218h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M198,223.38V218h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59H199v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M200.82,223.38V218h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M203.65,223.38V218h-.9v-.74a1.58,1.58,0,0,0,.73-.29,1.48,1.48,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M184.87,252.4V247H184v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M211.85,221.77a1.67,1.67,0,0,1-1.68,1.68A1.65,1.65,0,0,1,209,223a1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M216.13,221.77a1.67,1.67,0,0,1-1.68,1.68,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19ZM215,217.9a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M217.9,223.38V218H217v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H219v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M223.26,221.77a1.69,1.69,0,0,1-3.37,0v-3.85a1.63,1.63,0,0,1,.5-1.19,1.68,1.68,0,0,1,2.87,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M225,223.38V218h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M227.86,223.38V218H227v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M250.11,292.48v-5.43h-.91v-.74a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M252.94,292.48v-5.43H252v-.74a1.52,1.52,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59H254v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M258.3,290.87a1.68,1.68,0,1,1-3.36,0V287a1.69,1.69,0,0,1,2.88-1.2,1.66,1.66,0,0,1,.48,1.2ZM257.2,287a.61.61,0,0,0-1.22,0v3.85a.6.6,0,0,0,.18.44.63.63,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M187.72,297.16a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.43-.18.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M108.88,167.92V162.5H108v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M114.24,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87A.58.58,0,0,0,113,162a.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M116,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M83.7,177.63a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.68-1.68v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M123.13,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M128.49,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M132.77,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M113.11,93.75a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19V89.91a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69ZM112,89.89a.6.6,0,0,0-.18-.44.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.44v3.84a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M114.88,95.36V89.94H114v-.75a1.47,1.47,0,0,0,.73-.28,1.51,1.51,0,0,0,.5-.6h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M144.17,166.32a1.62,1.62,0,0,1-.49,1.19,1.69,1.69,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M145.94,167.92V162.5H145v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H147v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M133.93,140a1.61,1.61,0,0,1-.49,1.19,1.65,1.65,0,0,1-1.19.49,1.66,1.66,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M135.7,141.56v-5.42h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M141.06,140a1.61,1.61,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.69,1.69,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,1.69-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.58.58,0,0,0-.18.43v3.85a.58.58,0,0,0,.18.43.57.57,0,0,0,.43.18.61.61,0,0,0,.61-.61Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M142.82,141.56v-5.42h-.9v-.74a1.63,1.63,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.75v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M118.31,69.16a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19V65.31a1.63,1.63,0,0,1,.5-1.19,1.59,1.59,0,0,1,1.19-.49,1.62,1.62,0,0,1,1.19.49,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M120.07,70.77V65.34h-.9V64.6a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M125.43,69.16a1.67,1.67,0,0,1-1.68,1.68,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19V65.31a1.67,1.67,0,0,1,1.68-1.68,1.59,1.59,0,0,1,1.19.49,1.62,1.62,0,0,1,.49,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M127.2,70.77V65.34h-.91V64.6a1.61,1.61,0,0,0,1.23-.88h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M165.55,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,1,1,3.37,0Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.6.6,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M167.31,167.92V162.5h-.9v-.74a1.67,1.67,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M172.67,166.32a1.62,1.62,0,0,1-.49,1.19A1.66,1.66,0,0,1,171,168a1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M174.44,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M179.8,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.69-1.68v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.61.61,0,0,0-.17.43v3.85a.61.61,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M181.56,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M186.92,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M188.69,167.92V162.5h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M194.05,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.69,1.69,0,0,1,2.88-1.19,1.66,1.66,0,0,1,.49,1.19Zm-1.1-3.87a.58.58,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.58.58,0,0,0,.43.18.6.6,0,0,0,.44-.18.58.58,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M195.81,167.92V162.5h-.9v-.74a1.59,1.59,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M201.17,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.67,1.67,0,0,1-1.68-1.68v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M205.45,166.32a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.65,1.65,0,0,1-1.19-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M209.73,166.32a1.62,1.62,0,0,1-.49,1.19,1.69,1.69,0,0,1-2.38,0,1.62,1.62,0,0,1-.49-1.19v-3.85a1.67,1.67,0,0,1,1.68-1.68,1.63,1.63,0,0,1,1.2.49,1.65,1.65,0,0,1,.48,1.19Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M214,166.32a1.69,1.69,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.2-.49,1.62,1.62,0,0,1-.49-1.19v-3.85a1.65,1.65,0,0,1,.49-1.19,1.7,1.7,0,0,1,2.39,0,1.66,1.66,0,0,1,.49,1.19Zm-1.11-3.87a.61.61,0,0,0-1-.43.57.57,0,0,0-.17.43v3.85a.57.57,0,0,0,.17.43.61.61,0,0,0,1-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M332.37,174.69v-5.42h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M337.73,173.08a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.62,1.62,0,0,1,1.19.5,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.58.58,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.58.58,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M339.49,174.69v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M344.85,173.08a1.59,1.59,0,0,1-.49,1.19,1.68,1.68,0,0,1-2.87-1.19v-3.84A1.63,1.63,0,0,1,342,168a1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M346.62,174.69v-5.42h-.91v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M374.2,192.7a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.86a.6.6,0,0,0-.18-.44.58.58,0,0,0-.43-.18.57.57,0,0,0-.43.18.6.6,0,0,0-.18.44v3.85a.6.6,0,0,0,.18.43.57.57,0,0,0,.43.18.58.58,0,0,0,.43-.18.6.6,0,0,0,.18-.43Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M356.26,173.08a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M360.54,173.08a1.59,1.59,0,0,1-.49,1.19,1.62,1.62,0,0,1-1.19.49,1.59,1.59,0,0,1-1.19-.49,1.62,1.62,0,0,1-.5-1.19v-3.84a1.64,1.64,0,0,1,.5-1.2,1.66,1.66,0,0,1,1.19-.49,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.61.61,0,0,0-.61-.61.57.57,0,0,0-.43.18.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.57.57,0,0,0,.43.18.6.6,0,0,0,.43-.18.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M372.52,144.11a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.65,1.65,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.62,1.62,0,0,1,1.19.5,1.65,1.65,0,0,1,.49,1.19Zm-1.1-3.86a.61.61,0,0,0-.62-.62.6.6,0,0,0-.43.18.64.64,0,0,0-.17.44v3.84a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M248.93,143.48a1.67,1.67,0,0,1-1.68,1.68,1.67,1.67,0,0,1-1.68-1.68v-3.84a1.63,1.63,0,0,1,.49-1.2,1.66,1.66,0,0,1,1.19-.49,1.67,1.67,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.86,0,.6.6,0,0,0-.18.43v3.85a.6.6,0,0,0,.18.44.6.6,0,0,0,.86,0,.6.6,0,0,0,.18-.44Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M224.65,100.45a1.62,1.62,0,0,1-.49,1.19,1.66,1.66,0,0,1-1.19.49,1.62,1.62,0,0,1-1.19-.5,1.59,1.59,0,0,1-.49-1.18V96.6a1.68,1.68,0,1,1,3.36,0Zm-1.1-3.87a.61.61,0,0,0-1.22,0v3.85a.61.61,0,0,0,1.22,0Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M257.5,143.48a1.69,1.69,0,0,1-1.68,1.68,1.63,1.63,0,0,1-1.2-.49,1.66,1.66,0,0,1-.49-1.19v-3.84a1.69,1.69,0,0,1,1.69-1.69,1.69,1.69,0,0,1,1.68,1.69Zm-1.1-3.87a.6.6,0,0,0-.18-.43.6.6,0,0,0-.44-.18.6.6,0,0,0-.43.18.63.63,0,0,0-.17.43v3.85a.64.64,0,0,0,.17.44.6.6,0,0,0,.43.18.61.61,0,0,0,.62-.62Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M259.26,145.09v-5.42h-.9v-.75a1.56,1.56,0,0,0,.73-.29,1.38,1.38,0,0,0,.49-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M262.1,145.09v-5.42h-.9v-.75a1.49,1.49,0,0,0,.72-.29,1.41,1.41,0,0,0,.5-.59h.74v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M264.94,145.09v-5.42H264v-.75a1.48,1.48,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59H266v7.05Z"
                         style={{
                             fill: "#fff",
                         }}
                     />
-                    <path
+                    <motion.path variants={codeItem}
                         d="M279.83,119.45V114h-.91v-.74a1.58,1.58,0,0,0,.73-.29,1.41,1.41,0,0,0,.5-.59h.74v7Z"
                         style={{
                             fill: "#fff",
@@ -6972,7 +6982,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#263238",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <motion.circle
                     cx={355.26}
                     cy={410.95}
@@ -6980,7 +6990,7 @@ export default function HeroIllustration() {
                     style={{
                         fill: "#263238",
                     }}
-                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.3, ease: "easeOut" }} />
+                 initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} />
                 <path
                     d="M311.05,325h15.35a0,0,0,0,1,0,0v31.93a4.13,4.13,0,0,1-4.13,4.13h-7.09a4.13,4.13,0,0,1-4.13-4.13V325A0,0,0,0,1,311.05,325Z"
                     style={{
