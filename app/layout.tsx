@@ -39,11 +39,8 @@ const themeInitScript = `
 (function () {
   try {
     var param = new URLSearchParams(window.location.search).get('theme');
-    var stored = localStorage.getItem('theme');
-    var theme = param || stored;
-    var isDark = theme === 'dark';
+    var isDark = param === 'dark';
     document.documentElement.classList.toggle('dark', isDark);
-    if (param) localStorage.setItem('theme', param);
   } catch (e) {}
 })();
 `

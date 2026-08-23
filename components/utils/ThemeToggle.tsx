@@ -8,10 +8,11 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     const isDark = document.documentElement.classList.toggle('dark')
     const theme = isDark ? 'dark' : 'light'
-    try { localStorage.setItem('theme', theme) } catch {}
-    const params = new URLSearchParams(window.location.search)
-    params.set('theme', theme)
-    window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`)
+    const url = new URL(window.location.href)
+    url.searchParams.set('theme', theme)
+    // remove trailing slash on root to avoid /?theme ( -> ?theme )
+    var pathname = url.pathname === '/' ? '' : url.pathname
+    history.replaceState(null, '', pathname + '?' + url.searchParams.toString() + url.hash)
   }
 
   return (
