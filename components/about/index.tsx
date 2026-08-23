@@ -13,7 +13,7 @@ export default function About() {
                 <IntroProvider>
                     <div className='lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-[calc(100vh-80px)] py-24 lg:py-28'>
                         <Intro />
-                        <div className='hidden lg:flex items-center justify-center w-full h-fit bg-white dark:bg-[#f4f2f9] rounded-3xl shadow-sm border border-gray-200 dark:border-transparent p-6'>
+                        <div className='hidden lg:flex items-center justify-center w-full h-fit bg-transparent dark:bg-[#f4f2f9] border border-transparent rounded-none dark:rounded-3xl shadow-none dark:shadow-2xl p-0 dark:p-4'>
                             <HeroIllustration />
                         </div>
                         <BouncePoint />
