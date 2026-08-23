@@ -25,7 +25,7 @@ export default function Projects() {
                             />
                             <button
                                 onClick={() => setView('grid')}
-                                className={`view-toggle-btn ${view === 'grid' ? 'text-white dark:text-gray-900' : ''}`}
+                                className={`view-toggle-btn ${view === 'grid' ? 'view-toggle-btn-active' : ''}`}
                                 aria-label="Grid view"
                                 aria-pressed={view === 'grid'}
                             >
@@ -33,7 +33,7 @@ export default function Projects() {
                             </button>
                             <button
                                 onClick={() => setView('list')}
-                                className={`view-toggle-btn ${view === 'list' ? 'text-white dark:text-gray-900' : ''}`}
+                                className={`view-toggle-btn ${view === 'list' ? 'view-toggle-btn-active' : ''}`}
                                 aria-label="List view"
                                 aria-pressed={view === 'list'}
                             >
