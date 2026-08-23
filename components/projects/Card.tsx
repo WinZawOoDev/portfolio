@@ -1,6 +1,7 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { Inter } from 'next/font/google'
 import { AiFillGithub } from 'react-icons/ai'
 import { RiExternalLinkFill } from 'react-icons/ri'
@@ -23,7 +24,7 @@ type Props = {
 export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false, view = 'grid' }: Props) {
     const isList = view === 'list'
     return (
-        <div className={isList ? 'project-card-list' : 'project-card'}>
+        <motion.div layout transition={{ type: "spring", bounce: 0.15, duration: 0.5 }} className={isList ? 'project-card-list' : 'project-card'}>
             <Image
                 src={imageSource}
                 alt={projectName}
@@ -62,6 +63,6 @@ export default function Card({ imageSource, projectName, href, content, techStac
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

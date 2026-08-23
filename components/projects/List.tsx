@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Variants, motion } from 'framer-motion'
+import { Variants, motion, AnimatePresence } from 'framer-motion'
 import Card from './Card'
 import workplace from '@/public/images/work_place.jpg'
 
@@ -92,31 +92,39 @@ const item: Variants = {
 
 export default function List({ view }: { view: 'grid' | 'list' }) {
     return (
-        <motion.ul
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className={view === 'grid' ? 'projects-grid' : 'projects-list'}
-        >
-            {projects.map((project, idx) => (
-                <motion.li
-                    key={project.id}
-                    variants={item}
-                    className={view === 'grid' ? "flex" : "flex w-full"}
-                >
-                    <Card
-                        imageSource={project.imageSource}
-                        projectName={project.projectName}
-                        href={project.href}
-                        content={project.content}
-                        techStack={project.techStack}
-                        sourceLink={project.sourceLink}
-                        priority={idx < 2}
-                        view={view}
-                    />
-                </motion.li>
-            ))}
-        </motion.ul>
+        <AnimatePresence mode="wait">
+            <motion.ul
+                key={view}
+                layout
+                variants={container}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ layout: { type: "spring", bounce: 0.15, duration: 0.6 } }}
+                className={view === 'grid' ? 'projects-grid' : 'projects-list'}
+            >
+                {projects.map((project, idx) => (
+                    <motion.li
+                        key={project.id}
+                        layout
+                        variants={item}
+                        transition={{ layout: { type: "spring", bounce: 0.2, duration: 0.5 }, opacity: { duration: 0.3 }, y: { type: "spring", bounce: 0.2 } }}
+                        className={view === 'grid' ? "flex" : "flex w-full"}
+                    >
+                        <Card
+                            imageSource={project.imageSource}
+                            projectName={project.projectName}
+                            href={project.href}
+                            content={project.content}
+                            techStack={project.techStack}
+                            sourceLink={project.sourceLink}
+                            priority={idx < 2}
+                            view={view}
+                        />
+                    </motion.li>
+                ))}
+            </motion.ul>
+        </AnimatePresence>
     )
 }
