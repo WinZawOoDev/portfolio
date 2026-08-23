@@ -9,6 +9,42 @@ const projects = [
     {
         id: 1,
         imageSource: workplace,
+        projectName: "Marketing CMS — Content Hub",
+        href: "https://www.kbzbank.com",
+        content: "Marketing Content Management System at KBZ Bank — centralized content authoring and publishing for marketing campaigns, built and deployed with Strapi + Next.js on AWS.",
+        techStack: ["Strapi", "Next.js", "AWS", "TypeScript"],
+        sourceLink: "https://github.com/WinZawOoDev"
+    },
+    {
+        id: 2,
+        imageSource: workplace,
+        projectName: "Marketing CMS — Campaign Manager",
+        href: "https://www.kbzbank.com",
+        content: "Marketing CMS for campaign lifecycle — content scheduling, approval workflows and multi-channel distribution, deployed on AWS.",
+        techStack: ["Strapi", "Next.js", "AWS", "PostgreSQL"],
+        sourceLink: "https://github.com/WinZawOoDev"
+    },
+    {
+        id: 3,
+        imageSource: workplace,
+        projectName: "Marketing CMS — Promo Portal",
+        href: "https://www.kbzbank.com",
+        content: "Promo portal CMS for marketing — dynamic banners, offers and localized content management with Strapi headless CMS and Next.js SSR on AWS.",
+        techStack: ["Strapi", "Next.js", "AWS", "Tailwind"],
+        sourceLink: "https://github.com/WinZawOoDev"
+    },
+    {
+        id: 4,
+        imageSource: workplace,
+        projectName: "KYC Search Portal",
+        href: "https://www.kbzbank.com",
+        content: "Designed and developed KYC Search Portal for rapid customer verification — search, filtering and compliance workflows built with React.js.",
+        techStack: ["React.js", "TypeScript", "REST API"],
+        sourceLink: "https://github.com/WinZawOoDev"
+    },
+    {
+        id: 5,
+        imageSource: workplace,
         projectName: "HR Recruitment Module",
         href: "https://smilaxglobal.com",
         content: "Recruitment module for HR System at Smilax Global — candidate pipelines, job postings, and interview workflows built with microservices.",
@@ -16,7 +52,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 2,
+        id: 6,
         imageSource: workplace,
         projectName: "Tour Management System",
         href: "https://www.cloudsource.co.jp",
@@ -25,7 +61,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 3,
+        id: 7,
         imageSource: workplace,
         projectName: "Goods Order & SAP Integration",
         href: "http://pos.com.mm/",
@@ -34,7 +70,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 4,
+        id: 8,
         imageSource: workplace,
         projectName: "Membership Card Payment API",
         href: "http://pos.com.mm/",
@@ -43,7 +79,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 5,
+        id: 9,
         imageSource: workplace,
         projectName: "POS System Maintenance",
         href: "http://pos.com.mm/",
@@ -52,7 +88,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 6,
+        id: 10,
         imageSource: workplace,
         projectName: "Personal Portfolio",
         href: "#",

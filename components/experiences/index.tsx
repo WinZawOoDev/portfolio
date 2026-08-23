@@ -39,37 +39,15 @@ const experiences: contentDescProps[] = [
     techStack: ["TypeScript", "Remix", "Tailwind", "Prisma", "PostgreSQL", "GCP"]
   },
   {
-    position: "Web Developer — Order Management",
+    position: "Web Developer",
     company: "Advancer Business Solution",
     website: "http://pos.com.mm/",
     date: {
       start: "01/2020",
       end: "10/2022"
     },
-    description: "Built goods order management system for grocery stores to order from suppliers and integrated with SAP for stock and settlement.",
-    techStack: ["PHP (Laravel)", "React.js", "Bootstrap", "MySQL"]
-  },
-  {
-    position: "Web Developer — Payment Integration",
-    company: "Advancer Business Solution",
-    website: "http://pos.com.mm/",
-    date: {
-      start: "01/2020",
-      end: "10/2022"
-    },
-    description: "Built membership card payment API integration allowing charges to be paid via member card from the POS system.",
-    techStack: ["PHP (Laravel)", "MySQL", "REST API"]
-  },
-  {
-    position: "Web Developer — POS Maintenance",
-    company: "Advancer Business Solution",
-    website: "http://pos.com.mm/",
-    date: {
-      start: "01/2020",
-      end: "10/2022"
-    },
-    description: "Maintained and optimized legacy POS system — bug fixes, performance improvements and new feature development.",
-    techStack: ["PHP (CodeIgniter)", "Bootstrap", "MySQL"]
+    description: "Built goods order management system with SAP integration, membership card payment API, and maintained POS system — ordering, payment and performance improvements for grocery retail.",
+    techStack: ["PHP (Laravel)", "PHP (CodeIgniter)", "React.js", "Bootstrap", "MySQL", "REST API"]
   },
 ]
 
