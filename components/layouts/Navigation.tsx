@@ -47,7 +47,7 @@ export default function Navigation() {
   const [activeLink, setActiveLink] = useState("");
 
   return (
-    <nav className='hidden lg:block leading-3 tracking-tight text-gray-700'>
+    <nav className='hidden lg:block leading-3 tracking-tight text-gray-700 dark:text-gray-300'>
       <motion.ul
         variants={container}
         initial="hidden"
@@ -70,7 +70,7 @@ export default function Navigation() {
               {link.name}
               {activeLink === link.to &&
                 (<motion.div
-                  className='absolute -bottom-2 inset-x-0 h-[0.11em] rounded-2xl bg-[#343434]'
+                  className='absolute -bottom-2 inset-x-0 h-[0.11em] rounded-2xl bg-[#343434] dark:bg-gray-300'
                   layoutId='underline'
                 />)}
             </ScrollLink>

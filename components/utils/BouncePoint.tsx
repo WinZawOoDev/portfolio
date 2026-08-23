@@ -25,9 +25,9 @@ export default function BouncePoint() {
                         hashSpy={true}
                         duration={1000}
                     >
-                        <button className='relative h-7 w-4 lg:h-9 lg:w-5 border border-gray-300 ring-2 ring-gray-600 rounded-3xl'>
+                        <button className='relative h-7 w-4 lg:h-9 lg:w-5 border border-gray-300 dark:border-gray-700 ring-2 ring-gray-600 dark:ring-gray-500 rounded-3xl'>
                             <span
-                                className='absolute bounce-in-top m-auto inset-x-0 w-[0.3em] h-[0.3em] lg:w-2 lg:h-2 shadow ring-[0.1em] ring-gray-600 bg-gray-500 rounded-full'
+                                className='absolute bounce-in-top m-auto inset-x-0 w-[0.3em] h-[0.3em] lg:w-2 lg:h-2 shadow ring-[0.1em] ring-gray-600 dark:ring-gray-500 bg-gray-500 dark:bg-gray-400 rounded-full'
                             />
                         </button>
                     </Link>

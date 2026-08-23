@@ -42,10 +42,10 @@ export default function MobileMenu() {
                         }
                     }
                 }}
-                className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 shadow-2xl'
+                className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 dark:bg-[#15151b] shadow-2xl transition-colors duration-300'
             >
                 <ul
-                    className='absolute m-auto inset-0 h-fit w-fit text-gray-800'
+                    className='absolute m-auto inset-0 h-fit w-fit text-gray-800 dark:text-gray-200'
                 >
                     {navLinks.map(link => (
                         <li key={link.id} className={`${ibmFont.className} my-5 capitalize`}>
@@ -95,7 +95,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
             />
             <motion.span
                 variants={{
@@ -122,7 +122,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
             />
             <motion.span
                 variants={{
@@ -147,7 +147,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
             />
         </motion.button>
     )

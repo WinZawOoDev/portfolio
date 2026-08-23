@@ -34,28 +34,28 @@ export default function ContentDesc({ position, company, website, date, descript
         y: 0
       }}
       transition={{ type: "spring", duration: 0.5, bounce: 0.4 }}
-      className='relative rounded-md w-fit mx-5 lg:mx-0 h-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] cursor-default my-2 p-6'
+      className='relative rounded-md w-fit mx-5 lg:mx-0 h-fit bg-[#f5f5f5] hover:bg-[#f8f8ff] dark:bg-[#15151c] dark:hover:bg-[#1c1c24] cursor-default my-2 p-6 transition-colors duration-300'
     >
       <div className='py-2'>
 
         {/* Position */}
         <div className='flex items-center'>
-          <h5 className={`${rubik.className} font-bold text-lg text-gray-800 capitalize`}>{position}</h5>
+          <h5 className={`${rubik.className} font-bold text-lg text-gray-800 dark:text-gray-200 capitalize`}>{position}</h5>
           <Link href={website} target='_blank' className='group flex items-center'>
-            <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500`}>{company}</span>
-            <span className='text-gray-400 transform transition-all delay-75 duration-75 group-hover:scale-110'><BsArrowUpRight /></span>
+            <span className={`ml-2 mr-[0.5em] group-hover:underline underline-offset-2 text-sm italic font-light text-gray-500 dark:text-gray-400`}>{company}</span>
+            <span className='text-gray-400 dark:text-gray-500 transform transition-all delay-75 duration-75 group-hover:scale-110'><BsArrowUpRight /></span>
           </Link>
         </div>
 
         {/* Join Date  */}
-        <div className='font-light text-xs mt-1 my-2 text-gray-900'>
+        <div className='font-light text-xs mt-1 my-2 text-gray-900 dark:text-gray-100'>
           <span className='tracking-wide'>{date.start}</span>
           <span className='mx-2'>-</span>
           <span className='tracking-wide'>{date.end}</span>
         </div>
       </div>
 
-      <p className={`${alegreyaSanFont.className} py-1 text-lg font-light text-gray-700`}>
+      <p className={`${alegreyaSanFont.className} py-1 text-lg font-light text-gray-700 dark:text-gray-300`}>
         {description}
       </p>
 

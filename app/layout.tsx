@@ -13,13 +13,28 @@ export const metadata: Metadata = {
   description: 'portfolio site',
 }
 
+const themeInitScript = `
+(function () {
+  try {
+    var theme = new URLSearchParams(window.location.search).get('theme');
+    var isDark = theme
+      ? theme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.classList.toggle('dark', isDark);
+  } catch (e) {}
+})();
+`
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <ScrollProgress />
         <Header />

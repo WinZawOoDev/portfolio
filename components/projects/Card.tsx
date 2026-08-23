@@ -22,7 +22,7 @@ type Props = {
 
 export default function Card({ imageSource, projectName, href, content, techStack, sourceLink }: Props) {
     return (
-        <div className='relative flex-1 justify-between bg-[#f8f4ff] h-[25em]  w-full  md:w-[20em] shadow-2xl p-1 rounded-md'>
+        <div className='relative flex-1 justify-between bg-[#f8f4ff] dark:bg-[#15151c] h-[25em]  w-full  md:w-[20em] shadow-2xl p-1 rounded-md transition-colors duration-300'>
             <Image
                 src={imageSource}
                 alt='work place'
@@ -31,17 +31,17 @@ export default function Card({ imageSource, projectName, href, content, techStac
             <div className='relative m-2'>
                 <Link
                     href={href}
-                    className='absolute m-auto top-1 right-1 w-fit h-fit font-bold text-gray-500 text-lg'
+                    className='absolute m-auto top-1 right-1 w-fit h-fit font-bold text-gray-500 dark:text-gray-400 text-lg'
                 >
                     <RiExternalLinkFill />
                 </Link>
-                <h4 className={`${robotoFont.className} text-sm text-gray-800 text-left mb-3 mt-2`}>{projectName}</h4>
-                <p className={`mt-5 px-3 ${firaSansFont.className} text-center font-light text-sm text-gray-700`}>
+                <h4 className={`${robotoFont.className} text-sm text-gray-800 dark:text-gray-200 text-left mb-3 mt-2`}>{projectName}</h4>
+                <p className={`mt-5 px-3 ${firaSansFont.className} text-center font-light text-sm text-gray-700 dark:text-gray-300`}>
                     {content}
                 </p>
             </div>
             <div className='absolute bottom-4 px-2 mx-auto w-full h-fit inset-x-0 flex flex-wrap items-center justify-between'>
-                <div className={`flex flex-wrap ${openSansFont.className} text-gray-700  text-xs font-medium text-clip text-left w-3/4 h-fit`}>
+                <div className={`flex flex-wrap ${openSansFont.className} text-gray-700 dark:text-gray-300  text-xs font-medium text-clip text-left w-3/4 h-fit`}>
                     {techStack.map((tech, index) => (
                         <div key={index} className='flex items-center mr-1'>
                             <span className='inline-block'><BsDot /></span>
@@ -49,7 +49,7 @@ export default function Card({ imageSource, projectName, href, content, techStac
                         </div>
                     ))}
                 </div>
-                <Link href={sourceLink} target='__blank' className='block text-2xl mr-3 text-gray-700'>
+                <Link href={sourceLink} target='__blank' className='block text-2xl mr-3 text-gray-700 dark:text-gray-300'>
                     <AiFillGithub />
                 </Link>
             </div>
