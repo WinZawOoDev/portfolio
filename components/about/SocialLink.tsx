@@ -21,7 +21,7 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
                             transition={{ duration: 1, type: "spring" }}
-                            className='w-10 h-10 inline-flex items-center justify-center rounded-full bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 hover:border-transparent transition-colors'
+                            className='icon-btn'
                         >
                             <Link href={"https://www.linkedin.com/in/win-zaw-oo-393715222/"} target='_blank' aria-label="LinkedIn" >
                                 <AiFillLinkedin size={18} />
@@ -33,7 +33,7 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 15 }}
                             transition={{ duration: 1.5, type: "spring" }}
-                            className='w-10 h-10 inline-flex items-center justify-center rounded-full bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 hover:border-transparent transition-colors'
+                            className='icon-btn'
                         >
                             <Link href={"https://twitter.com/WinZaw00"} target='_blank' aria-label="Twitter" >
                                 <Twitter />
@@ -45,7 +45,7 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
                             transition={{ duration: 2.2, type: "spring" }}
-                            className='w-10 h-10 inline-flex items-center justify-center rounded-full bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 hover:border-transparent transition-colors'
+                            className='icon-btn'
                         >
                             <Link href={"https://github.com/WinZawOoDev"} target='_blank' aria-label="GitHub">
                                 <AiOutlineGithub size={18} />

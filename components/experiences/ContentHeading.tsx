@@ -36,7 +36,7 @@ export default function ContentHeading() {
                         initial={{ opacity: 0, x: -15 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ type: "spring", bounce: 0.5, duration: 0.7, delay: 0.2 }}
-                        className='hidden lg:inline-flex items-center outline-none rounded-lg bg-[#253529] hover:bg-[#1e2b21] dark:bg-[#2e4436] dark:hover:bg-[#253529] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-white shadow-sm hover:shadow transition-all cursor-pointer'
+                        className='btn-primary'
                     >
                         Contact me
                     </motion.button>
@@ -46,7 +46,7 @@ export default function ContentHeading() {
                     initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", bounce: 0.5, duration: 0.4, delay: 0.1 }}
-                    className='hidden lg:inline-flex outline-none rounded-lg mx-3 border border-[#253529] dark:border-[#9dbfa8] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-[#253529] dark:text-[#9dbfa8] hover:bg-[#253529] hover:text-white dark:hover:bg-[#9dbfa8] dark:hover:text-[#0d0d12] transition-colors cursor-pointer'
+                    className='btn-secondary'
                 >
                     <Link href='/resume.pdf'>
                         My Resume

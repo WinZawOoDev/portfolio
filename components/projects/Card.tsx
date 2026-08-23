@@ -21,7 +21,7 @@ type Props = {
 
 export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false }: Props) {
     return (
-        <div className='relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[26em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200'>
+        <div className='project-card'>
             <Image
                 src={imageSource}
                 alt={projectName}
@@ -36,7 +36,7 @@ export default function Card({ imageSource, projectName, href, content, techStac
                         href={href}
                         target="_blank"
                         aria-label={`Open ${projectName}`}
-                        className='shrink-0 w-7 h-7 inline-flex items-center justify-center rounded-md bg-transparent dark:bg-[#1e1e26] border border-gray-200/50 dark:border-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors'
+                        className='icon-btn-card'
                     >
                         <RiExternalLinkFill size={14} />
                     </Link>
@@ -47,7 +47,7 @@ export default function Card({ imageSource, projectName, href, content, techStac
                 <div className='mt-auto pt-4 flex items-center justify-between gap-2'>
                     <div className={`flex flex-wrap gap-1.5 ${interRegular.className} text-[11px] font-medium text-left flex-1`}>
                         {techStack.slice(0, 3).map((tech, index) => (
-                            <span key={index} className='px-2 py-1 rounded-full bg-gray-100/70 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-[#2a2a36]'>
+                            <span key={index} className='badge-sm'>
                                 {tech}
                             </span>
                         ))}
@@ -55,7 +55,7 @@ export default function Card({ imageSource, projectName, href, content, techStac
                             <span className='px-2 py-1 text-gray-500 dark:text-gray-500'>+{techStack.length - 3}</span>
                         )}
                     </div>
-                    <Link href={sourceLink} target='_blank' aria-label="GitHub source" className='shrink-0 w-8 h-8 inline-flex items-center justify-center rounded-full border border-gray-200/50 dark:border-[#252530] bg-transparent dark:bg-transparent text-gray-600 dark:text-gray-400 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 hover:border-transparent transition-colors'>
+                    <Link href={sourceLink} target='_blank' aria-label="GitHub source" className='icon-btn-sm !w-8 !h-8'>
                         <AiFillGithub size={16} />
                     </Link>
                 </div>

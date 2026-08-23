@@ -66,7 +66,7 @@ export default function Experiences() {
   return (
     <LinkContainer name='experiences'>
       <LayoutContainer>
-        <div className='overflow-hidden py-20 lg:py-28 border-t border-gray-200 dark:border-[#1e1e26]'>
+        <div className='section overflow-hidden'>
           <div className='relative h-fit md:px-6 lg:px-8 inset-y-0 inset-x-0'>
             <div className='lg:grid lg:grid-cols-2 lg:gap-12 items-start'>
               <ContentHeading />

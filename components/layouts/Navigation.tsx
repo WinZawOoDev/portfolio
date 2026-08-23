@@ -70,7 +70,7 @@ export default function Navigation() {
               {link.name}
               {activeLink === link.to &&
                 (<motion.div
-                  className='absolute -bottom-1.5 inset-x-0 h-[2px] rounded-full bg-gray-900 dark:bg-gray-100'
+                  className='nav-underline'
                   layoutId='underline'
                 />)}
             </ScrollLink>

@@ -34,6 +34,71 @@ body {
   @apply hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] transition-all duration-200;
 }
 
+/* ————— Utilities extracted from components ————— */
+.site-header {
+  @apply fixed top-0 w-full z-30 bg-[#f8f8ff]/90 dark:bg-[#0d0d12]/90 backdrop-blur-md border-b border-transparent dark:border-[#1a1a22] transition-colors duration-300;
+}
+.site-header-inner {
+  @apply relative flex items-center justify-between py-4 md:py-6;
+}
+.layout-container {
+  @apply w-full max-w-7xl mx-auto overflow-x-hidden px-4 sm:px-6 lg:px-8;
+}
+.section {
+  @apply py-20 lg:py-28 border-t border-gray-200 dark:border-[#1e1e26];
+}
+.section-hero {
+  @apply lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-[calc(100vh-80px)] py-24 lg:py-28;
+}
+.hero-illustration-wrap {
+  @apply hidden lg:flex items-center justify-center w-full h-fit bg-transparent dark:bg-[#f4f2f9] border border-transparent rounded-none dark:rounded-3xl shadow-none dark:shadow-2xl p-0 dark:p-4;
+}
+.experience-card {
+  @apply relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] cursor-default my-3 p-6 transition-all duration-200;
+}
+.project-card {
+  @apply relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[26em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200;
+}
+.contact-card {
+  @apply w-full max-w-lg bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] rounded-2xl shadow-none dark:shadow-sm p-6 lg:p-8;
+}
+.projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 place-items-stretch mx-auto w-full max-w-6xl mt-12;
+}
+.badge {
+  @apply rounded-full text-[11px] tracking-wide font-medium px-2.5 py-1 bg-gray-100/70 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-[#2a2a36];
+}
+.badge-sm {
+  @apply px-2 py-1 rounded-full bg-gray-100/70 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-[#2a2a36] text-[11px] font-medium;
+}
+.input-field {
+  @apply w-full px-3.5 py-2.5 bg-white dark:bg-[#0d0d12] border border-gray-200 dark:border-[#252530] rounded-lg text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-[#3a3a48] focus:ring-1 focus:ring-gray-400 dark:focus:ring-[#3a3a48] transition-colors;
+}
+.textarea-field {
+  @apply w-full min-h-[8em] px-3.5 py-2.5 bg-white dark:bg-[#0d0d12] border border-gray-200 dark:border-[#252530] rounded-lg text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:border-gray-400 dark:focus:border-[#3a3a48] focus:ring-1 focus:ring-gray-400 dark:focus:ring-[#3a3a48] transition-colors resize-y;
+}
+.btn-primary {
+  @apply hidden lg:inline-flex items-center outline-none rounded-lg bg-[#253529] hover:bg-[#1e2b21] dark:bg-[#2e4436] dark:hover:bg-[#253529] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-white shadow-sm hover:shadow transition-all cursor-pointer;
+}
+.btn-secondary {
+  @apply hidden lg:inline-flex outline-none rounded-lg mx-3 border border-[#253529] dark:border-[#9dbfa8] text-sm lg:text-base px-5 py-2.5 my-7 font-medium text-[#253529] dark:text-[#9dbfa8] hover:bg-[#253529] hover:text-white dark:hover:bg-[#9dbfa8] dark:hover:text-[#0d0d12] transition-colors cursor-pointer;
+}
+.btn-submit {
+  @apply w-full sm:w-auto inline-flex items-center justify-center px-6 py-2.5 rounded-lg font-medium text-sm bg-[#253529] dark:bg-[#2e4436] text-white shadow-sm hover:bg-[#1e2b21] dark:hover:bg-[#1e2b21] hover:shadow active:scale-[0.98] transition-all cursor-pointer disabled:opacity-60 disabled:pointer-events-none disabled:cursor-not-allowed;
+}
+.icon-btn {
+  @apply w-10 h-10 inline-flex items-center justify-center rounded-full bg-white dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 hover:border-transparent transition-colors;
+}
+.icon-btn-sm {
+  @apply w-9 h-9 inline-flex items-center justify-center rounded-full bg-transparent dark:bg-[#15151c] border border-gray-200/50 dark:border-[#252530] hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors;
+}
+.icon-btn-card {
+  @apply shrink-0 w-7 h-7 inline-flex items-center justify-center rounded-md bg-transparent dark:bg-[#1e1e26] border border-gray-200/50 dark:border-transparent text-gray-500 dark:text-gray-400 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-colors;
+}
+.nav-underline {
+  @apply absolute -bottom-1.5 inset-x-0 h-[2px] rounded-full bg-gray-900 dark:bg-gray-100;
+}
+
 .dark .logo-svg stop {
   stop-color: #e8e8ee;
 }

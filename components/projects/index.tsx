@@ -8,7 +8,7 @@ export default function Projects() {
     return (
         <LinkContainer name='projects'>
             <LayoutContainer>
-                <div className='text-center h-fit py-20 lg:py-28 border-t border-gray-200 dark:border-[#1e1e26]'>
+                <div className='section text-center h-fit'>
                     <Heading />
                     <ProjectList />
                 </div>
