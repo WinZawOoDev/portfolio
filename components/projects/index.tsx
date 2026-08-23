@@ -1,19 +1,47 @@
-import React, { Fragment } from 'react'
+'use client'
+
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { BsGrid3X3Gap, BsListUl } from 'react-icons/bs'
 import LinkContainer from '../layouts/LinkContainer'
 import LayoutContainer from '../layouts/LayoutContainer'
 import ProjectList from './List'
 import Heading from './Heading'
-import UnderPreParation from './UnderPreparation'
 
 export default function Projects() {
+    const [view, setView] = useState<'grid' | 'list'>('grid')
     return (
         <LinkContainer name='projects'>
             <LayoutContainer>
-                <div className='text-center h-fit pt-10 lg:pt-36'>
-                    <div className='absolute top-80 md:top-1/3 lg:top-1/2 bg-[#080808] inset-0 m-auto -z-10' />
-                    <Heading />
-                    {/* <ProjectList /> */}
-                    <UnderPreParation />
+                <div className='section h-fit'>
+                    <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-6xl mx-auto'>
+                        <Heading />
+                        <div className="view-toggle shrink-0 self-start sm:self-auto" role="group" aria-label="Toggle view">
+                            <motion.div
+                                layout
+                                transition={{ type: "spring", bounce: 0.1, duration: 0.3 }}
+                                className="view-toggle-indicator"
+                                style={{ left: view === 'grid' ? '4px' : 'calc(100% - 36px)' }}
+                            />
+                            <button
+                                onClick={() => setView('grid')}
+                                className={`view-toggle-btn ${view === 'grid' ? 'view-toggle-btn-active' : ''}`}
+                                aria-label="Grid view"
+                                aria-pressed={view === 'grid'}
+                            >
+                                <BsGrid3X3Gap size={14} />
+                            </button>
+                            <button
+                                onClick={() => setView('list')}
+                                className={`view-toggle-btn ${view === 'list' ? 'view-toggle-btn-active' : ''}`}
+                                aria-label="List view"
+                                aria-pressed={view === 'list'}
+                            >
+                                <BsListUl size={14} />
+                            </button>
+                        </div>
+                    </div>
+                    <ProjectList view={view} />
                 </div>
             </LayoutContainer>
         </LinkContainer>

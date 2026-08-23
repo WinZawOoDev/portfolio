@@ -1,24 +1,25 @@
 'use client';
 
 import React from 'react'
-import { Spectral, Work_Sans, DM_Sans } from 'next/font/google'
+import { Spectral, Inter } from 'next/font/google'
 import Typewriter from 'typewriter-effect'
 import { useIntroContext } from './IntroProvider';
 
 const spectralFont = Spectral({
     weight: "800",
-    subsets: ["latin"]
+    subsets: ["latin"],
+    display: 'swap'
 })
-const workSansFont = Work_Sans({ weight: "300", subsets: ["latin"] })
-const dmSansFont = DM_Sans({ weight: "600", subsets: ["latin"] });
+const interMedium = Inter({ subsets: ["latin"], weight: "600", display: 'swap' })
+const interLight = Inter({ subsets: ["latin"], weight: "300", display: 'swap' });
 
 export default function AboutMe() {
 
     const { typeOutStatus, dispatchTypeOutStatus } = useIntroContext();
 
     return (
-        <div className='relative pt-24 md:pt-28 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
-            <span className='mb-3 text-sm lg:text-base whitespace-pre-line text-gray-800'>
+        <div className='relative pt-2 md:pt-4 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
+            <span className='mb-3 text-sm lg:text-base whitespace-pre-line text-gray-800 dark:text-gray-300'>
                 <Typewriter
                     options={{
                         delay: 60
@@ -35,7 +36,7 @@ export default function AboutMe() {
                 />
             </span>
 
-            <h1 className={`${spectralFont.className} text-4xl md:text-5xl lg:text-7xl block mt-2 mb-10 text-gray-900`}>
+            <h1 className={`${spectralFont.className} text-4xl md:text-5xl lg:text-7xl block mt-2 mb-10 min-h-[1.2em] text-gray-900 dark:text-gray-100`}>
                 {typeOutStatus.intro && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -51,7 +52,7 @@ export default function AboutMe() {
                 }
             </h1>
 
-            <h4 className={`block ${dmSansFont.className} text-base  lg:text-xl lg:text-ba text-gray-900 my-5 font-bold leading-3`}>
+            <h4 className={`block ${interMedium.className} text-base lg:text-xl min-h-[1.5em] text-gray-900 dark:text-gray-100 my-5 font-semibold tracking-tight leading-6`}>
                 {typeOutStatus.name && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -68,17 +69,16 @@ export default function AboutMe() {
                 }
             </h4>
 
-            <div className={`${workSansFont.className} text-sm lg:text-base text-center my-4 text-gray-800`}>
+            <div className={`${interLight.className} text-sm lg:text-base text-center lg:text-left leading-relaxed my-4 text-gray-700 dark:text-gray-300`}>
                 {typeOutStatus.position && (
                     <Typewriter
                         options={{ delay: 1 }}
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(900)
-                                .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with fronted technologies.")
-                                .typeString(" Passionate about learning new technologies and building reusable components for others. When I was in free time, not in computer")
-                                .deleteChars(15)
-                                .typeString(" reading books and listened to music to improve my productivity and performance. Being a self-taught developer with continuously learns and catches up to new techlonologies time on time.")
+                                .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with frontend technologies.")
+                                .typeString(" Passionate about learning new technologies and building reusable components for others. When not at the computer,")
+                                .typeString(" I read books and listen to music to improve my productivity and performance.")
                                 .callFunction(() => {
                                     dispatchTypeOutStatus({ type: "content", payload: true })
                                 })

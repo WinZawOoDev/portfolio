@@ -1,14 +1,13 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
-import { Open_Sans, Fira_Sans, Roboto } from 'next/font/google'
+import { motion } from 'framer-motion'
+import { Inter } from 'next/font/google'
 import { AiFillGithub } from 'react-icons/ai'
 import { RiExternalLinkFill } from 'react-icons/ri'
-import { BsDot } from 'react-icons/bs'
 
-const openSansFont = Open_Sans({ subsets: ["latin"], weight: "600" })
-const firaSansFont = Fira_Sans({ subsets: ["latin"], weight: "300" })
-const robotoFont = Roboto({ subsets: ["greek"], weight: "400" })
+const interSemibold = Inter({ subsets: ["latin"], weight: "600" })
+const interRegular = Inter({ subsets: ["latin"], weight: "400" })
 
 
 type Props = {
@@ -18,41 +17,52 @@ type Props = {
     content: string;
     techStack: string[]
     sourceLink: string;
+    priority?: boolean;
+    view?: 'grid' | 'list';
 }
 
-export default function Card({ imageSource, projectName, href, content, techStack, sourceLink }: Props) {
+export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false, view = 'grid' }: Props) {
+    const isList = view === 'list'
     return (
-        <div className='relative flex-1 justify-between bg-[#f8f4ff] h-[25em]  w-full  md:w-[20em] shadow-2xl p-1 rounded-md'>
+        <motion.div layout transition={{ type: "spring", bounce: 0.1, duration: 0.3 }} className={isList ? 'project-card-list' : 'project-card'}>
             <Image
                 src={imageSource}
-                alt='work place'
-                className='w-full h-44 rounded'
+                alt={projectName}
+                sizes={isList ? "(max-width: 768px) 100vw, 400px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
+                priority={priority}
+                className={isList ? 'w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-auto md:min-h-[12rem] object-cover shrink-0' : 'w-full h-44 object-cover'}
             />
-            <div className='relative m-2'>
-                <Link
-                    href={href}
-                    className='absolute m-auto top-1 right-1 w-fit h-fit font-bold text-gray-500 text-lg'
-                >
-                    <RiExternalLinkFill />
-                </Link>
-                <h4 className={`${robotoFont.className} text-sm text-gray-800 text-left mb-3 mt-2`}>{projectName}</h4>
-                <p className={`mt-5 px-3 ${firaSansFont.className} text-center font-light text-sm text-gray-700`}>
+            <div className={`relative p-4 flex-1 flex flex-col ${isList ? 'justify-center' : ''}`}>
+                <div className='flex items-start justify-between gap-2 mb-2'>
+                    <h4 className={`${interSemibold.className} text-[14px] font-semibold text-gray-900 dark:text-gray-100 tracking-tight text-left leading-tight pr-6`}>{projectName}</h4>
+                    <Link
+                        href={href}
+                        target="_blank"
+                        aria-label={`Open ${projectName}`}
+                        className='icon-btn-card'
+                    >
+                        <RiExternalLinkFill size={14} />
+                    </Link>
+                </div>
+                <p className={`${interRegular.className} text-[13px] leading-relaxed font-normal text-gray-600 dark:text-gray-400 ${isList ? 'line-clamp-2' : 'line-clamp-3'}`}>
                     {content}
                 </p>
-            </div>
-            <div className='absolute bottom-4 px-2 mx-auto w-full h-fit inset-x-0 flex flex-wrap items-center justify-between'>
-                <div className={`flex flex-wrap ${openSansFont.className} text-gray-700  text-xs font-medium text-clip text-left w-3/4 h-fit`}>
-                    {techStack.map((tech, index) => (
-                        <div key={index} className='flex items-center mr-1'>
-                            <span className='inline-block'><BsDot /></span>
-                            <span className='inline-block '>{tech}</span>
-                        </div>
-                    ))}
+                <div className='mt-auto pt-4 flex items-center justify-between gap-2'>
+                    <div className={`flex flex-wrap gap-1.5 ${interRegular.className} text-[11px] font-medium text-left flex-1`}>
+                        {techStack.slice(0, 3).map((tech, index) => (
+                            <span key={index} className='badge-sm'>
+                                {tech}
+                            </span>
+                        ))}
+                        {techStack.length > 3 && (
+                            <span className='px-2 py-1 text-gray-500 dark:text-gray-500'>+{techStack.length - 3}</span>
+                        )}
+                    </div>
+                    <Link href={sourceLink} target='_blank' aria-label="GitHub source" className='icon-btn-sm !w-8 !h-8'>
+                        <AiFillGithub size={16} />
+                    </Link>
                 </div>
-                <Link href={sourceLink} target='__blank' className='block text-2xl mr-3 text-gray-700'>
-                    <AiFillGithub />
-                </Link>
             </div>
-        </div>
+        </motion.div>
     )
 }

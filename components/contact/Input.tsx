@@ -9,10 +9,10 @@ export function TextInput({ label, name, type }: { label: string, name: string, 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeInOut" }}
-            className='relative text-lg my-10'
+            className='relative my-5'
         >
-            <label className='block text-gray-200 text-sm font-medium mb-2'>{label}</label>
-            <input type={type} name={name} className='w-full focus:outline-hidden px-3 py-[0.4em] ring-2 text-white ring-gray-400 rounded bg-gray-900' required />
+            <label htmlFor={name} className='block text-gray-700 dark:text-gray-300 text-sm font-medium mb-1.5'>{label}</label>
+            <input id={name} type={type} name={name} autoComplete={name} className='input-field' required />
         </motion.div>
     )
 }
@@ -24,10 +24,10 @@ export function TextArea({ label, name }: { label: string, name: string }) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-            className='relative text-lg my-10'
+            className='relative my-5'
         >
-            <label className='block text-gray-200 text-sm font-medium mb-2'>{label}</label>
-            <textarea name={name} className='w-full h-full min-h-[8em] focus:outline-hidden px-3 py-[0.4em] ring-2 text-white ring-gray-400 rounded bg-gray-900' required />
+            <label htmlFor={name} className='block text-gray-700 dark:text-gray-300 text-sm font-medium mb-1.5'>{label}</label>
+            <textarea id={name} name={name} className='textarea-field' required />
         </motion.div>
     )
 }
@@ -39,7 +39,7 @@ export function Button({ label, disabled }: { label: string, disabled: boolean }
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-            className={`${disabled && "pointer-events-none cursor-not-allowed "} outline-hidden px-3 py-2 ring-2 font-medium ring-gray-400 text-gray-50 bg-gray-900 rounded`}
+            className="btn-submit"
             disabled={disabled}
         >
             {label}

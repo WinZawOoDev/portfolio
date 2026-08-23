@@ -1,30 +1,40 @@
+'use client'
+
 import React from 'react'
+import dynamic from 'next/dynamic'
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import LinkContainer from '../layouts/LinkContainer'
 import LayoutContainer from '../layouts/LayoutContainer'
 import Heading from './Heading'
-import Form from './Form'
 import Link from 'next/link'
+
+const Form = dynamic(() => import('./Form'), {
+  ssr: false,
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 dark:bg-[#15151c] rounded-xl" />
+})
 
 export default function Contact() {
     return (
         <LinkContainer name='contact'>
             <LayoutContainer>
-                <div className='h-screen flex items-center justify-center px-5'>
-                    <div className='absolute bg-[#080808] inset-0 m-auto -z-10' />
-                    <div className='w-full h-fit relative max-w-lg'>
-                        <Heading />
-                        <Form />
+                <div className='section bg-[#f8f8ff] dark:bg-[#0d0d12]'>
+                    <div className='flex flex-col items-center justify-center px-5'>
+                        <div className='contact-card'>
+                            <Heading />
+                            <div className='mt-6'>
+                                <Form />
+                            </div>
+                        </div>
+                        <div className='mt-8 flex items-center gap-3 text-gray-600 dark:text-gray-400'>
+                            <Link href="https://wa.me/+959987262564" target='_blank' aria-label="WhatsApp" className='icon-btn-sm hover:!bg-[#25D366] hover:!text-white hover:!border-transparent dark:hover:!bg-[#25D366]'>
+                                <FaWhatsapp size={18} />
+                            </Link>
+                            <Link href="tel:+959987262564" target='_blank' aria-label="Phone" className='icon-btn-sm'>
+                                <FaPhoneAlt size={14} />
+                            </Link>
+                            <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>+95 998 726 2564</span>
+                        </div>
                     </div>
-                </div>
-                <div className='absolute m-auto inset-x-0 bottom-4 h-fit w-fit flex items-center'>
-                    <Link href="https://wa.me/+959987262564" target='__blank' className='inline-block'>
-                        <span className='text-gray-300 text-2xl  lg:text-3xl' ><FaWhatsapp /></span>
-                    </Link>
-                    <Link href={"tel:+959987262564"} target='__blank' className='inline-block'>
-                        <span className='text-gray-300 inline-block mx-3 text-base md:text-lg lg:text-xl'><FaPhoneAlt /></span>
-                    </Link>
-                    <span className='text-gray-300 inline text-base md:text-lg lg:text-xl'>+959987262564</span>
                 </div>
             </LayoutContainer>
         </LinkContainer>

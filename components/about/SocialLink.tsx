@@ -12,7 +12,7 @@ export default function SocialLink() {
     const { typeOutStatus } = useIntroContext();
 
     return (
-        <div className='flex items-center justify-center mt-8 mb:2 lg:my-10 text-gray-600 text-2xl lg:text-3xl'>
+        <div className='flex items-center justify-center lg:justify-start mt-8 lg:mt-10 gap-3 text-gray-600 dark:text-gray-400 text-2xl lg:text-2xl'>
             <AnimatePresence>
                 {typeOutStatus.content && (
                     <>
@@ -21,10 +21,10 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 10 }}
                             transition={{ duration: 1, type: "spring" }}
-                            className='mr-4'
+                            className='icon-btn'
                         >
-                            <Link href={"https://www.linkedin.com/in/win-zaw-oo-393715222/"} target='_blank' >
-                                <AiFillLinkedin />
+                            <Link href={"https://www.linkedin.com/in/win-zaw-oo-393715222/"} target='_blank' aria-label="LinkedIn" >
+                                <AiFillLinkedin size={18} />
                             </Link>
                         </motion.div>}
 
@@ -33,9 +33,9 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 15 }}
                             transition={{ duration: 1.5, type: "spring" }}
-                            className='mx-2'
+                            className='icon-btn'
                         >
-                            <Link href={"https://twitter.com/WinZaw00"} target='_blank' >
+                            <Link href={"https://twitter.com/WinZaw00"} target='_blank' aria-label="Twitter" >
                                 <Twitter />
                             </Link>
                         </motion.div>
@@ -45,10 +45,10 @@ export default function SocialLink() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
                             transition={{ duration: 2.2, type: "spring" }}
-                            className='mx-2'
+                            className='icon-btn'
                         >
-                            <Link href={"https://github.com/WinZawOoDev"} target='_blank'>
-                                <AiOutlineGithub />
+                            <Link href={"https://github.com/WinZawOoDev"} target='_blank' aria-label="GitHub">
+                                <AiOutlineGithub size={18} />
                             </Link>
                         </motion.div>}
                     </>

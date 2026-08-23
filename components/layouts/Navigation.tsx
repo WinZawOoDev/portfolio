@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { IBM_Plex_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { motion, Variants } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
 
@@ -12,7 +12,7 @@ export const navLinks = [
   { id: 4, to: "contact", name: "contact" }
 ];
 
-const ibmFont = IBM_Plex_Sans({ subsets: ["latin"], weight: "400" })
+const navFont = Inter({ subsets: ["latin"], weight: "500" })
 
 const container: Variants = {
   hidden: {
@@ -47,7 +47,7 @@ export default function Navigation() {
   const [activeLink, setActiveLink] = useState("");
 
   return (
-    <nav className='hidden lg:block leading-3 tracking-tight text-gray-700'>
+    <nav className='hidden lg:block leading-3 tracking-tight text-gray-700 dark:text-gray-300'>
       <motion.ul
         variants={container}
         initial="hidden"
@@ -58,7 +58,7 @@ export default function Navigation() {
           <motion.li
             key={link.id}
             variants={item}
-            className={`${ibmFont.className} px-5 cursor-pointer`}
+            className={`${navFont.className} px-5 cursor-pointer text-[15px] tracking-tight`}
           >
             <ScrollLink
               to={link.to}
@@ -70,7 +70,7 @@ export default function Navigation() {
               {link.name}
               {activeLink === link.to &&
                 (<motion.div
-                  className='absolute -bottom-2 inset-x-0 h-[0.11em] rounded-2xl bg-[#343434]'
+                  className='nav-underline'
                   layoutId='underline'
                 />)}
             </ScrollLink>
