@@ -68,7 +68,7 @@ export default function AboutMe() {
                 }
             </h4>
 
-            <p className={`${workSansFont.className} text-sm lg:text-base text-center my-4 text-gray-800`}>
+            <div className={`${workSansFont.className} text-sm lg:text-base text-center my-4 text-gray-800`}>
                 {typeOutStatus.position && (
                     <Typewriter
                         options={{ delay: 1 }}
@@ -86,7 +86,7 @@ export default function AboutMe() {
                         }}
                     />)
                 }
-            </p>
+            </div>
 
         </div>
     )

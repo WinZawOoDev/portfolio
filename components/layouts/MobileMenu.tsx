@@ -70,7 +70,7 @@ function HambargerMenu({ onClick }: { onClick: () => void }) {
     return (
         <motion.button
             onClick={onClick}
-            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-none'
+            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-hidden'
         >
             <motion.span
                 variants={{

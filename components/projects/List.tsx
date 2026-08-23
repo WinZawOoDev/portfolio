@@ -74,8 +74,7 @@ const container: Variants = {
             duration: 0.05,
             delay: 0.02,
             delayChildren: 0.02,
-            staggerChildren: 0.09,
-            durationChildren: 0.03
+            staggerChildren: 0.09
         }
     }
 };
