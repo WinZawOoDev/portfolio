@@ -45,6 +45,15 @@ const projects = [
     {
         id: 5,
         imageSource: workplace,
+        projectName: "Healthcare Products CMS",
+        href: "#",
+        content: "CMS for health care products company website — product catalog, inventory and content management with Strapi and Next.js, deployed on on-premise Windows Server.",
+        techStack: ["Strapi", "Next.js", "Windows Server", "TypeScript"],
+        sourceLink: "https://github.com/WinZawOoDev"
+    },
+    {
+        id: 6,
+        imageSource: workplace,
         projectName: "HR Recruitment Module",
         href: "https://smilaxglobal.com",
         content: "Recruitment module for HR System at Smilax Global — candidate pipelines, job postings, and interview workflows built with microservices.",
@@ -52,7 +61,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 6,
+        id: 7,
         imageSource: workplace,
         projectName: "Tour Management System",
         href: "https://www.cloudsource.co.jp",
@@ -61,7 +70,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 7,
+        id: 8,
         imageSource: workplace,
         projectName: "Goods Order & SAP Integration",
         href: "http://pos.com.mm/",
@@ -70,7 +79,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 8,
+        id: 9,
         imageSource: workplace,
         projectName: "Membership Card Payment API",
         href: "http://pos.com.mm/",
@@ -79,7 +88,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 9,
+        id: 10,
         imageSource: workplace,
         projectName: "POS System Maintenance",
         href: "http://pos.com.mm/",
@@ -88,7 +97,7 @@ const projects = [
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
-        id: 10,
+        id: 11,
         imageSource: workplace,
         projectName: "Personal Portfolio",
         href: "#",
