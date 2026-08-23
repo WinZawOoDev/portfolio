@@ -19,7 +19,7 @@ export default function Projects() {
                         <div className="view-toggle shrink-0 self-start sm:self-auto" role="group" aria-label="Toggle view">
                             <motion.div
                                 layout
-                                transition={{ type: "spring", bounce: 0.2, duration: 0.45 }}
+                                transition={{ type: "spring", bounce: 0.1, duration: 0.3 }}
                                 className="view-toggle-indicator"
                                 style={{ left: view === 'grid' ? '4px' : 'calc(100% - 36px)' }}
                             />

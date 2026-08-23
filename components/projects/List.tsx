@@ -65,16 +65,16 @@ const projects = [
 const container: Variants = {
     hidden: {
         opacity: 0,
-        x: -100
+        x: -40
     },
     visible: {
         opacity: 1,
         x: 0,
         transition: {
-            duration: 0.05,
-            delay: 0.02,
-            delayChildren: 0.02,
-            staggerChildren: 0.09
+            duration: 0.03,
+            delay: 0.01,
+            delayChildren: 0.01,
+            staggerChildren: 0.04
         }
     }
 };
@@ -101,7 +101,7 @@ export default function List({ view }: { view: 'grid' | 'list' }) {
                 animate="visible"
                 exit="hidden"
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ layout: { type: "spring", bounce: 0.15, duration: 0.6 } }}
+                transition={{ layout: { type: "spring", bounce: 0.1, duration: 0.35 } }}
                 className={view === 'grid' ? 'projects-grid' : 'projects-list'}
             >
                 {projects.map((project, idx) => (
@@ -109,7 +109,7 @@ export default function List({ view }: { view: 'grid' | 'list' }) {
                         key={project.id}
                         layout
                         variants={item}
-                        transition={{ layout: { type: "spring", bounce: 0.2, duration: 0.5 }, opacity: { duration: 0.3 }, y: { type: "spring", bounce: 0.2 } }}
+                        transition={{ layout: { type: "spring", bounce: 0.1, duration: 0.3 }, opacity: { duration: 0.2 }, y: { type: "spring", bounce: 0.1 } }}
                         className={view === 'grid' ? "flex" : "flex w-full"}
                     >
                         <Card

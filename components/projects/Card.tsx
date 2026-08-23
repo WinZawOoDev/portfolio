@@ -24,7 +24,7 @@ type Props = {
 export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false, view = 'grid' }: Props) {
     const isList = view === 'list'
     return (
-        <motion.div layout transition={{ type: "spring", bounce: 0.15, duration: 0.5 }} className={isList ? 'project-card-list' : 'project-card'}>
+        <motion.div layout transition={{ type: "spring", bounce: 0.1, duration: 0.3 }} className={isList ? 'project-card-list' : 'project-card'}>
             <Image
                 src={imageSource}
                 alt={projectName}
