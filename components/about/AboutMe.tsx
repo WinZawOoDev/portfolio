@@ -78,7 +78,7 @@ export default function AboutMe() {
                                 .pauseFor(900)
                                 .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with frontend technologies.")
                                 .typeString(" Passionate about learning new technologies and building reusable components for others. When not at the computer,")
-                                .typeString(" I read books and listen to music to improve my productivity and performance. As a self-taught developer, I continuously learn and keep up with new technologies over time.")
+                                .typeString(" I read books and listen to music to improve my productivity and performance.")
                                 .callFunction(() => {
                                     dispatchTypeOutStatus({ type: "content", payload: true })
                                 })
