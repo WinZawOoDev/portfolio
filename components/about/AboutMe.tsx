@@ -51,7 +51,7 @@ export default function AboutMe() {
                 }
             </h1>
 
-            <h4 className={`block ${dmSansFont.className} text-base  lg:text-xl lg:text-ba text-gray-900 dark:text-gray-100 my-5 font-bold leading-3`}>
+            <h4 className={`block ${dmSansFont.className} text-base lg:text-xl text-gray-900 dark:text-gray-100 my-5 font-bold leading-6`}>
                 {typeOutStatus.name && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -75,10 +75,9 @@ export default function AboutMe() {
                         onInit={(typewriter) => {
                             typewriter
                                 .pauseFor(900)
-                                .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with fronted technologies.")
-                                .typeString(" Passionate about learning new technologies and building reusable components for others. When I was in free time, not in computer")
-                                .deleteChars(15)
-                                .typeString(" reading books and listened to music to improve my productivity and performance. Being a self-taught developer with continuously learns and catches up to new techlonologies time on time.")
+                                .typeString("Who solves user-facing problems, especially focusing on backend technologies and combining them with frontend technologies.")
+                                .typeString(" Passionate about learning new technologies and building reusable components for others. When not at the computer,")
+                                .typeString(" I read books and listen to music to improve my productivity and performance. As a self-taught developer, I continuously learn and keep up with new technologies over time.")
                                 .callFunction(() => {
                                     dispatchTypeOutStatus({ type: "content", payload: true })
                                 })

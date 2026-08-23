@@ -7,8 +7,10 @@ import { motion } from 'framer-motion'
 export default function ThemeToggle() {
   const toggleTheme = () => {
     const isDark = document.documentElement.classList.toggle('dark')
+    const theme = isDark ? 'dark' : 'light'
+    try { localStorage.setItem('theme', theme) } catch {}
     const params = new URLSearchParams(window.location.search)
-    params.set('theme', isDark ? 'dark' : 'light')
+    params.set('theme', theme)
     window.history.replaceState(null, '', `${window.location.pathname}?${params.toString()}`)
   }
 

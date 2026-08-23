@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IBM_Plex_Sans } from 'next/font/google'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
 import { navLinks } from './Navigation'
 
@@ -12,16 +12,44 @@ export default function MobileMenu() {
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(prev => !prev);
+    const closeMenu = () => setIsOpen(false);
+
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeMenu() }
+        if (isOpen) {
+            document.addEventListener('keydown', onKey)
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+        return () => {
+            document.removeEventListener('keydown', onKey)
+            document.body.style.overflow = ''
+        }
+    }, [isOpen])
 
     return (
         <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
             className='lg:hidden w-fit h-fit'
-            onBlur={() => setIsOpen(false)}
         >
-            <HambargerMenu onClick={() => toggleMenu()} />
+            <HambargerMenu onClick={toggleMenu} isOpen={isOpen} />
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={closeMenu}
+                        aria-hidden="true"
+                        className='fixed inset-0 z-20 bg-black/40 backdrop-blur-sm'
+                    />
+                )}
+            </AnimatePresence>
             <motion.nav
+                aria-label="Mobile navigation"
+                aria-hidden={!isOpen}
                 variants={{
                     open: {
                         x: 0,
@@ -52,6 +80,7 @@ export default function MobileMenu() {
                             <ScrollLink
                                 to={link.to}
                                 activeClass='relative flex item-center font-medium transition-all duration-75 delay-75 transform  translate-x-4'
+                                onClick={closeMenu}
                             >
                                 <span className='cursor-pointer'>
                                     {link.name}
@@ -65,12 +94,14 @@ export default function MobileMenu() {
     )
 }
 
-function HambargerMenu({ onClick }: { onClick: () => void }) {
+function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boolean }) {
 
     return (
         <motion.button
             onClick={onClick}
-            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-hidden'
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-hidden cursor-pointer'
         >
             <motion.span
                 variants={{

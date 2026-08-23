@@ -9,18 +9,41 @@ import Main from '@/components/layouts/Main'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Win Zaw Oo',
-  description: 'portfolio site',
+  title: {
+    default: 'Win Zaw Oo — Full-Stack Developer',
+    template: '%s | Win Zaw Oo',
+  },
+  description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL. Based in Myanmar.',
+  metadataBase: new URL('https://winzawoo.dev'),
+  openGraph: {
+    title: 'Win Zaw Oo — Full-Stack Developer',
+    description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL.',
+    url: 'https://winzawoo.dev',
+    siteName: 'Win Zaw Oo Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@WinZaw00',
+    title: 'Win Zaw Oo — Full-Stack Developer',
+    description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 const themeInitScript = `
 (function () {
   try {
-    var theme = new URLSearchParams(window.location.search).get('theme');
-    var isDark = theme
-      ? theme === 'dark'
-      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var param = new URLSearchParams(window.location.search).get('theme');
+    var stored = localStorage.getItem('theme');
+    var theme = param || stored;
+    var isDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
     document.documentElement.classList.toggle('dark', isDark);
+    if (param) localStorage.setItem('theme', param);
   } catch (e) {}
 })();
 `

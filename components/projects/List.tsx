@@ -9,55 +9,55 @@ const projects = [
     {
         id: 1,
         imageSource: workplace,
-        projectName: "Some Project",
-        href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        projectName: "HR Recruitment Module",
+        href: "https://smilaxglobal.com",
+        content: "Recruitment module for HR System at Smilax Global — candidate pipelines, job postings, and interview workflows built with microservices.",
+        techStack: ["TypeScript", "Next.js", "ShadcnUI", "Nest.js", "Prisma", "gRPC", "PostgreSQL"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
         id: 2,
         imageSource: workplace,
-        projectName: "Some Project",
-        href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        projectName: "Tour Management System",
+        href: "https://www.cloudsource.co.jp",
+        content: "Tour itinerary, bus routes, service pricing, customers, brokers and fleet management system deployed on GCP.",
+        techStack: ["TypeScript", "Remix", "Tailwind", "Prisma", "PostgreSQL", "GCP"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
         id: 3,
         imageSource: workplace,
-        projectName: "Some Project",
-        href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        projectName: "Goods Order & SAP Integration",
+        href: "http://pos.com.mm/",
+        content: "Grocery store ordering system integrated with SAP — ordering, supplier sync, stock and settlement flows.",
+        techStack: ["PHP (Laravel)", "React.js", "Bootstrap", "MySQL"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
         id: 4,
         imageSource: workplace,
-        projectName: "Some Project",
-        href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        projectName: "Membership Card Payment API",
+        href: "http://pos.com.mm/",
+        content: "POS member-card payment API integration allowing charges to be paid via membership card balance.",
+        techStack: ["PHP (Laravel)", "MySQL", "REST API"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
         id: 5,
         imageSource: workplace,
-        projectName: "Some Project",
-        href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        projectName: "POS System Maintenance",
+        href: "http://pos.com.mm/",
+        content: "Performance optimization, bug fixes and feature additions for legacy POS on CodeIgniter.",
+        techStack: ["PHP (CodeIgniter)", "Bootstrap", "MySQL"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
         id: 6,
         imageSource: workplace,
-        projectName: "Some Project",
+        projectName: "Personal Portfolio",
         href: "#",
-        content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-        techStack: ["TailwindCss", "React(Next.js)", "Node.js(Express)", "PostgreSql"],
+        content: "This portfolio — Next.js 16, React 19, Tailwind 4, Framer Motion with dark mode and scroll progress.",
+        techStack: ["Next.js", "React 19", "Tailwind CSS 4", "Framer Motion"],
         sourceLink: "https://github.com/WinZawOoDev"
     }
 ];
