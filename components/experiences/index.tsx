@@ -17,7 +17,7 @@ const experiences: contentDescProps[] = [
     techStack: ["TypeScript", "Next.js", "Node.js", "PostgreSQL"],
   },
   {
-    position: "Full-Stack Developer",
+    position: "Senior Full-Stack Developer",
     company: "Smilax Global", 
     website: "https://smilaxglobal.com",
     date: {
