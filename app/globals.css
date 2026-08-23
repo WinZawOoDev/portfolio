@@ -36,7 +36,7 @@ body {
 
 /* ————— Utilities extracted from components ————— */
 .site-header {
-  @apply fixed top-0 w-full z-30 bg-[#f8f8ff]/90 dark:bg-[#0d0d12]/90 backdrop-blur-md border-b border-transparent dark:border-[#1a1a22] transition-colors duration-300;
+  @apply fixed top-0 w-full z-30 bg-[#f8f8ff]/95 dark:bg-[#0d0d12]/95 border-b border-transparent dark:border-[#1a1a22] transition-colors duration-300;
 }
 .site-header-inner {
   @apply relative flex items-center justify-between py-4 md:py-6;

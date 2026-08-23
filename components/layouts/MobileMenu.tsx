@@ -1,9 +1,11 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Inter } from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
 import ScrollLink from '../utils/ScrollLink'
+import ThemeToggle from '../utils/ThemeToggle'
 import { navLinks } from './Navigation'
 
 const navFont = Inter({ subsets: ["latin"], weight: "500" })
@@ -11,8 +13,11 @@ const navFont = Inter({ subsets: ["latin"], weight: "500" })
 export default function MobileMenu() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const toggleMenu = () => setIsOpen(prev => !prev);
     const closeMenu = () => setIsOpen(false);
+
+    useEffect(() => setMounted(true), [])
 
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeMenu() }
@@ -28,13 +33,8 @@ export default function MobileMenu() {
         }
     }, [isOpen])
 
-    return (
-        <motion.div
-            initial={false}
-            animate={isOpen ? "open" : "closed"}
-            className='lg:hidden w-fit h-fit'
-        >
-            <HambargerMenu onClick={toggleMenu} isOpen={isOpen} />
+    const overlay = mounted ? createPortal(
+        <>
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -43,13 +43,15 @@ export default function MobileMenu() {
                         exit={{ opacity: 0 }}
                         onClick={closeMenu}
                         aria-hidden="true"
-                        className='fixed inset-0 z-20 bg-black/40 backdrop-blur-sm'
+                        className='fixed inset-0 z-40 bg-black/40 backdrop-blur-sm lg:hidden'
                     />
                 )}
             </AnimatePresence>
             <motion.nav
                 aria-label="Mobile navigation"
                 aria-hidden={!isOpen}
+                initial="closed"
+                animate={isOpen ? "open" : "closed"}
                 variants={{
                     open: {
                         x: 0,
@@ -70,7 +72,7 @@ export default function MobileMenu() {
                         }
                     }
                 }}
-                className='fixed top-0 right-0 z-30 h-full w-[15em] bg-gray-100 dark:bg-[#15151b] shadow-2xl transition-colors duration-300'
+                className='fixed top-0 right-0 z-50 h-full w-[15em] bg-gray-100 dark:bg-[#15151b] shadow-2xl transition-colors duration-300 lg:hidden'
             >
                 <ul
                     className='absolute m-auto inset-0 h-fit w-fit text-gray-900 dark:text-gray-100'
@@ -88,9 +90,21 @@ export default function MobileMenu() {
                             </ScrollLink>
                         </li>
                     ))}
+                    <li className={`${navFont.className} mt-8 pt-6 border-t border-gray-200 dark:border-[#252530] flex items-center justify-between text-[15px]`}>
+                        <span className='capitalize'>theme</span>
+                        <ThemeToggle />
+                    </li>
                 </ul>
             </motion.nav>
-        </motion.div>
+        </>,
+        document.body
+    ) : null
+
+    return (
+        <div className='lg:hidden w-fit h-fit'>
+            <HambargerMenu onClick={toggleMenu} isOpen={isOpen} />
+            {overlay}
+        </div>
     )
 }
 
@@ -98,10 +112,12 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
 
     return (
         <motion.button
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
             onClick={onClick}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
-            className='absolute right-5 inset-y-0 -top-2.5 m-auto z-40 w-8 outline-hidden cursor-pointer'
+            className='fixed right-4 sm:right-6 md:right-10 top-5 md:top-6 z-[60] w-8 h-8 outline-hidden cursor-pointer lg:hidden'
         >
             <motion.span
                 variants={{
@@ -183,5 +199,3 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
         </motion.button>
     )
 }
-
-

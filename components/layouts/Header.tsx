@@ -13,7 +13,9 @@ export default function Header() {
           <Logo />
           <Navigation />
           <div className='flex items-center gap-4 md:gap-6 pr-8 lg:pr-0'>
-            <ThemeToggle />
+            <div className='hidden lg:flex'>
+              <ThemeToggle />
+            </div>
             <MobileMenu />
           </div>
         </div>
