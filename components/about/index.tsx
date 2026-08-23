@@ -13,7 +13,7 @@ export default function About() {
                 <IntroProvider>
                     <div className='lg:grid lg:grid-cols-2 lg:place-items-center h-fit lg:h-screen'>
                         <Intro />
-                        <div className='hidden lg:flex items-center justify-center dark:bg-[#f4f2f9] dark:rounded-3xl dark:shadow-2xl dark:p-4 dark:w-fit dark:h-fit'>
+                        <div className='hidden lg:flex items-center justify-center w-full h-fit dark:bg-[#f4f2f9] dark:rounded-3xl dark:shadow-2xl dark:p-4'>
                             <HeroIllustration />
                         </div>
                         <BouncePoint />
