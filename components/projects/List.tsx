@@ -99,7 +99,7 @@ export default function List() {
             viewport={{ once: true, margin: "-50px" }}
             className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 place-items-stretch mx-auto w-full max-w-6xl mt-12'
         >
-            {projects.map(project => (
+            {projects.map((project, idx) => (
                 <motion.li
                     key={project.id}
                     variants={item}
@@ -112,6 +112,7 @@ export default function List() {
                         content={project.content}
                         techStack={project.techStack}
                         sourceLink={project.sourceLink}
+                        priority={idx < 2}
                     />
                 </motion.li>
             ))}

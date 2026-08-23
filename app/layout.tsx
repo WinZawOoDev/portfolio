@@ -6,7 +6,7 @@ import { Inter } from 'next/font/google'
 import ScrollProgress from '@/components/utils/ScrollProgress'
 import Main from '@/components/layouts/Main'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap', preload: true })
 
 export const metadata: Metadata = {
   title: {

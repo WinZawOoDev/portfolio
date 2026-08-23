@@ -1,10 +1,17 @@
+'use client'
+
 import React from 'react'
+import dynamic from 'next/dynamic'
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 import LinkContainer from '../layouts/LinkContainer'
 import LayoutContainer from '../layouts/LayoutContainer'
 import Heading from './Heading'
-import Form from './Form'
 import Link from 'next/link'
+
+const Form = dynamic(() => import('./Form'), {
+  ssr: false,
+  loading: () => <div className="h-64 animate-pulse bg-gray-100 dark:bg-[#15151c] rounded-xl" />
+})
 
 export default function Contact() {
     return (

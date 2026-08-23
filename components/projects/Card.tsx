@@ -16,14 +16,17 @@ type Props = {
     content: string;
     techStack: string[]
     sourceLink: string;
+    priority?: boolean;
 }
 
-export default function Card({ imageSource, projectName, href, content, techStack, sourceLink }: Props) {
+export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false }: Props) {
     return (
         <div className='relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[26em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200'>
             <Image
                 src={imageSource}
                 alt={projectName}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority={priority}
                 className='w-full h-44 object-cover'
             />
             <div className='relative p-4 flex-1 flex flex-col'>
