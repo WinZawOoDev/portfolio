@@ -41,7 +41,7 @@ const themeInitScript = `
     var param = new URLSearchParams(window.location.search).get('theme');
     var stored = localStorage.getItem('theme');
     var theme = param || stored;
-    var isDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var isDark = theme === 'dark';
     document.documentElement.classList.toggle('dark', isDark);
     if (param) localStorage.setItem('theme', param);
   } catch (e) {}
