@@ -6,14 +6,25 @@ import LayoutContainer from '../layouts/LayoutContainer'
 
 const experiences: contentDescProps[] = [
   {
+    position: "Senior Full-Stack Software Engineer",
+    company: "KBZ Bank",
+    website: "https://www.kbzbank.com",
+    date: {
+      start: "03/2025",
+      end: "present"
+    },
+    description: "Working as Senior Full-Stack Software Engineer at KBZ Bank — building and maintaining banking systems and digital services.",
+    techStack: ["TypeScript", "Next.js", "Node.js", "PostgreSQL"],
+  },
+  {
     position: "Full-Stack Developer",
     company: "Smilax Global", 
     website: "https://smilaxglobal.com",
     date: {
       start: "12/2023",
-      end: "present"
+      end: "02/2025"
     },
-    description: "Building recruitment module for HR system — candidate pipelines and hiring workflows.",
+    description: "Built recruitment module for HR system — candidate pipelines and hiring workflows.",
     techStack: ["TypeScript", "Next.js", "ShadcnUI", "Nest.js", "Prisma", "gRPC", "PostgreSQL"],
   },
   {
