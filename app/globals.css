@@ -51,7 +51,7 @@ body {
   @apply lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-[calc(100vh-80px)] py-24 lg:py-28;
 }
 .hero-illustration-wrap {
-  @apply hidden lg:flex items-center justify-center w-full h-fit bg-transparent dark:bg-[#f4f2f9] border border-transparent rounded-none dark:rounded-3xl shadow-none dark:shadow-2xl p-0 dark:p-4;
+  @apply hidden lg:flex items-center justify-center w-full h-fit bg-transparent border border-transparent shadow-none p-0;
 }
 .experience-card {
   @apply relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] cursor-default my-3 p-6 transition-all duration-200;
@@ -97,6 +97,45 @@ body {
 }
 .nav-underline {
   @apply absolute -bottom-1.5 inset-x-0 h-[2px] rounded-full bg-gray-900 dark:bg-gray-100;
+}
+
+/* Hero illustration — dark theme compatible */
+.hero-illustration {
+  @apply transition-[filter] duration-300;
+}
+/* Light fills → dark muted */
+.dark .hero-illustration [style*="#fff" i],
+.dark .hero-illustration [fill="#fff" i],
+.dark .hero-illustration [fill="#ffffff" i] {
+  fill: #1e1e26 !important;
+}
+.dark .hero-illustration [style*="#fafafa" i] {
+  fill: #1e1e26 !important;
+}
+.dark .hero-illustration [style*="#f0f0f0" i] {
+  fill: #252530 !important;
+}
+.dark .hero-illustration [style*="#f5f5f5" i] {
+  fill: #252530 !important;
+}
+.dark .hero-illustration [style*="#ebebeb" i] {
+  fill: #2a2a36 !important;
+}
+.dark .hero-illustration [style*="#e6e6e6" i] {
+  fill: #2f2f3d !important;
+}
+.dark .hero-illustration [style*="#e0e0e0" i] {
+  fill: #333340 !important;
+}
+/* Dark fills → lighten for contrast on dark bg */
+.dark .hero-illustration [style*="#3d3d3d" i],
+.dark .hero-illustration [fill="#3d3d3d" i],
+.dark .hero-illustration [fill="#3D3D3D" i] {
+  fill: #6b7280 !important;
+}
+.dark .hero-illustration [style*="#263238" i],
+.dark .hero-illustration [fill="#263238" i] {
+  fill: #64748b !important;
 }
 
 .dark .logo-svg stop {
