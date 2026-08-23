@@ -86,6 +86,27 @@ body {
 .projects-grid {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 place-items-stretch mx-auto w-full max-w-6xl mt-12;
 }
+.projects-list {
+  @apply flex flex-col gap-4 max-w-3xl mx-auto w-full mt-12;
+}
+.project-card-list {
+  @apply flex flex-row h-auto w-full bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md overflow-hidden rounded-xl transition-all duration-200;
+}
+.view-toggle {
+  @apply relative inline-flex items-center rounded-full border border-gray-200/80 dark:border-[#252530] bg-white/90 dark:bg-[#15151c]/90 backdrop-blur-sm p-1 gap-1 shadow-[0_2px_12px_rgba(0,0,0,0.06)] dark:shadow-none hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow;
+}
+.view-toggle-btn {
+  @apply relative z-10 w-8 h-8 inline-flex items-center justify-center rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer;
+}
+.view-toggle-btn-active {
+  @apply bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-[0_2px_8px_rgba(0,0,0,0.15)] dark:shadow-none;
+}
+.view-toggle-indicator {
+  @apply absolute inset-y-1 w-8 h-8 bg-gray-900 dark:bg-white rounded-full shadow-sm;
+}
+.theme-toggle {
+  @apply relative w-9 h-9 inline-flex items-center justify-center rounded-full border border-gray-200/80 dark:border-[#252530] bg-white/90 dark:bg-[#15151c] text-gray-600 dark:text-gray-300 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.12)] hover:-translate-y-[1px] active:translate-y-0 active:scale-95 transition-all cursor-pointer text-lg overflow-hidden;
+}
 .badge {
   @apply rounded-full text-[11px] tracking-wide font-medium px-2.5 py-1 bg-gray-100/70 dark:bg-[#1e1e26] text-gray-700 dark:text-gray-300 border border-gray-200/60 dark:border-[#2a2a36];
 }

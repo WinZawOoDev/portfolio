@@ -8,7 +8,7 @@ const headingFont = Inter({ subsets: ["latin"], weight: "800" })
 
 export default function Heading() {
     return (
-        <div className='mb-10'>
+        <div className='flex-1'>
             <motion.h1
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}

@@ -17,13 +17,23 @@ export default function ThemeToggle() {
 
   return (
     <motion.button
-      whileTap={{ scale: 0.8 }}
+      whileTap={{ scale: 0.88 }}
+      whileHover={{ scale: 1.06, y: -1 }}
+      transition={{ type: "spring", bounce: 0.4, duration: 0.4 }}
       onClick={toggleTheme}
       aria-label='Toggle dark mode'
-      className='text-gray-600 dark:text-gray-300 text-xl lg:text-2xl cursor-pointer outline-none'
+      className='theme-toggle outline-none group'
     >
-      <FiSun className='hidden dark:block' />
-      <FiMoon className='block dark:hidden' />
+      <motion.span
+        key="theme-icon"
+        initial={{ rotate: -15, scale: 0.9 }}
+        animate={{ rotate: 0, scale: 1 }}
+        transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
+        className="flex items-center justify-center"
+      >
+        <FiSun className='hidden dark:block group-hover:rotate-12 transition-transform duration-300' />
+        <FiMoon className='block dark:hidden group-hover:-rotate-12 transition-transform duration-300' />
+      </motion.span>
     </motion.button>
   )
 }

@@ -90,20 +90,20 @@ const item: Variants = {
     }
 };
 
-export default function List() {
+export default function List({ view }: { view: 'grid' | 'list' }) {
     return (
         <motion.ul
             variants={container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            className='projects-grid'
+            className={view === 'grid' ? 'projects-grid' : 'projects-list'}
         >
             {projects.map((project, idx) => (
                 <motion.li
                     key={project.id}
                     variants={item}
-                    className="flex"
+                    className={view === 'grid' ? "flex" : "flex w-full"}
                 >
                     <Card
                         imageSource={project.imageSource}
@@ -113,6 +113,7 @@ export default function List() {
                         techStack={project.techStack}
                         sourceLink={project.sourceLink}
                         priority={idx < 2}
+                        view={view}
                     />
                 </motion.li>
             ))}

@@ -17,19 +17,21 @@ type Props = {
     techStack: string[]
     sourceLink: string;
     priority?: boolean;
+    view?: 'grid' | 'list';
 }
 
-export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false }: Props) {
+export default function Card({ imageSource, projectName, href, content, techStack, sourceLink, priority = false, view = 'grid' }: Props) {
+    const isList = view === 'list'
     return (
-        <div className='project-card'>
+        <div className={isList ? 'project-card-list' : 'project-card'}>
             <Image
                 src={imageSource}
                 alt={projectName}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes={isList ? "(max-width: 768px) 100vw, 400px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
                 priority={priority}
-                className='w-full h-44 object-cover'
+                className={isList ? 'w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-auto md:min-h-[12rem] object-cover shrink-0' : 'w-full h-44 object-cover'}
             />
-            <div className='relative p-4 flex-1 flex flex-col'>
+            <div className={`relative p-4 flex-1 flex flex-col ${isList ? 'justify-center' : ''}`}>
                 <div className='flex items-start justify-between gap-2 mb-2'>
                     <h4 className={`${interSemibold.className} text-[14px] font-semibold text-gray-900 dark:text-gray-100 tracking-tight text-left leading-tight pr-6`}>{projectName}</h4>
                     <Link
@@ -41,7 +43,7 @@ export default function Card({ imageSource, projectName, href, content, techStac
                         <RiExternalLinkFill size={14} />
                     </Link>
                 </div>
-                <p className={`${interRegular.className} text-[13px] leading-relaxed font-normal text-gray-600 dark:text-gray-400 line-clamp-3`}>
+                <p className={`${interRegular.className} text-[13px] leading-relaxed font-normal text-gray-600 dark:text-gray-400 ${isList ? 'line-clamp-2' : 'line-clamp-3'}`}>
                     {content}
                 </p>
                 <div className='mt-auto pt-4 flex items-center justify-between gap-2'>
