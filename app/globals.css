@@ -48,7 +48,7 @@ body {
   @apply py-20 lg:py-28 border-t border-gray-200 dark:border-[#1e1e26];
 }
 .section-hero {
-  @apply lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-[calc(100vh-80px)] py-24 lg:py-28;
+  @apply flex flex-col justify-center lg:grid lg:grid-cols-2 lg:place-items-center gap-8 lg:gap-12 min-h-0 lg:min-h-[calc(100vh-80px)] py-16 lg:py-28;
 }
 .hero-illustration-wrap {
   @apply hidden lg:flex items-center justify-center w-full h-fit bg-transparent border border-transparent shadow-none p-0;

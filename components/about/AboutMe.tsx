@@ -18,7 +18,7 @@ export default function AboutMe() {
     const { typeOutStatus, dispatchTypeOutStatus } = useIntroContext();
 
     return (
-        <div className='relative pt-24 md:pt-28 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
+        <div className='relative pt-2 md:pt-4 lg:pt-0 lg:mt-0 w-full lg:w-[36em]'>
             <span className='mb-3 text-sm lg:text-base whitespace-pre-line text-gray-800 dark:text-gray-300'>
                 <Typewriter
                     options={{
