@@ -35,6 +35,7 @@ export default function MobileMenu() {
 
     const overlay = mounted ? createPortal(
         <>
+            <HambargerMenu onClick={toggleMenu} isOpen={isOpen} />
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -101,8 +102,7 @@ export default function MobileMenu() {
     ) : null
 
     return (
-        <div className='lg:hidden w-fit h-fit'>
-            <HambargerMenu onClick={toggleMenu} isOpen={isOpen} />
+        <div className='lg:hidden w-8 h-8' aria-hidden="true">
             {overlay}
         </div>
     )
@@ -117,7 +117,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
             onClick={onClick}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
-            className='fixed right-4 sm:right-6 md:right-10 top-5 md:top-6 z-[60] w-8 h-8 outline-hidden cursor-pointer lg:hidden'
+            className='fixed right-9 sm:right-11 md:right-11 top-[6px] md:top-2 z-[60] w-8 h-8 outline-hidden cursor-pointer lg:hidden'
         >
             <motion.span
                 variants={{
@@ -142,7 +142,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
             />
             <motion.span
                 variants={{
@@ -169,7 +169,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
             />
             <motion.span
                 variants={{
@@ -194,7 +194,7 @@ function HambargerMenu({ onClick, isOpen }: { onClick: () => void, isOpen: boole
                         }
                     }
                 }}
-                className='absolute w-full h-[0.18em] rounded-full bg-gray-700 dark:bg-gray-300'
+                className='absolute w-full h-[0.18em] rounded-full bg-gray-900 dark:bg-white'
             />
         </motion.button>
     )
