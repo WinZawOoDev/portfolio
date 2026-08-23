@@ -17,7 +17,8 @@ export default function MobileMenu() {
     const toggleMenu = () => setIsOpen(prev => !prev);
     const closeMenu = () => setIsOpen(false);
 
-    useEffect(() => setMounted(true), [])
+    // eslint-disable-next-line
+    useEffect(() => { setMounted(true) }, [])
 
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeMenu() }

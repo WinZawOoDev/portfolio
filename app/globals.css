@@ -54,7 +54,28 @@ body {
   @apply hidden lg:flex items-center justify-center w-full h-fit bg-transparent border border-transparent shadow-none p-0;
 }
 .experience-card {
-  @apply relative rounded-xl w-full max-w-xl mx-5 lg:mx-0 h-fit bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] cursor-default my-3 p-6 transition-all duration-200;
+  @apply relative rounded-lg w-full max-w-xl mx-5 lg:mx-0 h-fit bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] cursor-default my-2 p-4 transition-all duration-200;
+}
+.experience-meta {
+  @apply pb-1;
+}
+.experience-header {
+  @apply flex flex-wrap items-center gap-1.5;
+}
+.experience-position {
+  @apply font-semibold text-[14px] lg:text-[15px] text-gray-900 dark:text-gray-100 tracking-tight capitalize leading-none;
+}
+.experience-company {
+  @apply group-hover:underline underline-offset-2 text-[13px] font-normal text-gray-500 dark:text-gray-400;
+}
+.experience-company-icon {
+  @apply ml-1 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors;
+}
+.experience-date {
+  @apply font-normal text-[11px] mt-1 text-gray-500 dark:text-gray-400;
+}
+.experience-desc {
+  @apply pt-1 text-[13px] lg:text-[13.5px] leading-snug font-normal text-gray-600 dark:text-gray-300;
 }
 .project-card {
   @apply relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[26em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200;
