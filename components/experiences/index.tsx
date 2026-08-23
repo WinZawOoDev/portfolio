@@ -25,7 +25,7 @@ const experiences: contentDescProps[] = [
       end: "02/2025"
     },
     description: "Built recruitment module for HR system — candidate pipelines and hiring workflows.",
-    techStack: ["TypeScript", "Next.js", "ShadcnUI", "Nest.js", "Prisma", "gRPC", "PostgreSQL"],
+    techStack: ["Nest.js", "PostgreSQL", "TypeScript", "Next.js", "Prisma", "gRPC", "ShadcnUI"],
   },
   {
     position: "Web Developer",

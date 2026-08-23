@@ -57,7 +57,7 @@ const projects = [
         projectName: "HR Recruitment Module",
         href: "https://smilaxglobal.com",
         content: "Recruitment module for HR System at Smilax Global — candidate pipelines, job postings, and interview workflows built with microservices.",
-        techStack: ["TypeScript", "Next.js", "ShadcnUI", "Nest.js", "Prisma", "gRPC", "PostgreSQL"],
+        techStack: ["Nest.js", "PostgreSQL", "TypeScript", "Next.js", "Prisma", "gRPC", "ShadcnUI"],
         sourceLink: "https://github.com/WinZawOoDev"
     },
     {
