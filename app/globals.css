@@ -87,7 +87,7 @@ body {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 place-items-stretch mx-auto w-full max-w-6xl mt-12;
 }
 .projects-list {
-  @apply flex flex-col gap-4 max-w-3xl mx-auto w-full mt-12;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-6xl mx-auto w-full mt-12;
 }
 .project-card-list {
   @apply flex flex-row h-auto w-full bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md overflow-hidden rounded-xl transition-all duration-200;
