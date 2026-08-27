@@ -1,11 +1,12 @@
 'use client'
 
+import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Inter, Instrument_Serif } from 'next/font/google'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
-import { FiArrowLeft, FiArrowRight, FiCalendar, FiUsers, FiExternalLink, FiHash, FiCheck, FiLink2 } from 'react-icons/fi'
+import { FiArrowLeft, FiArrowRight, FiCalendar, FiUsers, FiExternalLink, FiHash, FiCheck, FiLink2, FiCheckCircle } from 'react-icons/fi'
 import type { Project } from './data'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +17,23 @@ type Props = { project: Project; prev: Project | null; next: Project | null; idx
 
 export default function DetailView({ project, prev, next, idx, total }: Props) {
   const year = project.duration.match(/\d{4}/)?.[0] ?? '—'
+  const [copied, setCopied] = useState(false)
+  const handleCopy = useCallback(async () => {
+    const url = typeof window !== 'undefined' ? window.location.href : ''
+    try {
+      await navigator.clipboard.writeText(url)
+    } catch {
+      // fallback
+      const el = document.createElement('textarea')
+      el.value = url
+      document.body.appendChild(el)
+      el.select()
+      document.execCommand('copy')
+      el.remove()
+    }
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1800)
+  }, [])
   return (
     <div className={`${inter.className} relative`}>
       {/* editorial top rule */}
@@ -70,8 +88,8 @@ export default function DetailView({ project, prev, next, idx, total }: Props) {
               <Link href={project.sourceLink} target="_blank" className="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-[#252530] bg-white dark:bg-[#15151c] px-6 py-2.5 text-sm font-medium hover:bg-gray-50 dark:hover:bg-[#1e1e26] transition-colors">
                 <AiFillGithub size={16} /> Source
               </Link>
-              <button onClick={() => navigator.clipboard.writeText(typeof window !== 'undefined' ? window.location.href : '')} className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-[#252530] px-4 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-[#15151c] transition-colors" aria-label="Copy link">
-                <FiLink2 size={14} /> Copy link
+              <button onClick={handleCopy} className={`hidden sm:inline-flex items-center gap-1.5 rounded-full border px-4 py-2.5 text-sm transition-colors ${copied ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-gray-900 dark:border-white' : 'border-gray-200 dark:border-[#252530] hover:bg-gray-50 dark:hover:bg-[#15151c]'}`} aria-label="Copy link">
+                {copied ? <><FiCheckCircle size={14} /> Copied!</> : <><FiLink2 size={14} /> Copy link</>}
               </button>
             </div>
           </motion.div>
@@ -252,7 +270,7 @@ export default function DetailView({ project, prev, next, idx, total }: Props) {
           {/* mobile related */}
           <div className="lg:hidden mt-10 grid sm:grid-cols-2 gap-4">
             {prev && (
-              <Link href={`/projects/${prev.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3">
+              <Link href={`/projects/${prev.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3 bg-white dark:bg-[#15151c]">
                 <Image src={prev.imageSource} alt={prev.projectName} className="w-16 h-16 rounded-xl object-cover" />
                 <div>
                   <div className="text-xs text-gray-500">Previous</div>
@@ -261,7 +279,7 @@ export default function DetailView({ project, prev, next, idx, total }: Props) {
               </Link>
             )}
             {next && (
-              <Link href={`/projects/${next.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3">
+              <Link href={`/projects/${next.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3 bg-white dark:bg-[#15151c]">
                 <Image src={next.imageSource} alt={next.projectName} className="w-16 h-16 rounded-xl object-cover" />
                 <div>
                   <div className="text-xs text-gray-500">Next</div>
@@ -272,6 +290,14 @@ export default function DetailView({ project, prev, next, idx, total }: Props) {
           </div>
         </div>
       </div>
+      {/* toast */}
+      <AnimatePresence>
+        {copied && (
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.2 }} className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-5 py-2.5 text-sm font-medium shadow-lg flex items-center gap-2">
+            <FiCheckCircle size={14} /> Link copied to clipboard
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
