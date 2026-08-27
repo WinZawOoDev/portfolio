@@ -3,299 +3,178 @@
 import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter, Instrument_Serif } from 'next/font/google'
+import { Inter, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
-import { FiArrowLeft, FiArrowRight, FiCalendar, FiUsers, FiExternalLink, FiHash, FiCheck, FiLink2, FiCheckCircle } from 'react-icons/fi'
+import { FiArrowLeft, FiArrowRight, FiCheckCircle, FiLink2 } from 'react-icons/fi'
 import type { Project } from './data'
 
 const inter = Inter({ subsets: ['latin'] })
+const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] })
 const serif = Instrument_Serif({ subsets: ['latin'], weight: '400' })
-const headingFont = Inter({ subsets: ['latin'], weight: '800' })
 
 type Props = { project: Project; prev: Project | null; next: Project | null; idx: number; total: number }
 
 export default function DetailView({ project, prev, next, idx, total }: Props) {
-  const year = project.duration.match(/\d{4}/)?.[0] ?? '—'
   const [copied, setCopied] = useState(false)
   const handleCopy = useCallback(async () => {
     const url = typeof window !== 'undefined' ? window.location.href : ''
-    try {
-      await navigator.clipboard.writeText(url)
-    } catch {
-      // fallback
-      const el = document.createElement('textarea')
-      el.value = url
-      document.body.appendChild(el)
-      el.select()
-      document.execCommand('copy')
-      el.remove()
-    }
-    setCopied(true)
-    setTimeout(() => setCopied(false), 1800)
+    try { await navigator.clipboard.writeText(url) } catch { const el = document.createElement('textarea'); el.value = url; document.body.appendChild(el); el.select(); document.execCommand('copy'); el.remove() }
+    setCopied(true); setTimeout(() => setCopied(false), 1600)
   }, [])
+
+  const num = String(idx + 1).padStart(2, '0')
+
   return (
-    <div className={`${inter.className} relative`}>
-      {/* editorial top rule */}
+    <div className={`${inter.className} bg-white dark:bg-[#0d0d12] text-gray-900 dark:text-gray-100`}>
+      {/* hairline top */}
       <div className="pt-16">
         <div className="layout-container">
-          {/* breadcrumb minimal */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35 }} className="flex items-center justify-between py-6 border-b border-gray-200 dark:border-[#1e1e26]">
-            <Link href="/#projects" className="inline-flex items-center gap-2 text-[13px] text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-              <FiArrowLeft size={14} /> <span className="hidden sm:inline">All projects</span><span className="sm:hidden">Projects</span>
-            </Link>
-            <span className="text-[11px] tracking-[0.18em] font-medium text-gray-400 dark:text-gray-500">
-              {String(idx + 1).padStart(2, '0')} — {String(total).padStart(2, '0')} / {project.category.toUpperCase()}
-            </span>
-          </motion.div>
-
-          {/* header - editorial, centered, huge serif */}
-          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: 'easeOut' }} className="mx-auto max-w-[880px] text-center pt-10 lg:pt-14 pb-8">
-            <div className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] font-semibold text-[#253529] dark:text-[#9dbfa8]">
-              <span className="h-px w-6 bg-[#253529]/30 dark:bg-[#9dbfa8]/30" />
-              {project.category} • {year}
-              <span className="h-px w-6 bg-[#253529]/30 dark:bg-[#9dbfa8]/30" />
-            </div>
-
-            <h1 className={`${serif.className} mt-4 text-[34px] sm:text-[44px] lg:text-[54px] leading-[0.95] tracking-[-0.03em] font-normal text-gray-900 dark:text-white`}>
-              {project.projectName}
-            </h1>
-
-            <p className={`${headingFont.className} mt-3 text-[11px] tracking-[0.16em] font-semibold text-gray-400 dark:text-gray-500 uppercase`}>
-              {project.role} — {project.team}
-            </p>
-
-            {/* lead */}
-            <p className="mx-auto mt-6 max-w-[680px] text-[17px] sm:text-[18px] leading-8 text-gray-600 dark:text-gray-300 font-light">
-              {project.overview}
-            </p>
-
-            {/* meta bar - single line, elegant */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[12px] text-gray-500 dark:text-gray-400 border-y border-gray-200 dark:border-[#1e1e26] py-4">
-              <span className="inline-flex items-center gap-1.5"><FiCalendar size={12} /> {project.duration}</span>
-              <span className="h-3 w-px bg-gray-200 dark:bg-[#252530]" />
-              <span className="inline-flex items-center gap-1.5"><FiUsers size={12} /> {project.team}</span>
-              <span className="h-3 w-px bg-gray-200 dark:bg-[#252530]" />
-              <span className="inline-flex items-center gap-1.5"><FiHash size={12} /> {project.techStack.join(' • ')}</span>
-            </div>
-
-            <div className="mt-6 flex items-center justify-center gap-3">
-              {project.href !== '#' && (
-                <Link href={project.href} target="_blank" className="inline-flex items-center gap-2 rounded-full bg-gray-900 dark:bg-white px-6 py-2.5 text-sm font-medium text-white dark:text-gray-900 hover:opacity-90 transition-opacity">
-                  Visit live <FiExternalLink size={14} />
-                </Link>
-              )}
-              <Link href={project.sourceLink} target="_blank" className="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-[#252530] bg-white dark:bg-[#15151c] px-6 py-2.5 text-sm font-medium hover:bg-gray-50 dark:hover:bg-[#1e1e26] transition-colors">
-                <AiFillGithub size={16} /> Source
+          <div className="mx-auto max-w-[720px]">
+            {/* minimal nav */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center justify-between py-6 border-b border-gray-100 dark:border-[#1e1e26]">
+              <Link href="/#projects" className="inline-flex items-center gap-2 text-[13px] tracking-wide text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                <FiArrowLeft size={13} /> Projects
               </Link>
-              <button onClick={handleCopy} className={`hidden sm:inline-flex items-center gap-1.5 rounded-full border px-4 py-2.5 text-sm transition-colors ${copied ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 border-gray-900 dark:border-white' : 'border-gray-200 dark:border-[#252530] hover:bg-gray-50 dark:hover:bg-[#15151c]'}`} aria-label="Copy link">
-                {copied ? <><FiCheckCircle size={14} /> Copied!</> : <><FiLink2 size={14} /> Copy link</>}
-              </button>
-            </div>
-          </motion.div>
+              <span className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>{num} / {String(total).padStart(2, '0')}</span>
+            </motion.div>
 
-          {/* hero image - full bleed, editorial */}
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mx-auto max-w-[1100px]">
-            <div className="relative overflow-hidden rounded-[28px] border border-gray-200/60 dark:border-[#252530] bg-[#f3f3f7] dark:bg-[#15151c] shadow-[0_24px_64px_rgba(0,0,0,0.08)] dark:shadow-none">
-              <Image src={project.imageSource} alt={project.projectName} priority sizes="(max-width: 1100px) 100vw, 1100px" className="w-full aspect-[16/9] sm:aspect-[18/9] object-cover" />
-              <div className="absolute inset-0 pointer-events-none ring-1 ring-black/[0.04] dark:ring-white/[0.04] rounded-[28px]" />
-            </div>
-            <div className="mx-auto mt-3 flex max-w-[1100px] items-center justify-between px-1 text-[11px] tracking-wide text-gray-400 dark:text-gray-500">
-              <span>Fig. {String(idx + 1).padStart(2, '0')} — {project.projectName} • {project.category}</span>
-              <span className="hidden sm:inline">{project.techStack.slice(0, 3).join('  /  ')}</span>
-            </div>
-          </motion.div>
-
-          {/* body: left TOC + center prose + right meta - editorial grid */}
-          <div className="mx-auto max-w-[1100px] mt-10 lg:mt-14 grid lg:grid-cols-[180px_1fr_220px] gap-8 lg:gap-10 items-start">
-            {/* LEFT TOC - desktop */}
-            <aside className="hidden lg:block sticky top-28 h-fit">
-              <div className="text-[11px] tracking-[0.16em] font-semibold text-gray-400 dark:text-gray-500">CONTENTS</div>
-              <nav className="mt-3 grid gap-2 text-[13px] leading-6">
-                {[
-                  { id: 'narrative', label: 'Narrative' },
-                  { id: 'features', label: 'What I built' },
-                  { id: 'impact', label: 'Impact' },
-                  { id: 'stack', label: 'Stack & role' },
-                ].map((l) => (
-                  <a key={l.id} href={`#${l.id}`} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors flex gap-2">
-                    <span className="text-gray-300 dark:text-gray-600">—</span> {l.label}
-                  </a>
-                ))}
-              </nav>
-              <div className="mt-8 pt-6 border-t border-gray-200 dark:border-[#1e1e26] text-xs leading-6 text-gray-500 dark:text-gray-400">
-                <div>Next: {next ? next.projectName : '—'}</div>
-                {next && (
-                  <Link href={`/projects/${next.slug}`} className="inline-flex items-center gap-1 font-medium text-gray-900 dark:text-white hover:underline underline-offset-4">
-                    Continue <FiArrowRight size={12} />
-                  </Link>
-                )}
+            {/* hero — minimal, centered, airy */}
+            <motion.header initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="pt-10 pb-8 text-center">
+              <div className={`${mono.className} inline-flex items-center gap-2 text-[11px] tracking-[0.18em] text-gray-400`}>
+                <span className="h-[3px] w-[3px] rounded-full bg-gray-900 dark:bg-white" />
+                {project.category.toUpperCase()}
+                <span className="h-px w-4 bg-gray-200 dark:bg-[#252530]" />
+                {project.duration}
               </div>
-            </aside>
 
-            {/* CENTER PROSE */}
-            <div className="min-w-0">
-              {/* mobile TOC */}
-              <div className="lg:hidden mb-6 flex gap-2 overflow-x-auto pb-2 scrollbar-none">
-                {['narrative', 'features', 'impact', 'stack'].map((id) => (
-                  <a key={id} href={`#${id}`} className="shrink-0 rounded-full border border-gray-200 dark:border-[#252530] bg-white dark:bg-[#15151c] px-3.5 py-1.5 text-xs capitalize">
-                    {id}
-                  </a>
+              <h1 className={`${serif.className} mx-auto mt-5 max-w-[560px] text-[32px] sm:text-[40px] leading-[0.98] tracking-[-0.02em] font-normal`}>
+                {project.projectName}
+              </h1>
+
+              <p className="mx-auto mt-4 max-w-[540px] text-[15px] leading-7 text-gray-500 dark:text-gray-400">
+                {project.content}
+              </p>
+
+              <div className="mx-auto mt-6 flex flex-wrap items-center justify-center gap-2">
+                {project.techStack.map((t) => (
+                  <span key={t} className={`${mono.className} text-[11px] tracking-wide text-gray-500 border border-gray-200 dark:border-[#252530] rounded-full px-2.5 py-1`}>{t}</span>
                 ))}
               </div>
 
-              <section id="narrative" className="prose prose-gray dark:prose-invert max-w-none">
-                <h2 className={`${serif.className} text-[26px] leading-none tracking-tight text-gray-900 dark:text-white`}>Narrative</h2>
-                <div className="mt-1 h-px w-12 bg-gray-200 dark:bg-[#252530]" />
-                <p className="mt-5 text-[15.5px] leading-8 text-gray-700 dark:text-gray-300">{project.overview}</p>
-                <p className="mt-4 text-[14px] leading-7 text-gray-500 dark:text-gray-400 italic border-l-2 border-gray-200 dark:border-[#252530] pl-4">“{project.content}”</p>
-
-                {project.challenges && (
-                  <div className="mt-8 rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/50 dark:border-amber-900/30 p-5">
-                    <div className="text-[11px] tracking-[0.14em] font-semibold text-amber-800 dark:text-amber-200">CHALLENGE</div>
-                    <p className="mt-2 text-[14px] leading-7 text-amber-900/80 dark:text-amber-100/80">{project.challenges}</p>
-                  </div>
+              <div className="mt-7 flex items-center justify-center gap-3">
+                {project.href !== '#' && (
+                  <Link href={project.href} target="_blank" className="rounded-full bg-gray-900 dark:bg-white px-5 py-2.5 text-sm font-medium text-white dark:text-gray-900 hover:opacity-90">Visit live</Link>
                 )}
+                <Link href={project.sourceLink} target="_blank" className="inline-flex items-center gap-2 rounded-full border border-gray-200 dark:border-[#252530] px-5 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-[#15151c]">
+                  <AiFillGithub size={15} /> Source
+                </Link>
+                <button onClick={handleCopy} className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-[#252530] px-4 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-[#15151c]">
+                  {copied ? <><FiCheckCircle size={13} /> Copied</> : <><FiLink2 size={13} /> Copy</>}
+                </button>
+              </div>
+            </motion.header>
+
+            {/* image — hairline, no shadow */}
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }} className="overflow-hidden rounded-[12px] border border-gray-200 dark:border-[#252530]">
+              <Image src={project.imageSource} alt={project.projectName} priority sizes="(max-width: 720px) 100vw, 720px" className="w-full aspect-[16/10] object-cover" />
+            </motion.div>
+            <div className={`${mono.className} mt-2 flex justify-between text-[10px] tracking-wide text-gray-400 px-1`}>
+              <span>{project.category} — {project.role}</span>
+              <span>{project.techStack.slice(0, 2).join(' · ')}</span>
+            </div>
+
+            {/* content — single column, generous whitespace */}
+            <article className="mt-12">
+              <section>
+                <div className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>01 — OVERVIEW</div>
+                <p className="mt-3 text-[16px] leading-8 text-gray-700 dark:text-gray-300">{project.overview}</p>
               </section>
 
-              <section id="features" className="mt-12">
-                <h2 className={`${serif.className} text-[26px] leading-none tracking-tight text-gray-900 dark:text-white`}>What I built</h2>
-                <div className="mt-1 h-px w-12 bg-gray-200 dark:bg-[#252530]" />
-                <div className="mt-6 relative">
-                  <div className="absolute left-[11px] top-2 bottom-2 w-px bg-gray-200 dark:bg-[#252530] hidden sm:block" />
-                  <ul className="grid gap-4">
-                    {project.features.map((f, i) => (
-                      <li key={f} className="relative flex gap-4">
-                        <span className="hidden sm:inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-[11px] font-bold">{i + 1}</span>
-                        <span className="sm:hidden mt-1 h-2 w-2 rounded-full bg-gray-900 dark:bg-white shrink-0" />
-                        <p className="text-[14.5px] leading-7 text-gray-700 dark:text-gray-300 pt-0.5">{f}</p>
-                      </li>
-                    ))}
-                  </ul>
+              <hr className="my-10 border-gray-100 dark:border-[#1e1e26]" />
+
+              <section>
+                <div className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>02 — FEATURES</div>
+                <ol className="mt-4 divide-y divide-gray-100 dark:divide-[#1e1e26] border-y border-gray-100 dark:border-[#1e1e26]">
+                  {project.features.map((f, i) => (
+                    <li key={f} className="flex gap-4 py-4">
+                      <span className={`${mono.className} text-[11px] tracking-wide text-gray-400 pt-1`}>{String(i + 1).padStart(2, '0')}</span>
+                      <span className="text-[14.5px] leading-7 text-gray-700 dark:text-gray-300">{f}</span>
+                    </li>
+                  ))}
+                </ol>
+              </section>
+
+              <hr className="my-10 border-gray-100 dark:border-[#1e1e26]" />
+
+              <section className="grid gap-8 sm:grid-cols-[1.2fr_0.8fr]">
+                <div>
+                  <div className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>03 — OUTCOME</div>
+                  <p className="mt-3 text-[15px] leading-7 text-gray-700 dark:text-gray-300">{project.outcome}</p>
+                </div>
+                <div>
+                  <div className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>CHALLENGE</div>
+                  <p className="mt-3 text-[13.5px] leading-6 text-gray-500 dark:text-gray-400">{project.challenges ?? '—'}</p>
                 </div>
               </section>
 
-              <section id="impact" className="mt-12">
-                <h2 className={`${serif.className} text-[26px] leading-none tracking-tight text-gray-900 dark:text-white`}>Impact</h2>
-                <div className="mt-1 h-px w-12 bg-gray-200 dark:bg-[#252530]" />
-                <div className="mt-6 rounded-2xl bg-[#253529] dark:bg-[#1e1e26] text-white dark:text-gray-100 p-6 lg:p-7">
-                  <div className="text-[11px] tracking-[0.16em] font-semibold text-white/60">OUTCOME</div>
-                  <p className="mt-2 text-[16px] leading-8 font-light text-white/90">{project.outcome}</p>
-                </div>
-              </section>
+              <hr className="my-10 border-gray-100 dark:border-[#1e1e26]" />
 
-              <section id="stack" className="mt-12">
-                <h2 className={`${serif.className} text-[26px] leading-none tracking-tight text-gray-900 dark:text-white`}>Stack & role</h2>
-                <div className="mt-1 h-px w-12 bg-gray-200 dark:bg-[#252530]" />
-                <div className="mt-6 grid sm:grid-cols-2 gap-4">
-                  <div className="rounded-2xl border border-gray-200 dark:border-[#252530] bg-white dark:bg-[#15151c] p-5">
-                    <div className="text-[11px] tracking-wide font-semibold text-gray-500 dark:text-gray-400">MY ROLE</div>
-                    <ul className="mt-3 grid gap-2">
+              <section>
+                <div className={`${mono.className} text-[11px] tracking-[0.14em] text-gray-400`}>04 — ROLE & STACK</div>
+                <div className="mt-4 grid sm:grid-cols-2 gap-8">
+                  <div>
+                    <div className="text-xs font-medium text-gray-900 dark:text-white mb-2">Responsibilities</div>
+                    <ul className="space-y-1.5">
                       {project.responsibilities.map((r) => (
-                        <li key={r} className="flex gap-2 text-[13.5px] leading-6 text-gray-700 dark:text-gray-300">
-                          <FiCheck size={14} className="mt-1 text-[#253529] dark:text-[#9dbfa8] shrink-0" /> {r}
-                        </li>
+                        <li key={r} className="text-[13px] leading-6 text-gray-600 dark:text-gray-400 flex gap-2"><span className="text-gray-300 mt-2 h-px w-3 bg-gray-300 dark:bg-[#252530] shrink-0" /> {r}</li>
                       ))}
                     </ul>
                   </div>
-                  <div className="rounded-2xl border border-gray-200 dark:border-[#252530] bg-white dark:bg-[#15151c] p-5">
-                    <div className="text-[11px] tracking-wide font-semibold text-gray-500 dark:text-gray-400">TECH</div>
-                    <div className="mt-3 flex flex-wrap gap-2">
+                  <div>
+                    <div className="text-xs font-medium text-gray-900 dark:text-white mb-2">Stack</div>
+                    <div className="flex flex-wrap gap-1.5">
                       {project.techStack.map((t) => (
-                        <span key={t} className="rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-3 py-1.5 text-xs font-medium">
-                          {t}
-                        </span>
+                        <span key={t} className="rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-3 py-1 text-xs">{t}</span>
                       ))}
                     </div>
-                    <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-                      {project.duration} • {project.team}
-                    </div>
+                    <div className={`${mono.className} mt-3 text-[11px] text-gray-400`}>{project.duration} · {project.team}</div>
                   </div>
                 </div>
               </section>
+            </article>
 
-              {/* bottom nav */}
-              <div className="mt-14 flex items-center justify-between gap-4 border-t border-gray-200 dark:border-[#1e1e26] pt-6">
-                <Link href="/#projects" className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                  <FiArrowLeft size={14} /> All projects
-                </Link>
-                <div className="flex gap-2">
-                  {prev && (
-                    <Link href={`/projects/${prev.slug}`} className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-[#252530] px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-[#15151c]">
-                      <FiArrowLeft size={14} /> {prev.category}
-                    </Link>
-                  )}
-                  {next && (
-                    <Link href={`/projects/${next.slug}`} className="inline-flex items-center gap-1.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-5 py-2 text-sm font-medium">
-                      Next <FiArrowRight size={14} />
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT - related */}
-            <aside className="hidden lg:block sticky top-28 h-fit space-y-4">
-              <div className="rounded-2xl border border-gray-200 dark:border-[#252530] overflow-hidden bg-white dark:bg-[#15151c]">
-                <div className="p-4">
-                  <div className="text-[11px] tracking-[0.14em] font-semibold text-gray-500 dark:text-gray-400">UP NEXT</div>
-                  {next ? (
-                    <Link href={`/projects/${next.slug}`} className="group mt-3 block">
-                      <div className="overflow-hidden rounded-xl border border-gray-200 dark:border-[#252530]">
-                        <Image src={next.imageSource} alt={next.projectName} className="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-300" />
-                      </div>
-                      <div className="mt-3 text-[13px] font-semibold leading-tight text-gray-900 dark:text-white group-hover:text-[#253529] dark:group-hover:text-[#9dbfa8]">{next.projectName}</div>
-                      <div className="text-xs text-gray-500 dark:text-gray-400">{next.category} • {next.techStack.slice(0, 2).join(' • ')}</div>
-                    </Link>
-                  ) : (
-                    <div className="mt-3 text-sm text-gray-500">You’ve reached the end.</div>
-                  )}
-                </div>
-                {prev && (
-                  <Link href={`/projects/${prev.slug}`} className="flex items-center justify-between border-t border-gray-200 dark:border-[#252530] px-4 py-3 text-sm hover:bg-gray-50 dark:hover:bg-[#1e1e26] transition-colors">
-                    <span className="text-gray-600 dark:text-gray-300 truncate pr-3">{prev.projectName}</span>
-                    <FiArrowLeft size={14} className="shrink-0 text-gray-400" />
+            {/* minimal prev/next */}
+            <nav className="mt-12 flex items-center justify-between gap-4 border-t border-gray-100 dark:border-[#1e1e26] pt-6">
+              <div className="flex-1 min-w-0">
+                {prev ? (
+                  <Link href={`/projects/${prev.slug}`} className="group inline-flex flex-col">
+                    <span className={`${mono.className} text-[11px] tracking-wide text-gray-400`}>← PREV</span>
+                    <span className="text-sm font-medium truncate group-hover:underline underline-offset-4">{prev.projectName}</span>
+                    <span className={`${mono.className} text-[11px] text-gray-400`}>{prev.category}</span>
                   </Link>
-                )}
+                ) : <span />}
               </div>
-
-              <div className="rounded-2xl bg-gray-50 dark:bg-[#15151c] border border-gray-200 dark:border-[#252530] p-4">
-                <div className="text-sm font-medium text-gray-900 dark:text-white">Let’s talk</div>
-                <p className="mt-1 text-xs leading-5 text-gray-600 dark:text-gray-400">Available for freelance and full-time. I can walk you through this build.</p>
-                <Link href="/#contact" className="mt-3 inline-flex w-full justify-center rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 text-sm font-medium">Contact</Link>
+              <Link href="/#projects" className={`${mono.className} hidden sm:inline-flex rounded-full border border-gray-200 dark:border-[#252530] px-4 py-2 text-xs hover:bg-gray-50 dark:hover:bg-[#15151c]`}>All</Link>
+              <div className="flex-1 min-w-0 text-right">
+                {next ? (
+                  <Link href={`/projects/${next.slug}`} className="group inline-flex flex-col items-end">
+                    <span className={`${mono.className} text-[11px] tracking-wide text-gray-400`}>NEXT →</span>
+                    <span className="text-sm font-medium truncate group-hover:underline underline-offset-4">{next.projectName}</span>
+                    <span className={`${mono.className} text-[11px] text-gray-400`}>{next.category}</span>
+                  </Link>
+                ) : <span />}
               </div>
-            </aside>
-          </div>
+            </nav>
 
-          {/* mobile related */}
-          <div className="lg:hidden mt-10 grid sm:grid-cols-2 gap-4">
-            {prev && (
-              <Link href={`/projects/${prev.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3 bg-white dark:bg-[#15151c]">
-                <Image src={prev.imageSource} alt={prev.projectName} className="w-16 h-16 rounded-xl object-cover" />
-                <div>
-                  <div className="text-xs text-gray-500">Previous</div>
-                  <div className="text-sm font-medium line-clamp-2">{prev.projectName}</div>
-                </div>
-              </Link>
-            )}
-            {next && (
-              <Link href={`/projects/${next.slug}`} className="flex gap-3 rounded-2xl border border-gray-200 dark:border-[#252530] p-3 bg-white dark:bg-[#15151c]">
-                <Image src={next.imageSource} alt={next.projectName} className="w-16 h-16 rounded-xl object-cover" />
-                <div>
-                  <div className="text-xs text-gray-500">Next</div>
-                  <div className="text-sm font-medium line-clamp-2">{next.projectName}</div>
-                </div>
-              </Link>
-            )}
+            <div className="pb-12" />
           </div>
         </div>
       </div>
-      {/* toast */}
+
       <AnimatePresence>
         {copied && (
-          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.2 }} className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-5 py-2.5 text-sm font-medium shadow-lg flex items-center gap-2">
-            <FiCheckCircle size={14} /> Link copied to clipboard
-          </motion.div>
+          <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 6 }} className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-4 py-2 text-xs font-medium shadow">Link copied</motion.div>
         )}
       </AnimatePresence>
     </div>
