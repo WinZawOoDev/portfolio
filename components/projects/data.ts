@@ -14,6 +14,7 @@ export type Project = {
   role: string
   duration: string
   team: string
+  category: string
   features: string[]
   responsibilities: string[]
   challenges?: string
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2023 — Present',
     team: 'KBZ Bank Marketing Tech (4 devs, 1 designer, PM)',
+    category: 'Banking CMS',
     features: [
       'Headless Strapi content types for articles, banners, promotions and FAQs with draft/preview/publish lifecycle',
       'Next.js SSR + ISR front-end with preview mode for marketers before publish',
@@ -69,6 +71,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2023 — Present',
     team: 'KBZ Bank Marketing Tech',
+    category: 'Banking CMS',
     features: [
       'Campaign entity linking banners, articles and promo codes into a single release unit',
       'Multi-channel distribution config and status tracking per channel',
@@ -100,6 +103,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2024',
     team: 'KBZ Bank Marketing Tech',
+    category: 'Banking CMS',
     features: [
       'Dynamic promo blocks (banner, carousel, offer card, countdown) as reusable Strapi components',
       'Locale-aware content (my/en) with fallback',
@@ -131,6 +135,7 @@ export const projects: Project[] = [
     role: 'Frontend Developer',
     duration: '2023',
     team: 'KBZ Bank Compliance Tech (3 devs)',
+    category: 'Compliance',
     features: [
       'Unified search with ranked results and fuzzy matching',
       'Advanced filters: customer type, risk level, branch, status',
@@ -162,6 +167,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2023',
     team: 'Freelance — 2 devs',
+    category: 'Healthcare',
     features: [
       'Product content type with variants, specs, certifications and MSDS attachments',
       'Category tree, search and filtered catalog with pagination',
@@ -193,6 +199,7 @@ export const projects: Project[] = [
     role: 'Backend / Full-Stack Developer',
     duration: '2022 — 2023',
     team: 'Smilax Global HR Tech (5 devs)',
+    category: 'HR SaaS',
     features: [
       'Job opening creation with approval chain and public board sync',
       'Candidate pipeline: Applied → Screen → Interview → Offer → Hired with drag-and-drop',
@@ -225,6 +232,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2021 — 2022',
     team: 'Cloud Source (4 devs, Japan/Mynamar)',
+    category: 'Travel Ops',
     features: [
       'Itinerary builder with day-by-day activities, meals, lodging and transport legs',
       'Bus route management, seat maps and manifest generation',
@@ -257,6 +265,7 @@ export const projects: Project[] = [
     role: 'Full-Stack Developer',
     duration: '2020 — 2021',
     team: 'POS Myanmar (3 devs)',
+    category: 'Retail / SAP',
     features: [
       'Supplier catalog sync from SAP (items, UOM, prices)',
       'Store ordering cart with stock validation and MOQ rules',
@@ -288,6 +297,7 @@ export const projects: Project[] = [
     role: 'Backend Developer',
     duration: '2020',
     team: 'POS Myanmar',
+    category: 'Payments API',
     features: [
       'Card lookup, PIN/auth and balance query endpoints',
       'Hold → capture payment flow with expiry and auto-release',
@@ -319,6 +329,7 @@ export const projects: Project[] = [
     role: 'Backend Developer',
     duration: '2019 — 2020',
     team: 'POS Myanmar',
+    category: 'Retail POS',
     features: [
       'Slow query remediation with indexing and pagination',
       'Checkout and discount logic bug fixes',
@@ -350,6 +361,7 @@ export const projects: Project[] = [
     role: 'Solo — Design + Development',
     duration: '2024 — 2025',
     team: 'Solo',
+    category: 'Portfolio',
     features: [
       'App Router with metadata, sitemap and openGraph',
       'Tailwind 4 design tokens and dark mode theming',
