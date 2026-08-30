@@ -78,7 +78,7 @@ body {
   @apply pt-1 text-[13px] lg:text-[13.5px] leading-snug font-normal text-gray-600 dark:text-gray-300;
 }
 .project-card {
-  @apply relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[26em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200;
+  @apply relative flex flex-col bg-transparent dark:bg-[#15151c] border border-gray-200/0 dark:border-[#252530] h-[28em] w-full md:w-[20em] shadow-none dark:shadow-sm hover:shadow-none dark:hover:shadow-md hover:border-transparent dark:hover:border-[#2a2a36] dark:hover:bg-[#1a1a22] p-0 rounded-xl overflow-hidden transition-all duration-200;
 }
 .contact-card {
   @apply w-full max-w-lg bg-transparent dark:bg-[#15151c] border border-transparent dark:border-[#252530] rounded-2xl shadow-none dark:shadow-sm p-6 lg:p-8;
