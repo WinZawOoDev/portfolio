@@ -2,13 +2,11 @@
 
 import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { Inter } from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
-import ScrollLink from '../utils/ScrollLink'
-import ThemeToggle from '../utils/ThemeToggle'
-import { navLinks } from './Navigation'
-
-const navFont = Inter({ subsets: ["latin"], weight: "500" })
+import ScrollLink from '../utils/scroll-link'
+import ThemeToggle from '../utils/theme-toggle'
+import { navLinks } from './navigation'
+import { interMedium } from '@/lib/fonts'
 
 export default function MobileMenu() {
 
@@ -80,7 +78,7 @@ export default function MobileMenu() {
                     className='mobile-nav-list'
                 >
                     {navLinks.map(link => (
-                        <li key={link.id} className={`${navFont.className} mobile-nav-item`}>
+                        <li key={link.id} className={`${interMedium.className} mobile-nav-item`}>
                             <ScrollLink
                                 to={link.to}
                                 activeClass='relative flex item-center font-semibold transition-all duration-75 delay-75 transform translate-x-2'
@@ -92,7 +90,7 @@ export default function MobileMenu() {
                             </ScrollLink>
                         </li>
                     ))}
-                    <li className={`${navFont.className} mobile-nav-theme`}>
+                    <li className={`${interMedium.className} mobile-nav-theme`}>
                         <span className='capitalize'>theme</span>
                         <ThemeToggle />
                     </li>

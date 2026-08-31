@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { Variants, motion, AnimatePresence } from 'framer-motion'
-import Card from './Card'
-import { projects } from './data'
+import Card from './card'
+import { projects, placeholderImage } from './data'
 
 const container: Variants = {
     hidden: {
@@ -57,7 +57,7 @@ export default function List({ view }: { view: 'grid' | 'list' }) {
                     >
                         <Card
                             slug={project.slug}
-                            imageSource={project.imageSource}
+                            imageSource={project.imageSource ?? placeholderImage}
                             projectName={project.projectName}
                             href={project.href}
                             content={project.content}

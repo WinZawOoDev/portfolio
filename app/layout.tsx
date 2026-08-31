@@ -1,33 +1,34 @@
 
-import Header from '@/components/layouts/Header'
+import Header from '@/components/layouts/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import ScrollProgress from '@/components/utils/ScrollProgress'
-import Main from '@/components/layouts/Main'
+import ScrollProgress from '@/components/utils/scroll-progress'
+import Main from '@/components/layouts/main'
+import { inter } from '@/lib/fonts'
+import { siteConfig } from '@/lib/site'
 
-const inter = Inter({ subsets: ['latin'], display: 'swap', preload: true })
+const fullTitle = `${siteConfig.name} — ${siteConfig.role}`
 
 export const metadata: Metadata = {
   title: {
-    default: 'Win Zaw Oo — Full-Stack Developer',
-    template: '%s | Win Zaw Oo',
+    default: fullTitle,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL. Based in Myanmar.',
-  metadataBase: new URL('https://winzawoo.dev'),
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
-    title: 'Win Zaw Oo — Full-Stack Developer',
-    description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL.',
-    url: 'https://winzawoo.dev',
-    siteName: 'Win Zaw Oo Portfolio',
+    title: fullTitle,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: `${siteConfig.name} Portfolio`,
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    creator: '@WinZaw00',
-    title: 'Win Zaw Oo — Full-Stack Developer',
-    description: 'Full-Stack Developer specializing in backend systems, Next.js, Nest.js and PostgreSQL.',
+    creator: siteConfig.twitterHandle,
+    title: fullTitle,
+    description: siteConfig.description,
   },
   robots: {
     index: true,

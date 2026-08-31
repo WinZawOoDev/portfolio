@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Inter } from 'next/font/google'
 import { motion, Variants } from 'framer-motion'
-import ScrollLink from '../utils/ScrollLink'
+import ScrollLink from '../utils/scroll-link'
+import { interMedium } from '@/lib/fonts'
 
 export const navLinks = [
   { id: 1, to: "about", name: "about" },
@@ -11,8 +11,6 @@ export const navLinks = [
   { id: 3, to: "projects", name: "projects" },
   { id: 4, to: "contact", name: "contact" }
 ];
-
-const navFont = Inter({ subsets: ["latin"], weight: "500" })
 
 const container: Variants = {
   hidden: {
@@ -58,7 +56,7 @@ export default function Navigation() {
           <motion.li
             key={link.id}
             variants={item}
-            className={`${navFont.className} px-5 cursor-pointer text-[15px] tracking-tight`}
+            className={`${interMedium.className} px-5 cursor-pointer text-[15px] tracking-tight`}
           >
             <ScrollLink
               to={link.to}

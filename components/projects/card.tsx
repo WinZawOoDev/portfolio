@@ -2,13 +2,9 @@ import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Inter } from 'next/font/google'
 import { AiFillGithub } from 'react-icons/ai'
 import { RiExternalLinkFill } from 'react-icons/ri'
-
-const interSemibold = Inter({ subsets: ["latin"], weight: "600" })
-const interRegular = Inter({ subsets: ["latin"], weight: "400" })
-
+import { interRegular, interSemibold } from '@/lib/fonts'
 
 type Props = {
     slug: string
@@ -38,7 +34,7 @@ export default function Card({ slug, imageSource, projectName, href, content, te
             <div className={`relative p-4 flex-1 flex flex-col ${isList ? 'justify-center' : ''}`}>
                 <div className='flex items-start justify-between gap-2 mb-2'>
                     <Link href={`/projects/${slug}`} className="flex-1 pr-6 group/title">
-                        <h4 className={`${interSemibold.className} text-[14px] font-semibold text-gray-900 dark:text-gray-100 tracking-tight text-left leading-tight group-hover/title:text-[#253529] dark:group-hover/title:text-[#9dbfa8] transition-colors`}>{projectName}</h4>
+                        <h4 className={`${interSemibold.className} text-[14px] font-semibold text-gray-900 dark:text-gray-100 tracking-tight text-left leading-tight group-hover/title:text-accent dark:group-hover/title:text-accent-muted transition-colors`}>{projectName}</h4>
                     </Link>
                     <Link
                         href={href}
@@ -68,7 +64,7 @@ export default function Card({ slug, imageSource, projectName, href, content, te
                         <AiFillGithub size={16} />
                     </Link>
                 </div>
-                <Link href={`/projects/${slug}`} className={`${interRegular.className} mt-3 inline-flex items-center gap-1 text-xs font-medium text-[#253529] dark:text-[#9dbfa8] hover:underline underline-offset-4`}>
+                <Link href={`/projects/${slug}`} className={`${interRegular.className} mt-3 inline-flex items-center gap-1 text-xs font-medium text-accent dark:text-accent-muted hover:underline underline-offset-4`}>
                     View details →
                 </Link>
             </div>

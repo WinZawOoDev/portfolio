@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import ScrollLink from './ScrollLink'
+import ScrollLink from './scroll-link'
 
 export default function Logo() {
     return (

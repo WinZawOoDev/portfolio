@@ -1,8 +1,8 @@
 import React from 'react'
-import Navigation from './Navigation'
-import Logo from '../utils/Logo'
-import MobileMenu from './MobileMenu'
-import ThemeToggle from '../utils/ThemeToggle'
+import Navigation from './navigation'
+import Logo from '../utils/logo'
+import MobileMenu from './mobile-menu'
+import ThemeToggle from '../utils/theme-toggle'
 
 
 export default function Header() {

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { projects, getProjectBySlug } from '@/components/projects/data'
-import DetailView from '@/components/projects/DetailView'
+import DetailView from '@/components/projects/detail-view'
+import { siteConfig } from '@/lib/site'
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }))
@@ -15,9 +16,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: project.projectName,
     description: project.overview,
     openGraph: {
-      title: `${project.projectName} — Win Zaw Oo`,
+      title: `${project.projectName} — ${siteConfig.name}`,
       description: project.content,
-      url: `https://winzawoo.dev/projects/${project.slug}`,
+      url: `${siteConfig.url}/projects/${project.slug}`,
       type: 'article',
     },
     twitter: {

@@ -1,8 +1,8 @@
 import React from 'react'
-import LinkContainer from '../layouts/LinkContainer'
-import ContentDesc, { contentDescProps } from './ContentDesc'
-import ContentHeading from './ContentHeading'
-import LayoutContainer from '../layouts/LayoutContainer'
+import LinkContainer from '../layouts/link-container'
+import ContentDesc, { contentDescProps } from './content-desc'
+import ContentHeading from './content-heading'
+import LayoutContainer from '../layouts/layout-container'
 
 const experiences: contentDescProps[] = [
   {

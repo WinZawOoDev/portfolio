@@ -3,11 +3,9 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { FiSearch, FiX } from 'react-icons/fi'
-import { projects } from './data'
-
-const inter = Inter({ subsets: ['latin'] })
+import { projects, placeholderImage } from './data'
+import { inter } from '@/lib/fonts'
 
 const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))]
 
@@ -78,12 +76,12 @@ export default function ProjectsIndexClient() {
             <Link key={p.id} href={`/projects/${p.slug}`} className="project-card group text-left">
               {/* subtle category tint overlay so same image feels distinct */}
               <div className="relative">
-                <Image src={p.imageSource} alt={p.projectName} className="w-full h-44 object-cover" />
+                <Image src={p.imageSource ?? placeholderImage} alt={p.projectName} className="w-full h-44 object-cover" />
                 <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-black/20 to-transparent" />
                 <span className="absolute left-3 top-3 rounded-full bg-white/90 dark:bg-[#0d0d12]/90 backdrop-blur border border-gray-200/50 dark:border-white/10 px-2.5 py-1 text-[11px] font-medium">{p.category}</span>
               </div>
               <div className="p-4 flex-1 flex flex-col">
-                <h2 className="text-[14px] font-semibold text-gray-900 dark:text-gray-100 group-hover:text-[#253529] dark:group-hover:text-[#9dbfa8] transition-colors line-clamp-2">{p.projectName}</h2>
+                <h2 className="text-[14px] font-semibold text-gray-900 dark:text-gray-100 group-hover:text-accent dark:group-hover:text-accent-muted transition-colors line-clamp-2">{p.projectName}</h2>
                 <p className="mt-2 text-[13px] leading-relaxed text-gray-600 dark:text-gray-400 line-clamp-3">{p.content}</p>
                 <div className="mt-auto pt-4 flex flex-wrap gap-1.5">
                   {p.techStack.slice(0, 3).map((t) => (
@@ -93,7 +91,7 @@ export default function ProjectsIndexClient() {
                   ))}
                   {p.techStack.length > 3 && <span className="badge-sm">+{p.techStack.length - 3}</span>}
                 </div>
-                <span className="mt-3 text-xs font-medium text-[#253529] dark:text-[#9dbfa8]">View details →</span>
+                <span className="mt-3 text-xs font-medium text-accent dark:text-accent-muted">View details →</span>
               </div>
             </Link>
           ))}

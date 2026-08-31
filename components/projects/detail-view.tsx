@@ -3,15 +3,11 @@
 import { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter, Instrument_Serif, JetBrains_Mono } from 'next/font/google'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AiFillGithub } from 'react-icons/ai'
-import { FiArrowLeft, FiArrowRight, FiCheckCircle, FiLink2 } from 'react-icons/fi'
-import type { Project } from './data'
-
-const inter = Inter({ subsets: ['latin'] })
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] })
-const serif = Instrument_Serif({ subsets: ['latin'], weight: '400' })
+import { FiArrowLeft, FiCheckCircle, FiLink2 } from 'react-icons/fi'
+import { placeholderImage, type Project } from './data'
+import { inter, mono, serif } from '@/lib/fonts'
 
 type Props = { project: Project; prev: Project | null; next: Project | null; idx: number; total: number }
 
@@ -77,7 +73,7 @@ export default function DetailView({ project, prev, next, idx, total }: Props) {
 
             {/* image — hairline, no shadow */}
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }} className="overflow-hidden rounded-[12px] border border-gray-200 dark:border-[#252530]">
-              <Image src={project.imageSource} alt={project.projectName} priority sizes="(max-width: 720px) 100vw, 720px" className="w-full aspect-[16/10] object-cover" />
+              <Image src={project.imageSource ?? placeholderImage} alt={project.projectName} priority sizes="(max-width: 720px) 100vw, 720px" className="w-full aspect-[16/10] object-cover" />
             </motion.div>
             <div className={`${mono.className} mt-2 flex justify-between text-[10px] tracking-wide text-gray-400 px-1`}>
               <span>{project.category} — {project.role}</span>

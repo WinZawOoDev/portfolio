@@ -2,7 +2,7 @@
 
 import React, { FormEvent, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { TextInput, TextArea, Button } from './Input'
+import { TextInput, TextArea, Button } from './input'
 
 type Status = 'idle' | 'success' | 'error'
 

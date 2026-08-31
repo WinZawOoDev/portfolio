@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import AboutMe from './AboutMe'
-import SocialLink from './SocialLink'
+import AboutMe from './about-me'
+import SocialLink from './social-link'
 
 export default function Intro() {
     return (

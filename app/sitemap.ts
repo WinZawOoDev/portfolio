@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { projects } from '@/components/projects/data'
+import { siteConfig } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://winzawoo.dev'
+  const base = siteConfig.url
   return [
     {
       url: base,

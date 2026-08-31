@@ -1,10 +1,10 @@
 import { StaticImageData } from 'next/image'
-import workplace from '@/public/images/work_place.jpg'
+export { default as placeholderImage } from '@/public/images/work_place.jpg'
 
 export type Project = {
   id: number
   slug: string
-  imageSource: StaticImageData
+  imageSource?: StaticImageData
   projectName: string
   href: string
   sourceLink: string
@@ -25,7 +25,6 @@ export const projects: Project[] = [
   {
     id: 1,
     slug: 'marketing-cms-content-hub',
-    imageSource: workplace,
     projectName: 'Marketing CMS — Content Hub',
     href: 'https://www.kbzbank.com',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -59,7 +58,6 @@ export const projects: Project[] = [
   {
     id: 2,
     slug: 'marketing-cms-campaign-manager',
-    imageSource: workplace,
     projectName: 'Marketing CMS — Campaign Manager',
     href: 'https://www.kbzbank.com',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -91,7 +89,6 @@ export const projects: Project[] = [
   {
     id: 3,
     slug: 'marketing-cms-promo-portal',
-    imageSource: workplace,
     projectName: 'Marketing CMS — Promo Portal',
     href: 'https://www.kbzbank.com',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -123,7 +120,6 @@ export const projects: Project[] = [
   {
     id: 4,
     slug: 'kyc-search-portal',
-    imageSource: workplace,
     projectName: 'KYC Search Portal',
     href: 'https://www.kbzbank.com',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -155,7 +151,6 @@ export const projects: Project[] = [
   {
     id: 5,
     slug: 'healthcare-products-cms',
-    imageSource: workplace,
     projectName: 'Healthcare Products CMS',
     href: '#',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -187,7 +182,6 @@ export const projects: Project[] = [
   {
     id: 6,
     slug: 'hr-recruitment-module',
-    imageSource: workplace,
     projectName: 'HR Recruitment Module',
     href: 'https://smilaxglobal.com',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -220,7 +214,6 @@ export const projects: Project[] = [
   {
     id: 7,
     slug: 'tour-management-system',
-    imageSource: workplace,
     projectName: 'Tour Management System',
     href: 'https://www.cloudsource.co.jp',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -253,7 +246,6 @@ export const projects: Project[] = [
   {
     id: 8,
     slug: 'goods-order-sap-integration',
-    imageSource: workplace,
     projectName: 'Goods Order & SAP Integration',
     href: 'http://pos.com.mm/',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -285,7 +277,6 @@ export const projects: Project[] = [
   {
     id: 9,
     slug: 'membership-card-payment-api',
-    imageSource: workplace,
     projectName: 'Membership Card Payment API',
     href: 'http://pos.com.mm/',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -317,7 +308,6 @@ export const projects: Project[] = [
   {
     id: 10,
     slug: 'pos-system-maintenance',
-    imageSource: workplace,
     projectName: 'POS System Maintenance',
     href: 'http://pos.com.mm/',
     sourceLink: 'https://github.com/WinZawOoDev',
@@ -349,7 +339,6 @@ export const projects: Project[] = [
   {
     id: 11,
     slug: 'personal-portfolio',
-    imageSource: workplace,
     projectName: 'Personal Portfolio',
     href: '#',
     sourceLink: 'https://github.com/WinZawOoDev',

@@ -1,17 +1,9 @@
 'use client';
 
 import React from 'react'
-import { Spectral, Inter } from 'next/font/google'
 import Typewriter from 'typewriter-effect'
-import { useIntroContext } from './IntroProvider';
-
-const spectralFont = Spectral({
-    weight: "800",
-    subsets: ["latin"],
-    display: 'swap'
-})
-const interMedium = Inter({ subsets: ["latin"], weight: "600", display: 'swap' })
-const interLight = Inter({ subsets: ["latin"], weight: "300", display: 'swap' });
+import { useIntroContext } from './intro-provider';
+import { interLight, interSemibold, spectral } from '@/lib/fonts';
 
 export default function AboutMe() {
 
@@ -36,7 +28,7 @@ export default function AboutMe() {
                 />
             </span>
 
-            <h1 className={`${spectralFont.className} text-4xl md:text-5xl lg:text-7xl block mt-2 mb-10 min-h-[1.2em] text-gray-900 dark:text-gray-100`}>
+            <h1 className={`${spectral.className} text-4xl md:text-5xl lg:text-7xl block mt-2 mb-10 min-h-[1.2em] text-gray-900 dark:text-gray-100`}>
                 {typeOutStatus.intro && (
                     <Typewriter
                         onInit={(typewriter) => {
@@ -52,7 +44,7 @@ export default function AboutMe() {
                 }
             </h1>
 
-            <h4 className={`block ${interMedium.className} text-base lg:text-xl min-h-[1.5em] text-gray-900 dark:text-gray-100 my-5 font-semibold tracking-tight leading-6`}>
+            <h4 className={`block ${interSemibold.className} text-base lg:text-xl min-h-[1.5em] text-gray-900 dark:text-gray-100 my-5 font-semibold tracking-tight leading-6`}>
                 {typeOutStatus.name && (
                     <Typewriter
                         onInit={(typewriter) => {

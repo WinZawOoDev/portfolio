@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import { interRegular, interSemibold } from '@/lib/fonts'
 
 export type contentDescProps = {
   position: string;
@@ -18,10 +18,7 @@ export type contentDescProps = {
   techStack: string[];
 }
 
-const interSemibold = Inter({ subsets: ["latin"], weight: "600" })
-const interRegular = Inter({ subsets: ["latin"], weight: "400" })
-
-export default function ContentDesc({ position, company, website, date, description, techStack: _techStack }: contentDescProps) {
+export default function ContentDesc({ position, company, website, date, description }: contentDescProps) {
 
   return (
     <motion.div

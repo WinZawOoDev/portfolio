@@ -1,12 +1,10 @@
 "use client"
 
 import React from 'react'
-import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
-import ScrollLink from '../utils/ScrollLink'
+import ScrollLink from '../utils/scroll-link'
 import Link from 'next/link'
-
-const headingFont = Inter({ subsets: ["latin"], weight: "800" })
+import { interBold } from '@/lib/fonts'
 
 export default function ContentHeading() {
 
@@ -17,7 +15,7 @@ export default function ContentHeading() {
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ type: "spring", duration: 0.5, delay: 0.1 }}
-                    className={`${headingFont.className} text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100`}
+                    className={`${interBold.className} text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100`}
                 >
                     Working Experiences.
                 </motion.h1>

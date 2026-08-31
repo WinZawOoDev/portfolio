@@ -3,10 +3,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { BsGrid3X3Gap, BsListUl } from 'react-icons/bs'
-import LinkContainer from '../layouts/LinkContainer'
-import LayoutContainer from '../layouts/LayoutContainer'
-import ProjectList from './List'
-import Heading from './Heading'
+import LinkContainer from '../layouts/link-container'
+import LayoutContainer from '../layouts/layout-container'
+import ProjectList from './list'
+import Heading from './heading'
 
 export default function Projects() {
     const [view, setView] = useState<'grid' | 'list'>('grid')

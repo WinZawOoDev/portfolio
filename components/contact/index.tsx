@@ -3,12 +3,13 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
-import LinkContainer from '../layouts/LinkContainer'
-import LayoutContainer from '../layouts/LayoutContainer'
-import Heading from './Heading'
+import LinkContainer from '../layouts/link-container'
+import LayoutContainer from '../layouts/layout-container'
+import Heading from './heading'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/site'
 
-const Form = dynamic(() => import('./Form'), {
+const Form = dynamic(() => import('./form'), {
   ssr: false,
   loading: () => <div className="h-64 animate-pulse bg-gray-100 dark:bg-[#15151c] rounded-xl" />
 })
@@ -26,13 +27,13 @@ export default function Contact() {
                             </div>
                         </div>
                         <div className='mt-8 flex items-center gap-3 text-gray-600 dark:text-gray-400'>
-                            <Link href="https://wa.me/+959987262564" target='_blank' aria-label="WhatsApp" className='icon-btn-sm hover:!bg-[#25D366] hover:!text-white hover:!border-transparent dark:hover:!bg-[#25D366]'>
+                            <Link href={siteConfig.contact.whatsapp} target='_blank' aria-label="WhatsApp" className='icon-btn-sm hover:!bg-[#25D366] hover:!text-white hover:!border-transparent dark:hover:!bg-[#25D366]'>
                                 <FaWhatsapp size={18} />
                             </Link>
-                            <Link href="tel:+959987262564" target='_blank' aria-label="Phone" className='icon-btn-sm'>
+                            <Link href={`tel:${siteConfig.contact.phone}`} target='_blank' aria-label="Phone" className='icon-btn-sm'>
                                 <FaPhoneAlt size={14} />
                             </Link>
-                            <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>+95 998 726 2564</span>
+                            <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>{siteConfig.contact.phoneDisplay}</span>
                         </div>
                     </div>
                 </div>
